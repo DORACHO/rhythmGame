@@ -36,4 +36,10 @@ public class EJnoteMaker : MonoBehaviour
             currentTime -= 3;
         }
     }
+
+
+    void LongNote()
+    {
+        //둘 사이를 라인렌더러로 잇는다.
+    }
 }

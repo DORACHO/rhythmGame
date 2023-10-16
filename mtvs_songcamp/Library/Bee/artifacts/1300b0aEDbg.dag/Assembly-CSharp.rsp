@@ -349,6 +349,7 @@
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/EJ/02_Scripts/EJMissPad.cs"
 "Assets/EJ/02_Scripts/EJnoteFlow.cs"
 "Assets/EJ/02_Scripts/EJnoteMaker.cs"
 "Assets/EJ/02_Scripts/EJTouchPad.cs"
