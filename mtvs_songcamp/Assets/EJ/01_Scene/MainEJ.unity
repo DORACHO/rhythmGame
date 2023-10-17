@@ -1131,6 +1131,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574634384}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &577878212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577878213}
+  - component: {fileID: 577878214}
+  m_Layer: 0
+  m_Name: LineRendererTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &577878213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577878212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.61151737, y: 4.2729864, z: 1.8646262}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577878214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577878212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a27bd4287b52a4883a39405395a2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 8946263236910229840, guid: 616f6090790b24f4387ec8a115e0193e, type: 3}
+  end: {fileID: 4336873006639638757, guid: 9dc4d9ce5a3e30f46b5252f2d9495523, type: 3}
+  startT: {fileID: 52916350}
+  endT: {fileID: 725758886}
 --- !u!1 &677316335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,6 +2263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1271823015}
   - component: {fileID: 1271823016}
+  - component: {fileID: 1271823017}
   m_Layer: 0
   m_Name: Rails
   m_TagString: Untagged
@@ -2262,6 +2311,20 @@ MonoBehaviour:
   notes:
   - {fileID: 4563475324704490506, guid: a5dbded4966afd34c9102e054fd63d5c, type: 3}
   bpm: 72
+--- !u!114 &1271823017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271823014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2019158d6d776e4ea0003acf963df46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  note: {fileID: 8946263236910229840, guid: 616f6090790b24f4387ec8a115e0193e, type: 3}
+  noteFactory: {fileID: 52916350}
 --- !u!1 &1339689893
 GameObject:
   m_ObjectHideFlags: 0
