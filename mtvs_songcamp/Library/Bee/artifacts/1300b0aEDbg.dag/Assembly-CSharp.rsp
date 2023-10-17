@@ -119,6 +119,7 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Melanchall/DryWetMIDI/Melanchall.DryWetMidi.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -361,6 +362,7 @@
 "Assets/EJ/02_Scripts/Tutorial/PlayController.cs"
 "Assets/EJ/02_Scripts/Tutorial/SongManager.cs"
 "Assets/EJ/02_Scripts/Tutorial/TimingManager.cs"
+"Assets/Melanchall/DryWetMIDI/Demo/DemoScript.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
