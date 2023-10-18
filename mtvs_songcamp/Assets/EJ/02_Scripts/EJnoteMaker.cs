@@ -25,7 +25,6 @@ public class EJnoteMaker : MonoBehaviour
         // bpm(beats per minute): 분당 몇 비트의 템포로 연주되는가.
         // 60 / bpm : 한 비트 당 걸리는 시간?
 
-
         if (currentTime >= 3)
         {
             GameObject note = Instantiate(notes[0], noteFactories[0].position + Vector3.forward * -0.5f, Quaternion.identity);
@@ -40,6 +39,7 @@ public class EJnoteMaker : MonoBehaviour
 
     void LongNote()
     {
-        //둘 사이를 라인렌더러로 잇는다.
+        //01. 둘 사이를 라인렌더러로 잇는다.
+        //02. rectangle의 세로 길이와 누른 Length를 연동한다.
     }
 }

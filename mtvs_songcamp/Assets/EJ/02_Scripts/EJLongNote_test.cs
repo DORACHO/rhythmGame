@@ -11,15 +11,18 @@ public class EJLongNote_test : MonoBehaviour
     double currentTime = 0;
     LineRenderer lr;
 
+    float firstNoteTime = 1;
+    float endNoteTime = 6;
+    bool isStartNoteDone;
+
+    GameObject startNote;
+    GameObject endNote;
+
     // Start is called before the first frame update
     void Start()
     {
         lr = note.GetComponent<LineRenderer>();  
     }
-
-    float firstNoteTime = 1;
-    float endNoteTime = 6;
-    bool isStartNoteDone;
 
     // Update is called once per frame
     void Update()
@@ -30,27 +33,28 @@ public class EJLongNote_test : MonoBehaviour
         {
             if (!isStartNoteDone)
             {
-                isStartNoteDone = true;
-
-                GameObject startNote = Instantiate(note, noteFactory.position + Vector3.forward * (-0.5f), Quaternion.identity);              
+                startNote = Instantiate(note, noteFactory.position + Vector3.forward * (-0.5f), Quaternion.identity);              
                 startNote.transform.forward = note.transform.forward;
                 //note.transform.SetParent(noteFactory.transform);
 
-                lr.SetPosition(0, startNote.transform.position);
             }
+                lr.SetPosition(0, startNote.transform.position);           
+                isStartNoteDone = true;
         }
+        
+        //setPosition 할 때 까지 계속 그려줘야 한다.
 
         if (currentTime >= endNoteTime)
         {
             if (isStartNoteDone)
             {
-                isStartNoteDone = false;
-
-                GameObject endNote = Instantiate(note, noteFactory.position + Vector3.forward * (-0.5f), Quaternion.identity);
+                endNote = Instantiate(note, noteFactory.position + Vector3.forward * (-0.5f), Quaternion.identity);
                 endNote.transform.forward = note.transform.forward;
                 //note.transform.SetParent(noteFactory.transform);
 
                 lr.SetPosition(1, endNote.transform.position);
+               
+                isStartNoteDone = false;
                 currentTime -= endNoteTime;
             }
         }
