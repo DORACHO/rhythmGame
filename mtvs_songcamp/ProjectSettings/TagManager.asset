@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Note
+  - linkNote
+  - startNote
+  - endNote
   layers:
   - Default
   - TransparentFX

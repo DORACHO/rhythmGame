@@ -15,6 +15,7 @@ public class EJTouchPad : MonoBehaviour
     float zoneGreat = 0.75f;
     float zoneExcellent = 0.25f;
 
+    public bool isTriggered;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,8 @@ public class EJTouchPad : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("touchpad에 triggerEnter된 것은" + other.gameObject);
+        isTriggered = true;
+        //print("touchpad에 triggerEnter된 것은" + other.gameObject);
         //touchpad 빛나기?
     }
     private void OnTriggerStay(Collider other)
@@ -75,13 +77,23 @@ public class EJTouchPad : MonoBehaviour
             }
         }
         #endregion
-        
-        
+
+        #region keepTouch
+
+        //if (other.gameObject.CompareTag("linkNote"))
+        //{
+        //    float length = touchpads[0].transform.position.y - other.gameObject.transform.position.y;
+        //    other.gameObject.transform.localScale -= new Vector3(0, length, 0);
+        //    //frame밖으로 나가면 되니까 안해줘도 되는 부분인 거 같긴 함
+        //}
+
+        #endregion
     }
 
     private void OnTriggerExit(Collider other)
     {
-        print("touchpad에 triggerExit된 것은"+ other.gameObject);
+        isTriggered = false;
+        //print("touchpad에 triggerExit된 것은"+ other.gameObject);
 
         if (other.CompareTag("Note"))
         {
@@ -99,7 +111,4 @@ public class EJTouchPad : MonoBehaviour
         Destroy(miss, 0.5f);
 
     }
-
-
-
 }
