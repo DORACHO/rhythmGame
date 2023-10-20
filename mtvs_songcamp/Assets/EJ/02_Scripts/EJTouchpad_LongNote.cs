@@ -35,6 +35,8 @@ public class EJTouchpad_LongNote : MonoBehaviour
     public Canvas canvas;
     public GameObject missText;
 
+    public Material missMat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -139,6 +141,7 @@ public class EJTouchpad_LongNote : MonoBehaviour
         if (other.CompareTag("startNote") && n == 0)
         {
             missCheck();
+            other.gameObject.GetComponent<MeshRenderer>().material = missMat;
         }
 
         if (other.CompareTag("linkNote") && n == 0)
@@ -171,6 +174,9 @@ public class EJTouchpad_LongNote : MonoBehaviour
             else
             {
                 missCheck();
+                
+                //여기 체크
+                other.gameObject.GetComponent<MeshRenderer>().material = missMat;
             }
 
         }
@@ -180,6 +186,8 @@ public class EJTouchpad_LongNote : MonoBehaviour
     {
         GameObject miss = Instantiate(missText, canvas.transform.position - Vector3.forward, Quaternion.identity);
         miss.transform.SetParent(canvas.transform);
+
+        
 
         Destroy(miss, 3);
     }

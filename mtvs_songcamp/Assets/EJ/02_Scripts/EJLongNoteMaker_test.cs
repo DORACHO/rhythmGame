@@ -62,7 +62,7 @@ public class EJLongNoteMaker_test : MonoBehaviour
                 endNote.tag = "endNote";
 
                 linkLine = Instantiate(linkLinePrefab, (startNote.transform.position + endNote.transform.position) / 2 , Quaternion.identity);
-                //linkLine.transform.SetParent(startNote.transform);
+                linkLine.transform.SetParent(vacantNoteFac);
                 linkLine.tag = "linkNote";
               
                 float length = (endNote.transform.position.y - startNote.transform.position.y);

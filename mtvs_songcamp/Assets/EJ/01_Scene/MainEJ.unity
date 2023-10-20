@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3236,6 +3236,7 @@ MonoBehaviour:
   scoreText: {fileID: 1880996688}
   canvas: {fileID: 1599783460}
   missText: {fileID: 3271136883742011284, guid: 2d85f6fcb980cf446a06da77c2d8630b, type: 3}
+  missMat: {fileID: 2100000, guid: ed95faebe3dc8d148b5f341758ba0795, type: 2}
 --- !u!1 &1476758201
 GameObject:
   m_ObjectHideFlags: 0

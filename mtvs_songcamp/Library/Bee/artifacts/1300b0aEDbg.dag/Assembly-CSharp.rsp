@@ -358,6 +358,7 @@
 "Assets/EJ/02_Scripts/EJLongNoteMaker_test.cs"
 "Assets/EJ/02_Scripts/EJLongNoteScore.cs"
 "Assets/EJ/02_Scripts/EJLongNoteTouchTest.cs"
+"Assets/EJ/02_Scripts/EJMatChange_test.cs"
 "Assets/EJ/02_Scripts/EJMissPad.cs"
 "Assets/EJ/02_Scripts/EJnoteFlow.cs"
 "Assets/EJ/02_Scripts/EJnoteMaker.cs"
