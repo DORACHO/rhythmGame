@@ -13,6 +13,6 @@ public class EJnoteFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition += Vector3.down * Time.deltaTime;
+        transform.localPosition += Vector3.down * 5 * Time.deltaTime;
     }
 }
