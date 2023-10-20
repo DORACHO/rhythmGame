@@ -23,7 +23,7 @@ public class EJLongNoteTouchTest : MonoBehaviour
     public GameObject touchpadmodel;
     EJTouchPad touchpad;
 
-    bool isKeyDown = true;
+    //bool isKeyDown = true;
     Stopwatch stopwatch = new Stopwatch();
 
     // Start is called before the first frame update
@@ -48,7 +48,7 @@ public class EJLongNoteTouchTest : MonoBehaviour
                 long keydownTime = stopwatch.ElapsedMilliseconds;
                 print(keydownTime);
                 print("keydown");
-                isKeyDown = true;
+                //isKeyDown = true;
                 stopwatch.Start();
             }
             else if (Input.GetKey(KeyCode.Alpha0))
@@ -61,7 +61,7 @@ public class EJLongNoteTouchTest : MonoBehaviour
                 long keyupTime = stopwatch.ElapsedMilliseconds;
                 print("keyup");
                 print(keyupTime);
-                isKeyDown = false;
+                //isKeyDown = false;
             }            
         }
         #endregion

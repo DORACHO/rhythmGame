@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 4563475324704490508}
   - component: {fileID: 4563475324704490509}
   - component: {fileID: -2554410294356799854}
+  - component: {fileID: -1986706597641274399}
   - component: {fileID: 6421839488840568810}
   m_Layer: 0
   m_Name: noteDrum
@@ -207,11 +208,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4563475324704490506}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5454fb588c7e4994393c1b3213b8d765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1986706597641274399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563475324704490506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc89d884283a724298d8b497ac07f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    rail: 0
+    type: 0
+    time: 0
+    press_start: 0
+    press_idx: 0
+  bpm: 120
 --- !u!54 &6421839488840568810
 Rigidbody:
   m_ObjectHideFlags: 0
