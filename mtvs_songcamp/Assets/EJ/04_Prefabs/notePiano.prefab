@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 5812008776662071370}
   - component: {fileID: 5494359518952009101}
   - component: {fileID: -2082842815564869777}
+  - component: {fileID: 3731380165351410294}
   m_Layer: 0
   m_Name: notePiano
   m_TagString: Note
@@ -213,7 +214,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -323,11 +324,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8946263236910229840}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5454fb588c7e4994393c1b3213b8d765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3731380165351410294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946263236910229840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc89d884283a724298d8b497ac07f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteInfo:
+    railIdx: 0
+    type: 0
+    time: 0
+    isLongNoteStart: 0
+    press_idx: 0
+  linkNotePrefab: {fileID: 2711432886464089921, guid: cbdf2a3feeecb014bb0246b03456d9b1, type: 3}
 --- !u!1 &8946263237025681888
 GameObject:
   m_ObjectHideFlags: 0

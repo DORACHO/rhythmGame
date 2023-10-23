@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638333022427959848
-    m_Hash: 2911042011
+      ticks: 638333867956814674
+    m_Hash: 1687881702
   m_LockFileStatus:
     m_FilePath: D:/Projects/rhythmGame/mtvs_songcamp/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638333022427991779
-    m_Hash: 1200491308
+      ticks: 638333867956814674
+    m_Hash: 2810482879
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

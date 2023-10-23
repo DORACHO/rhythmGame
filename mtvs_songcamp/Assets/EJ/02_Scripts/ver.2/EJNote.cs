@@ -11,11 +11,15 @@ public class EJNote : MonoBehaviour
     //03.Note_autoDestroy
 
     //01.Note_Flow Variables
-    public int bpm = 120;
+    int bpm = 120;
     float spb;
 
     //02.Note_Connect Variables
     public NoteInfo noteInfo;
+    public GameObject linkNotePrefab;
+    GameObject linkNote;
+    GameObject startN;
+    GameObject endN;
 
     //03.Note_autoDestroy
     public Action<int, EJNote, bool> autoDestroyAction;
@@ -36,38 +40,43 @@ public class EJNote : MonoBehaviour
     {
         //01.Note_Flow
         //===== 수정 필요 ===== note의 speed = bpm
-        transform.position = Vector3.down * Time.deltaTime * spb;
+        transform.position += Vector3.down * Time.deltaTime * 5/* * spb*/;
 
-        //02.Note_autoDestroy
+        //02.Note_autoDestroy isPassed Check
         if (transform.position.y < touchpad.position.y)
         {
             autoDestroy(true);
         }
-        
+
     }
 
     //02.Note_autoDestroy
     public void autoDestroy(bool isPassed = false)
     {
+        //autoDestroyAction Parameter
+        //01. rail_idx
+        //02. noteInfo
+        //03. passDestroy
+
         if (autoDestroyAction != null) autoDestroyAction(noteInfo.railIdx, this, isPassed);
         Destroy(gameObject);
     }
 
     //03.Note_Connect
-    public void connectNote()
+    public void connectNote(GameObject endN)
     {
-        if (noteInfo.type == (int)NoteType.LONG)
-        {
+        print("connectNote가 실행되었습니다");
 
-        }
-        else if (noteInfo.type == (int)NoteType.DRAG)
-        {
+        startN = this.gameObject;
 
-        }
+        if (endN == null) return;
+
+        linkNote = Instantiate(linkNotePrefab, (startN.transform.position + endN.transform.position) / 2, Quaternion.identity);
+
+        linkNote.transform.SetParent(startN.transform);
+
+        float length = (endN.transform.localPosition.y - startN.transform.localPosition.y);
+        linkNote.transform.localScale += new Vector3(0, length, 0);
+
     }
-
-    //note만들기 함수
-    //noteType분별해서 만들기 구분
-
-    //NoteMaker Script에서 함수 호출
 }

@@ -225,13 +225,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc89d884283a724298d8b497ac07f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info:
-    rail: 0
+  noteInfo:
+    railIdx: 0
     type: 0
     time: 0
-    press_start: 0
+    isLongNoteStart: 0
     press_idx: 0
-  bpm: 120
+  linkNotePrefab: {fileID: 2711432886464089921, guid: cbdf2a3feeecb014bb0246b03456d9b1, type: 3}
 --- !u!54 &6421839488840568810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

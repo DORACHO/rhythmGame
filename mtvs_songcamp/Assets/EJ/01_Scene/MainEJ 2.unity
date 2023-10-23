@@ -806,6 +806,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492973347}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &568990122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568990123}
+  - component: {fileID: 568990124}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &568990123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568990122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.1434507, y: 1.0008371, z: 0.4616593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &568990124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568990122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8575663293e248c4287ed33cbdb7d8ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textScore: {fileID: 1880996688}
 --- !u!1 &574634384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1677,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notePrefabs:
   - {fileID: 4563475324704490506, guid: a5dbded4966afd34c9102e054fd63d5c, type: 3}
-  noteSpawnPos:
+  - {fileID: 8946263236910229840, guid: 616f6090790b24f4387ec8a115e0193e, type: 3}
+  - {fileID: 5119678665360020807, guid: cff4bdd6e403baa47a898b55cd0c0401, type: 3}
+  - {fileID: 1433315881158573589, guid: 804271bd9ec2c2842ae4ce3c60e8ad27, type: 3}
+  noteSpawnRail:
   - {fileID: 2140195094}
   - {fileID: 492973348}
   - {fileID: 52916350}
@@ -1646,6 +1694,13 @@ MonoBehaviour:
   - {fileID: 143022921}
   - {fileID: 1528191776}
   - {fileID: 84683591}
+  canvas: {fileID: 1599783460}
+  scoreTexts:
+  - {fileID: 1135454251485591376, guid: 8ed54d22cb0f7e247b16be16a6d3ab53, type: 3}
+  - {fileID: 3271136883742011284, guid: 770edd5676a793241a94a522ddd61b53, type: 3}
+  - {fileID: 1931420887434705749, guid: af915dd60fa780f40957f967ef7f65df, type: 3}
+  - {fileID: 5118348788227531741, guid: e150f902b0b8aa24e8373ca3c349e3b7, type: 3}
+  - {fileID: 3271136883742011284, guid: a7f9bb1a971d7514bb36e92e8f28c9cc, type: 3}
 --- !u!1 &1339689893
 GameObject:
   m_ObjectHideFlags: 0
