@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 //01. Note_Instantiate & Destroy
-//02. Note_pressCheck & scoreCheck
+//02. scoreCheck
 
 public class EJNoteManager : MonoBehaviour
 {
@@ -144,21 +144,31 @@ public class EJNoteManager : MonoBehaviour
         }
         #endregion
 
-        //02-1.Note_pressCheck
-        #region TouchPad - PressCheck (0,1,2,3,4,5 ~ a,s,d,j,k,l)
-        //0,1,2,3,4,5 ~ a,s,d,j,k,l
+        //02-1.scoreCheck
+        #region scoreCheck by touchPhase
 
-        //keyDown
-
-        //여기까지만 되는지 체크?
         if (Input.touchCount > 0)
         {
             for (int i = 0; i < Input.touchCount; i++)
-            {
+            {           
                 touch = Input.GetTouch(i);
+                //touch의 pad의 index
 
                 Ray ray = Camera.main.ScreenPointToRay(touch.position);
                 RaycastHit hitInfo;
+
+                if (phase == TouchPhase.Began)
+                {
+                    
+                }
+                if (phase == TouchPhase.Moved)
+                {
+
+                }
+                if(phase == TouchPhase.Ended)                 
+                { 
+                
+                }
 
 
                 if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
@@ -181,88 +191,8 @@ public class EJNoteManager : MonoBehaviour
                         }
                     }
                 }
-
-                //if (phase == TouchPhase.Began)
-                //{
-                //    if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
-                //    {
-                //        for (int j = 0; j < touchpads.Length; j++)
-                //        {
-                //            if (hitInfo.transform.gameObject == touchpads[j].gameObject)
-                //            {
-                //                isPressDown(j);
-                //                touchpads[j].GetComponent<MeshRenderer>().enabled = true;
-                //            }
-                //        }
-                //    }
-                //}
-
-                //if (phase == TouchPhase.Ended)
-                //{
-                //    if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
-                //    {
-                //        for (int j = 0; j < touchpads.Length; j++)
-                //        {
-                //            if (hitInfo.transform.gameObject == touchpads[j].gameObject)
-                //            {
-                //                isPressUp(j);
-                //                touchpads[j].GetComponent<MeshRenderer>().enabled = false;
-                //            }
-                //        }
-                //    }
-                //}
             }
         }
-
-
-
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit hitInfo;
-
-
-        //    for (int i = 0; i < touchpads.Length; i++)
-        //    {
-        //        if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
-        //        {
-
-        //            print("눌렀을 때 hitInfo는" + hitInfo.transform.gameObject.name);
-        //            for (int j = 0; j < touchpads.Length; j++)
-        //            {
-        //                if (hitInfo.transform.gameObject == touchpads[j].gameObject)
-        //                {
-        //                    isPressDown(j);
-        //                    touchpads[j].GetComponent<MeshRenderer>().enabled = true;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit hitInfo;
-
-        //    for (int i = 0; i < touchpads.Length; i++)
-        //    {
-        //        if (Physics.Raycast(ray, out hitInfo, 100f, 1<<LayerMask.NameToLayer("touchPad")))
-        //        {
-        //            print("뗐을 때 hitInfo는" + hitInfo.transform.gameObject.name);
-
-        //            for (int j = 0; j < touchpads.Length; j++)
-        //            {
-        //                if (hitInfo.transform.gameObject == touchpads[j].gameObject)
-        //                {
-        //                    isPressUp(j);
-        //                    touchpads[j].GetComponent<MeshRenderer>().enabled = false;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
 
         //if (Input.GetKeyDown(KeyCode.A))
         //{
