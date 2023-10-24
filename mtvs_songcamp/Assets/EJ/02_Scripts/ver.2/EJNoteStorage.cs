@@ -27,7 +27,8 @@ public struct NoteInfo
     //longNote일때 start이면 true, end이면 false
     public bool isLongNoteStart;
 
-    //dragNote일 때 line, idxNote
+    //dragNote일 때 눌린 rail의 idx?
+    //dragNote일 때 지나간 rail idx?
     public int press_idx;
 }
 

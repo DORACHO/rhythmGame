@@ -60,6 +60,7 @@ public class EJNote : MonoBehaviour
 
         if (autoDestroyAction != null) autoDestroyAction(noteInfo.railIdx, this, isPassed);
         Destroy(gameObject);
+
     }
 
     //03.Note_Connect
@@ -73,7 +74,7 @@ public class EJNote : MonoBehaviour
 
         linkNote = Instantiate(linkNotePrefab, (startN.transform.position + endN.transform.position) / 2, Quaternion.identity);
 
-        linkNote.transform.SetParent(startN.transform);
+        linkNote.transform.SetParent(endN.transform);
 
         float length = (endN.transform.localPosition.y - startN.transform.localPosition.y);
         linkNote.transform.localScale += new Vector3(0, length, 0);

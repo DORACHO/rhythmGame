@@ -68,6 +68,7 @@
     <Compile Include="Assets\EJ\02_Scripts\Tutorial\Note.cs" />
     <Compile Include="Assets\EJ\02_Scripts\Tutorial\TimingManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJDragTest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJnoteMakerOld.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />

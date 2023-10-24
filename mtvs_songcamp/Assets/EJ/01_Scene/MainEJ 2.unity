@@ -540,8 +540,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143022920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08333334, y: 0, z: 0}
-  m_LocalScale: {x: 0.16666669, y: 1, z: 1}
+  m_LocalPosition: {x: 0.08333335, y: 0, z: 0}
+  m_LocalScale: {x: 0.1666667, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1781747347}
@@ -851,6 +851,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textScore: {fileID: 1880996688}
+  canvas: {fileID: 1599783460}
+  scoreTexts:
+  - {fileID: 1135454251485591376, guid: 8ed54d22cb0f7e247b16be16a6d3ab53, type: 3}
+  - {fileID: 3271136883742011284, guid: 770edd5676a793241a94a522ddd61b53, type: 3}
+  - {fileID: 1931420887434705749, guid: af915dd60fa780f40957f967ef7f65df, type: 3}
+  - {fileID: 5118348788227531741, guid: e150f902b0b8aa24e8373ca3c349e3b7, type: 3}
+  - {fileID: 3271136883742011284, guid: a7f9bb1a971d7514bb36e92e8f28c9cc, type: 3}
+  - {fileID: 3271136883742011284, guid: 108dacceee722d4488ffe0f5a54a0c48, type: 3}
 --- !u!1 &574634384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,6 +1702,7 @@ MonoBehaviour:
   - {fileID: 143022921}
   - {fileID: 1528191776}
   - {fileID: 84683591}
+  missMat: {fileID: 2100000, guid: ed95faebe3dc8d148b5f341758ba0795, type: 2}
   canvas: {fileID: 1599783460}
   scoreTexts:
   - {fileID: 1135454251485591376, guid: 8ed54d22cb0f7e247b16be16a6d3ab53, type: 3}
@@ -1701,6 +1710,9 @@ MonoBehaviour:
   - {fileID: 1931420887434705749, guid: af915dd60fa780f40957f967ef7f65df, type: 3}
   - {fileID: 5118348788227531741, guid: e150f902b0b8aa24e8373ca3c349e3b7, type: 3}
   - {fileID: 3271136883742011284, guid: a7f9bb1a971d7514bb36e92e8f28c9cc, type: 3}
+  - {fileID: 3271136883742011284, guid: 108dacceee722d4488ffe0f5a54a0c48, type: 3}
+  - {fileID: 3271136883742011284, guid: 861f6d2e8fd60e74f95993e1388e8432, type: 3}
+  - {fileID: 3271136883742011284, guid: e64f93a69fe0de64984cb7bd457c137b, type: 3}
 --- !u!1 &1339689893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,6 +3124,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880996686}
   m_CullTransparentMesh: 1
+--- !u!1 &2052211581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052211582}
+  - component: {fileID: 2052211583}
+  m_Layer: 0
+  m_Name: dragTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052211582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052211581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.1434507, y: 1.0008371, z: 0.4616593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2052211583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052211581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6ab02ca2c6eff45ac3f5caa2019ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchpads:
+  - {fileID: 143022920}
+  - {fileID: 1528191775}
+  - {fileID: 84683590}
+  canvas: {fileID: 1599783460}
+  scoreTexts: {fileID: 3271136883742011284, guid: e64f93a69fe0de64984cb7bd457c137b, type: 3}
 --- !u!1 &2140195093
 GameObject:
   m_ObjectHideFlags: 0

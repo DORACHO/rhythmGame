@@ -355,6 +355,7 @@
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/EJ/02_Scripts/EJDragNote_test.cs"
+"Assets/EJ/02_Scripts/EJDragTest.cs"
 "Assets/EJ/02_Scripts/EJLongNoteMaker_test.cs"
 "Assets/EJ/02_Scripts/EJLongNoteScore.cs"
 "Assets/EJ/02_Scripts/EJLongNoteTouchTest.cs"

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,9 +14,9 @@ public class EJNoteManager : MonoBehaviour
     public Transform[] noteSpawnRail;
     public Transform[] touchpads;
 
+    GameObject note;
     GameObject startNote;
     GameObject endNote;
-    bool isBothMade;
 
     const int railCount = 6;
     float currTime;
@@ -31,6 +32,10 @@ public class EJNoteManager : MonoBehaviour
     //02. Note_pressCheck
     bool[] isTouchPadPressed = new bool[railCount];
 
+    int dragRailPressCount;
+
+    public Material missMat;
+
     //03. scoreCheck;
     float badZone = 2.9f;
     float goodZone = 2f;
@@ -42,6 +47,8 @@ public class EJNoteManager : MonoBehaviour
     int greatScore = 3;
     int excellentScore = 5;
     int missScore = -1;
+
+    float pressScore = 1;
 
     public Canvas canvas;
     public GameObject[] scoreTexts;
@@ -55,7 +62,7 @@ public class EJNoteManager : MonoBehaviour
             noteInstance_Rails[i] = new List<EJNote>();
         }
 
-        InputTestSHORTNotes();
+        //InputTestSHORTNotes();    //test FINISHED!!!
         //InputTestLONGNotes();
         //InputTestDRAGNote();
     }
@@ -79,7 +86,7 @@ public class EJNoteManager : MonoBehaviour
                 {
                     //Note_Instantiate by NoteType, SpawnRail
                     //01-1-1.NoteType_SHORT
-                    GameObject note = Instantiate(notePrefabs[noteInfo_Rails[i][0].type], noteSpawnRail[i].position + Vector3.forward * (-0.5f), Quaternion.identity);
+                    note = Instantiate(notePrefabs[noteInfo_Rails[i][0].type], noteSpawnRail[i].position + Vector3.forward * (-0.5f), Quaternion.identity);
 
                     note.transform.forward = notePrefabs[0].transform.forward;
                     note.transform.SetParent(noteSpawnRail[0].transform);
@@ -106,7 +113,8 @@ public class EJNoteManager : MonoBehaviour
                             if (startNoteArr[i] != null)
                             {
                                 print("LongNote의 endNote입니다");
-                                endNote = noteInstance.gameObject;
+                                endNote = noteInstance.gameObject;                 
+
                                 print("endNote에 담긴 것은" + endNote.gameObject);
                                 startNote.GetComponent<EJNote>().connectNote(endNote);
                                 
@@ -121,8 +129,9 @@ public class EJNoteManager : MonoBehaviour
                     {
                         //Pass without Press
                         if (isPassed) isTouchPadPressed[railIdx] = false;
-                        //Pass >> remove from List
+                        //Pass >> remove from List                                                                             
                         noteInstance_Rails[railIdx].Remove(noteInfo);
+                        showScoreText(4);
                     };
                     
                     //Instantiated되면 대기열에서 지워주기
@@ -208,29 +217,60 @@ public class EJNoteManager : MonoBehaviour
         #endregion
 
         //02-2.Note_pressCheck + scoreCheck
-        #region 02. Note_pressCheck
+        #region 02. Note_scoreCheck
 
-        // 02-2-1. KeyEvent check : keyDown = true
+        // 02-2-1. scoreCheck for LONG & DRAG Note //KeyEvent check : keyDown = true
         for (int i = 0; i < isTouchPadPressed.Length; i++)
         {
+
+            //판정 범위 내에서 누르기 시작하면 isTouchPadPressed == true
+            //keyUp, 즉 isTouchPadPressed == false가 되기 전까지 1frame씩 Update
             if (isTouchPadPressed[i] == true)
             {
-                //무슨 경우지?
+                //longNote라면 누르고 있으면 되도록
+                if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.LONG) 
+                {
+                    print("longNote가 계속 눌리고 있다");
+                    //점수 계속 증가 
+                    EJScoreManager.instance.SCORE += pressScore * Time.deltaTime;
+
+                    for (int j = 0; j < noteInstance_Rails[i][0].gameObject.GetComponents<MeshRenderer>().Length; j++)
+                    {
+                        noteInstance_Rails[i][0].gameObject.GetComponents<MeshRenderer>()[j].material = missMat;
+                        print("점수 Pad 판정 범위 내에서 누르기 시작했다.");
+                        showScoreText(5);
+                    }
+                }else if(note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_LEFT || note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_RIGHT)
+                {
+                    print(dragRailPressCount + "dragRailCount는 이래요");
+                    if (dragRailPressCount == 3)
+                    {
+                        showScoreText(7);
+                        
+                    }
+                }
+                //dragNote라면 세 개 차례로 눌리는 지 확인
             }
         }
+        
+        //???????
+        // 02-2-2. scoreCheck for LONG & DRAG Note //KeyEvent check : keyDown = false(keyUP일때)
 
-        // 02-2-2. KeyEvent check : before anyNote Instantiated
         for (int i = 0; i < noteInstance_Rails.Length; i++)
         {
             //Before any Note Instantiated 
+            //??? 이 줄이 모르겠음.
             if (noteInstance_Rails[i].Count == 0) continue;
 
+            //longNote's endNote
             //Note Not Pressed && TouchPad Not Pressed 
             if (noteInstance_Rails[i][0].noteInfo.type == (int)NoteType.LONG && noteInstance_Rails[i][0].noteInfo.isLongNoteStart == false)
             {
+                //endNote가 지나가도록 눌리지 않았다면 miss 판정을 한다.
                 if (isTouchPadPressed[i] == false)
                 {
                     //score: Miss
+                    showScoreText(4);
                 }
             }
         }
@@ -250,7 +290,7 @@ public class EJNoteManager : MonoBehaviour
             //scoreCheck by NoteCheck
 
             //01.SHORT Note scoreCheck
-
+            #region SHORT check
             if (firstNoteInfo.type == (int)NoteType.SHORT)
             {
                 //01.excellentZone
@@ -286,23 +326,39 @@ public class EJNoteManager : MonoBehaviour
                 }
             }
 
+            #endregion
 
-            //02.longNote scoreCheck
+            //02.LONG Note scoreCheck
             //KeyDown >> isTouchPadPress = true
-            //press_start???
+
+            #region LONG && DRAG check Start
+
             if (firstNoteInfo.type == (int)NoteType.LONG && firstNoteInfo.isLongNoteStart == true)
             {
                 //누르기 시작
-                isTouchPadPressed[n] = true;
+                if (dist < badZone)
+                {
+                    isTouchPadPressed[n] = true;                    
+                }
+            }
+            else if (firstNoteInfo.type == (int)NoteType.DRAG_RIGHT || firstNoteInfo.type == (int)NoteType.DRAG_LEFT) 
+            {
+                if (dist < badZone)
+                {
+                    isTouchPadPressed[n] = true;
+                    dragRailPressCount++;
+                }
             }
             else
             {
-                //성공???
-                //왜지?
+                //shortNote scoreCheck 여기서 가능
             }
+
+            #endregion
 
             //isPassed: No Any KeyEvent 
             noteInstance_Rails[n][0].autoDestroy();
+
         }
     }
 
@@ -312,19 +368,25 @@ public class EJNoteManager : MonoBehaviour
         //Song Start && After Note Instantiated
         if (noteInstance_Rails[n].Count > 0)
         {
-            //
+            //LONG note의 endNote가 아니라면 return 하기!
             if (!(noteInstance_Rails[n][0].noteInfo.type == (int)NoteType.LONG && noteInstance_Rails[n][0].noteInfo.isLongNoteStart == false)) return;
 
             //02.LongNote scoreCheck
+            //keyUp을 touchPad에서 떨어진 지점에서 떼면 miss
+
             float dist = Mathf.Abs(noteInstance_Rails[n][0].transform.position.y - touchpads[n].position.y);
 
             if (dist < 0.4f)
             {
                 if (isTouchPadPressed[n])
                 {
+                    showScoreText(6);
                     //PressDestroy
                     noteInstance_Rails[n][0].autoDestroy();
                 }
+            }else if (dist > badZone)
+            {
+                showScoreText(4);
             }
         }
     }
@@ -530,6 +592,7 @@ public class EJNoteManager : MonoBehaviour
     #endregion
 
 
+    //scoreManager Script로 이전
     void showScoreText(int n)
     {
         GameObject scoreText = Instantiate(scoreTexts[n], canvas.transform.position - Vector3.forward, Quaternion.identity);
