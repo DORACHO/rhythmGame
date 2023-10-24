@@ -27,12 +27,14 @@ public class EJNoteManager : MonoBehaviour
 
     //01-2.Hierarchy - instance noteData
     List<EJNote>[] noteInstance_Rails = new List<EJNote>[railCount];
-    EJNote [] startNoteArr = new EJNote[railCount];
+    EJNote[] startNoteArr = new EJNote[railCount];
 
     //02. Note_pressCheck
     bool[] isTouchPadPressed = new bool[railCount];
+    bool[] isDragPressed = new bool[railCount];
 
-    int dragRailPressCount;
+    Touch touch;
+    TouchPhase phase;
 
     public Material missMat;
 
@@ -63,8 +65,8 @@ public class EJNoteManager : MonoBehaviour
         }
 
         //InputTestSHORTNotes();    //test FINISHED!!!
-        //InputTestLONGNotes();
-        //InputTestDRAGNote();
+        //InputTestLONGNotes();     //test FINISHED_1차!!!
+        InputTestDRAGNote();
     }
 
     void Update()
@@ -90,7 +92,7 @@ public class EJNoteManager : MonoBehaviour
 
                     note.transform.forward = notePrefabs[0].transform.forward;
                     note.transform.SetParent(noteSpawnRail[0].transform);
-                    
+
                     EJNote firstNoteInstance = note.GetComponent<EJNote>();
                     firstNoteInstance.noteInfo = noteInfo_Rails[i][0];
                     noteInstance_Rails[i].Add(firstNoteInstance);
@@ -107,17 +109,18 @@ public class EJNoteManager : MonoBehaviour
                             print("LongNote의 StartNote입니다");
                             startNoteArr[i] = noteInstance;
                             startNote = noteInstance.gameObject;
-                            
-                        }else
+
+                        }
+                        else
                         {
                             if (startNoteArr[i] != null)
                             {
                                 print("LongNote의 endNote입니다");
-                                endNote = noteInstance.gameObject;                 
+                                endNote = noteInstance.gameObject;
 
                                 print("endNote에 담긴 것은" + endNote.gameObject);
                                 startNote.GetComponent<EJNote>().connectNote(endNote);
-                                
+
                                 //startNote[] remove
                                 startNoteArr[i] = null;
                             }
@@ -133,7 +136,7 @@ public class EJNoteManager : MonoBehaviour
                         noteInstance_Rails[railIdx].Remove(noteInfo);
                         showScoreText(4);
                     };
-                    
+
                     //Instantiated되면 대기열에서 지워주기
                     noteInfo_Rails[i].RemoveAt(0);
                 }
@@ -146,73 +149,188 @@ public class EJNoteManager : MonoBehaviour
         //0,1,2,3,4,5 ~ a,s,d,j,k,l
 
         //keyDown
-        if (Input.GetKeyDown(KeyCode.A))
+
+        //여기까지만 되는지 체크?
+        if (Input.touchCount > 0)
         {
-            isPressDown(0);
-            touchpads[0].GetComponent<MeshRenderer>().enabled = true;
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                touch = Input.GetTouch(i);
+
+                Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                RaycastHit hitInfo;
+
+
+                if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                {
+                    for (int j = 0; j < touchpads.Length; j++)
+                    {
+                        if (hitInfo.transform.gameObject == touchpads[j].gameObject)
+                        {
+                            if (phase == TouchPhase.Began)
+                            {
+                                isPressDown(j);
+                                touchpads[j].GetComponent<MeshRenderer>().enabled = true;
+                            }
+
+                            if (phase == TouchPhase.Ended)
+                            {
+                                isPressUp(j);
+                                touchpads[j].GetComponent<MeshRenderer>().enabled = false;
+                            }
+                        }
+                    }
+                }
+
+                //if (phase == TouchPhase.Began)
+                //{
+                //    if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                //    {
+                //        for (int j = 0; j < touchpads.Length; j++)
+                //        {
+                //            if (hitInfo.transform.gameObject == touchpads[j].gameObject)
+                //            {
+                //                isPressDown(j);
+                //                touchpads[j].GetComponent<MeshRenderer>().enabled = true;
+                //            }
+                //        }
+                //    }
+                //}
+
+                //if (phase == TouchPhase.Ended)
+                //{
+                //    if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                //    {
+                //        for (int j = 0; j < touchpads.Length; j++)
+                //        {
+                //            if (hitInfo.transform.gameObject == touchpads[j].gameObject)
+                //            {
+                //                isPressUp(j);
+                //                touchpads[j].GetComponent<MeshRenderer>().enabled = false;
+                //            }
+                //        }
+                //    }
+                //}
+            }
         }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            isPressDown(1);
-            touchpads[1].GetComponent<MeshRenderer>().enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            isPressDown(2);
-            touchpads[2].GetComponent<MeshRenderer>().enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            isPressDown(3);
-            touchpads[3].GetComponent<MeshRenderer>().enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            isPressDown(4);
-            touchpads[4].GetComponent<MeshRenderer>().enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            isPressDown(5);
-            touchpads[5].GetComponent<MeshRenderer>().enabled = true;
-        }
-        //keyUp
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            isPressUp(0);
-            isTouchPadPressed[0] = false;
-            touchpads[0].GetComponent<MeshRenderer>().enabled = false;
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            isPressUp(1);
-            isTouchPadPressed[1] = false;
-            touchpads[1].GetComponent<MeshRenderer>().enabled = false;
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            isPressUp(2);
-            isTouchPadPressed[2] = false;
-            touchpads[2].GetComponent<MeshRenderer>().enabled = false;
-        }
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            isPressUp(3);
-            isTouchPadPressed[3] = false;
-            touchpads[3].GetComponent<MeshRenderer>().enabled = false;
-        }
-        if (Input.GetKeyUp(KeyCode.K))
-        {
-            isPressUp(4);
-            isTouchPadPressed[4] = false;
-            touchpads[4].GetComponent<MeshRenderer>().enabled = false;
-        }
-        if (Input.GetKeyUp(KeyCode.L))
-        {
-            isPressUp(5);
-            isTouchPadPressed[5] = false;
-            touchpads[5].GetComponent<MeshRenderer>().enabled = false;
-        }
+
+
+
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hitInfo;
+
+
+        //    for (int i = 0; i < touchpads.Length; i++)
+        //    {
+        //        if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+        //        {
+
+        //            print("눌렀을 때 hitInfo는" + hitInfo.transform.gameObject.name);
+        //            for (int j = 0; j < touchpads.Length; j++)
+        //            {
+        //                if (hitInfo.transform.gameObject == touchpads[j].gameObject)
+        //                {
+        //                    isPressDown(j);
+        //                    touchpads[j].GetComponent<MeshRenderer>().enabled = true;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hitInfo;
+
+        //    for (int i = 0; i < touchpads.Length; i++)
+        //    {
+        //        if (Physics.Raycast(ray, out hitInfo, 100f, 1<<LayerMask.NameToLayer("touchPad")))
+        //        {
+        //            print("뗐을 때 hitInfo는" + hitInfo.transform.gameObject.name);
+
+        //            for (int j = 0; j < touchpads.Length; j++)
+        //            {
+        //                if (hitInfo.transform.gameObject == touchpads[j].gameObject)
+        //                {
+        //                    isPressUp(j);
+        //                    touchpads[j].GetComponent<MeshRenderer>().enabled = false;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    isPressDown(0);
+        //    touchpads[0].GetComponent<MeshRenderer>().enabled = true;
+        //}
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    isPressDown(1);
+        //    touchpads[1].GetComponent<MeshRenderer>().enabled = true;
+        //}
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    isPressDown(2);
+        //    touchpads[2].GetComponent<MeshRenderer>().enabled = true;
+        //}
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    isPressDown(3);
+        //    touchpads[3].GetComponent<MeshRenderer>().enabled = true;
+        //}
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    isPressDown(4);
+        //    touchpads[4].GetComponent<MeshRenderer>().enabled = true;
+        //}
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    isPressDown(5);
+        //    touchpads[5].GetComponent<MeshRenderer>().enabled = true;
+        //}
+        ////keyUp
+        //if (Input.GetKeyUp(KeyCode.A))
+        //{
+        //    isPressUp(0);
+        //    isTouchPadPressed[0] = false;
+        //    touchpads[0].GetComponent<MeshRenderer>().enabled = false;
+        //}
+        //if (Input.GetKeyUp(KeyCode.S))
+        //{
+        //    isPressUp(1);
+        //    isTouchPadPressed[1] = false;
+        //    touchpads[1].GetComponent<MeshRenderer>().enabled = false;
+        //}
+        //if (Input.GetKeyUp(KeyCode.D))
+        //{
+        //    isPressUp(2);
+        //    isTouchPadPressed[2] = false;
+        //    touchpads[2].GetComponent<MeshRenderer>().enabled = false;
+        //}
+        //if (Input.GetKeyUp(KeyCode.J))
+        //{
+        //    isPressUp(3);
+        //    isTouchPadPressed[3] = false;
+        //    touchpads[3].GetComponent<MeshRenderer>().enabled = false;
+        //}
+        //if (Input.GetKeyUp(KeyCode.K))
+        //{
+        //    isPressUp(4);
+        //    isTouchPadPressed[4] = false;
+        //    touchpads[4].GetComponent<MeshRenderer>().enabled = false;
+        //}
+        //if (Input.GetKeyUp(KeyCode.L))
+        //{
+        //    isPressUp(5);
+        //    isTouchPadPressed[5] = false;
+        //    touchpads[5].GetComponent<MeshRenderer>().enabled = false;
+        //}
 
         #endregion
 
@@ -224,11 +342,12 @@ public class EJNoteManager : MonoBehaviour
         {
 
             //판정 범위 내에서 누르기 시작하면 isTouchPadPressed == true
-            //keyUp, 즉 isTouchPadPressed == false가 되기 전까지 1frame씩 Update
+            //keyUp, 즉 isTouchPadPressed == false가 되기 전까지 1 frame씩 Update
             if (isTouchPadPressed[i] == true)
             {
+                //print("현재note의 type은" + note.GetComponent<EJNote>().noteInfo.type);
                 //longNote라면 누르고 있으면 되도록
-                if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.LONG) 
+                if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.LONG)
                 {
                     print("longNote가 계속 눌리고 있다");
                     //점수 계속 증가 
@@ -240,19 +359,52 @@ public class EJNoteManager : MonoBehaviour
                         print("점수 Pad 판정 범위 내에서 누르기 시작했다.");
                         showScoreText(5);
                     }
-                }else if(note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_LEFT || note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_RIGHT)
-                {
-                    print(dragRailPressCount + "dragRailCount는 이래요");
-                    if (dragRailPressCount == 3)
-                    {
-                        showScoreText(7);
-                        
-                    }
                 }
-                //dragNote라면 세 개 차례로 눌리는 지 확인
+                else if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_RIGHT)
+                {
+                    if (isDragPressed[i] == true)
+                    {
+                        print("drag_right고" + i + "번쨰가 눌렸다");
+                        if (isDragPressed[i + 1] == true)
+                        {
+                            print("drag_right고" + (i + 1) + "번쨰가 눌렸다");
+                            if (isDragPressed[i + 2] == true)
+                            {
+                                print("drag_right고" + (i + 2) + "번쨰가 눌렸다");
+                                showScoreText(7);
+
+                            }
+                        }
+                    }
+                    isDragPressed[i] = false;
+                    isDragPressed[i + 1] = false;
+                    isDragPressed[i + 2] = false;
+                }
+                else if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_LEFT)
+                {
+                    if (isDragPressed[i] == true)
+                    {
+                        print("drag_left이고" + i + "번쨰가 눌렸다");
+                        if (isDragPressed[i - 1] == true)
+                        {
+                            print("drag_left이고" + (i - 1) + "번쨰가 눌렸다");
+                            if (isDragPressed[i - 2] == true)
+                            {
+                                print("drag_left이고" + (i - 2) + "번쨰가 눌렸다");
+                                showScoreText(7);
+                            }
+                        }
+                    }
+                    isDragPressed[i] = false;
+                    isDragPressed[i - 1] = false;
+                    isDragPressed[i - 2] = false;
+                }
             }
+
+
+
         }
-        
+
         //???????
         // 02-2-2. scoreCheck for LONG & DRAG Note //KeyEvent check : keyDown = false(keyUP일때)
 
@@ -338,15 +490,15 @@ public class EJNoteManager : MonoBehaviour
                 //누르기 시작
                 if (dist < badZone)
                 {
-                    isTouchPadPressed[n] = true;                    
+                    isTouchPadPressed[n] = true;
                 }
             }
-            else if (firstNoteInfo.type == (int)NoteType.DRAG_RIGHT || firstNoteInfo.type == (int)NoteType.DRAG_LEFT) 
+            else if (firstNoteInfo.type == (int)NoteType.DRAG_RIGHT || firstNoteInfo.type == (int)NoteType.DRAG_LEFT)
             {
                 if (dist < badZone)
                 {
                     isTouchPadPressed[n] = true;
-                    dragRailPressCount++;
+                    isDragPressed[n] = true;
                 }
             }
             else
@@ -384,7 +536,8 @@ public class EJNoteManager : MonoBehaviour
                     //PressDestroy
                     noteInstance_Rails[n][0].autoDestroy();
                 }
-            }else if (dist > badZone)
+            }
+            else if (dist > badZone)
             {
                 showScoreText(4);
             }
