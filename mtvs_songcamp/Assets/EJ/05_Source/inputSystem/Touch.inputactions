@@ -1,0 +1,107 @@
+{
+    "name": "Touch",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "3d2b86be-5f65-40c6-bef1-6ebaba6100b6",
+            "actions": [
+                {
+                    "name": "Touch_began",
+                    "type": "Button",
+                    "id": "2643b0dd-cd19-4788-9864-ace8ca236c83",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Touch_moved",
+                    "type": "Button",
+                    "id": "384fb3cb-575d-4562-9d22-78959dd09942",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Touch_ended",
+                    "type": "Button",
+                    "id": "18350f52-0eb4-473a-9cb4-1b65b4e40e67",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1d7a11dd-1602-45f9-adc3-a41a89472a53",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_began",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f6431cb-2876-4e91-bbc3-197b91fabf67",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_began",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c661d8d-ca5a-4f38-b956-89c8cefe9076",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_moved",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49a89c13-30a5-4f9d-8d63-29fdde3624a4",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_moved",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e8bf45b-9447-46f7-93b5-975dacb97a93",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_ended",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "694000cc-1cbd-41ee-bd0a-c9ef28f341ce",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch_ended",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

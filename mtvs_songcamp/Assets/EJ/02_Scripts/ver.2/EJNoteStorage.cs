@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //Note Storage
@@ -29,10 +30,11 @@ public struct NoteInfo
 
     //dragNote일 때 눌린 rail의 idx?
     //dragNote일 때 지나간 rail idx?
-    public int press_idx;
+    public int released_idx;
 }
 
 public class EJNoteStorage : MonoBehaviour
 {
 
 }
+

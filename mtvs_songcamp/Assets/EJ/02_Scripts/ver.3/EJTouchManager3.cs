@@ -72,6 +72,7 @@ public class EJTouchManager3 : MonoBehaviour
             }
         }
         #endregion
+
     }
 
     private void ScoreCheck_SHORT()

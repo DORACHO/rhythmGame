@@ -104,6 +104,7 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
@@ -296,6 +297,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.XRModule.dll"
 -r:"D:/Projects/rhythmGame/mtvs_songcamp/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1300b0aP.dag/IngameDebugConsole.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aP.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.ProBuilder.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Timeline.ref.dll"
@@ -304,6 +307,7 @@
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/EJ/02_Scripts/dragNoteFlow.cs"
+"Assets/EJ/02_Scripts/EJbothTouched.cs"
 "Assets/EJ/02_Scripts/EJDragNote_test.cs"
 "Assets/EJ/02_Scripts/EJDragTest.cs"
 "Assets/EJ/02_Scripts/EJLongNoteMaker_test.cs"
@@ -326,8 +330,11 @@
 "Assets/EJ/02_Scripts/Tutorial/TimingManager.cs"
 "Assets/EJ/02_Scripts/ver.2/EJNote.cs"
 "Assets/EJ/02_Scripts/ver.2/EJNoteManager.cs"
+"Assets/EJ/02_Scripts/ver.2/EJNoteManager_OLD.cs"
 "Assets/EJ/02_Scripts/ver.2/EJNoteStorage.cs"
 "Assets/EJ/02_Scripts/ver.2/EJScoreManager.cs"
+"Assets/EJ/02_Scripts/ver.3/EJTouchManager3.cs"
+"Assets/EJ/05_Source/inputSystem/InputSystemTest.cs"
 "Assets/Melanchall/DryWetMIDI/Demo/DemoScript.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

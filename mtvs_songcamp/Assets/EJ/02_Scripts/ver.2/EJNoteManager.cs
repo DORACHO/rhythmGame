@@ -32,13 +32,18 @@ public class EJNoteManager : MonoBehaviour
     //02. Note_pressCheck
     bool[] isTouchPadPressed = new bool[railCount];
     bool[] isDragPressed = new bool[railCount];
+    int touchReleasedIdx;
 
     Touch touch;
     TouchPhase phase;
+    Vector2 deltaPos;
 
     public Material missMat;
 
     //03. scoreCheck;
+    float distAbs;     //touchPad와 note사이의 거리 체크
+    float dist;
+
     float badZone = 2.9f;
     float goodZone = 2f;
     float greatZone = 1f;
@@ -66,69 +71,67 @@ public class EJNoteManager : MonoBehaviour
 
         //InputTestSHORTNotes();    //test FINISHED!!!
         //InputTestLONGNotes();     //test FINISHED_1차!!!
-        InputTestDRAGNote();
+        //InputTestDRAGNote();
+        InputTestMIXEDNote();
     }
 
     void Update()
     {
         currTime += Time.deltaTime;
 
-        //01. Note_Instantiate & Destroy
+        //01. Note_Instantiate & Destroy    //test FINISHED!!!
         #region 01. Note_Instantiate & Destroy
 
         //01-1. Note_Instantiate
         //note instantiate per rails
 
+        //0~5까지 반복하면서 ex) 0번 레일일 때
         for (int i = 0; i < noteInfo_Rails.Length; i++)
         {
+            // ex) 0번 레일에 만들어질 노트가 있다면
+            // i = railIndex 체크 중
             if (noteInfo_Rails[i].Count > 0)
             {
                 //Note_Instantiate on Time
+                //대기열에 있는 0번 레일의 0번 노트의 생성시간에 생성
                 if (currTime >= noteInfo_Rails[i][0].time)
                 {
                     //Note_Instantiate by NoteType, SpawnRail
-                    //01-1-1.NoteType_SHORT
+                    //01-1-1.NoteType
+                    //notePrefabs[type], noteSpawnRail[0],
                     note = Instantiate(notePrefabs[noteInfo_Rails[i][0].type], noteSpawnRail[i].position + Vector3.forward * (-0.5f), Quaternion.identity);
 
                     note.transform.forward = notePrefabs[0].transform.forward;
-                    note.transform.SetParent(noteSpawnRail[0].transform);
+                    note.transform.SetParent(noteSpawnRail[i].transform);
 
-                    EJNote firstNoteInstance = note.GetComponent<EJNote>();
-                    firstNoteInstance.noteInfo = noteInfo_Rails[i][0];
-                    noteInstance_Rails[i].Add(firstNoteInstance);
-
+                    //현재 instantiated된 Note의 info에 대기열의 정보를 담아주고
+                    //새로운 리스트의 배열에 넣어주고 싶음.
                     EJNote noteInstance = note.GetComponent<EJNote>();
+                    noteInstance.noteInfo = noteInfo_Rails[i][0];
+                    noteInstance_Rails[i].Add(noteInstance);
+
+                    //Instantiated되면 대기열에서 지워주기
+                    noteInfo_Rails[i].RemoveAt(0);
 
                     //01-1-2.NoteType_LONG
+                    //LONG이라면 endNote를 생성
                     if (noteInstance.noteInfo.type == (int)NoteType.LONG)
                     {
-                        print("noteType은 LONG입니다");
-
                         if (noteInstance.noteInfo.isLongNoteStart)
                         {
                             print("LongNote의 StartNote입니다");
                             startNoteArr[i] = noteInstance;
-                            startNote = noteInstance.gameObject;
-
+                            //startNote = firstNoteInstance.gameObject;
                         }
                         else
                         {
-                            if (startNoteArr[i] != null)
-                            {
-                                print("LongNote의 endNote입니다");
-                                endNote = noteInstance.gameObject;
-
-                                print("endNote에 담긴 것은" + endNote.gameObject);
-                                startNote.GetComponent<EJNote>().connectNote(endNote);
-
-                                //startNote[] remove
-                                startNoteArr[i] = null;
-                            }
+                            int startNoteIdx = noteInstance_Rails[i].Count - 1 - 1;
+                            noteInstance_Rails[i][startNoteIdx].GetComponent<EJNote>().connectNote(noteInstance.gameObject);
                         }
                     }
 
                     //01-2. Note_AutoDestroy
-                    firstNoteInstance.autoDestroyAction = (railIdx, noteInfo, isPassed) =>
+                    noteInstance.autoDestroyAction = (railIdx, noteInfo, isPassed) =>
                     {
                         //Pass without Press
                         if (isPassed) isTouchPadPressed[railIdx] = false;
@@ -137,341 +140,265 @@ public class EJNoteManager : MonoBehaviour
                         showScoreText(4);
                     };
 
-                    //Instantiated되면 대기열에서 지워주기
-                    noteInfo_Rails[i].RemoveAt(0);
+
                 }
             }
         }
         #endregion
+
 
         //02-1.scoreCheck
         #region scoreCheck by touchPhase
 
         if (Input.touchCount > 0)
+        //if(Input.GetMouseButton(0))
         {
-            for (int i = 0; i < Input.touchCount; i++)
-            {           
+            for (int i = 0; i < Input.touchCount; i++)            
+            {
                 touch = Input.GetTouch(i);
-                //touch의 pad의 index
+                //Vector3 touch = Input.mousePosition;
 
                 Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                //Ray ray = Camera.main.ScreenPointToRay(touch);
                 RaycastHit hitInfo;
-
-                if (phase == TouchPhase.Began)
-                {
-                    
-                }
-                if (phase == TouchPhase.Moved)
-                {
-
-                }
-                if(phase == TouchPhase.Ended)                 
-                { 
-                
-                }
-
 
                 if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
                 {
-                    for (int j = 0; j < touchpads.Length; j++)
+                    //j = railCount 
+                    for (int j = 0; j < noteInstance_Rails.Length; j++)
                     {
+                        //if (noteInstance_Rails[j].Count == 0) continue;
+                        //continue: if 조건이 참이라면, 현재 반복을 중단하고 다음 반복을 시작합니다. 
+                        //해당 레일에 note가 생성되어 있을 때마 터치가 먹는 거임.
+
                         if (hitInfo.transform.gameObject == touchpads[j].gameObject)
                         {
-                            if (phase == TouchPhase.Began)
+                            if (touch.phase == TouchPhase.Began)
                             {
-                                isPressDown(j);
-                                touchpads[j].GetComponent<MeshRenderer>().enabled = true;
+                                //isPressDown(j);
+                                touchpads[j].GetComponent<MeshRenderer>().enabled = true;   //이 줄까지 들어오는지 확인
+                                //Debug.Log("touchPad의 인덱스는" + j);
+
+                                if (noteInstance_Rails[j].Count == 0) continue;
+
+                                //short Note score check (0~5)
+                                if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.SHORT)
+                                {
+                                    ScoreCheck_SHORT(j);
+                                }
+                                //long Note success check (0,1)
+                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.LONG)
+                                {
+                                    SuccessEnter_LONG(j);
+                                }
+                                //drag Note success check (0,1)
+                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                                {
+                                    SuccessEnter_DRAG(j);
+                                }
+
                             }
 
-                            if (phase == TouchPhase.Ended)
+                            if (touch.phase == TouchPhase.Moved)
                             {
-                                isPressUp(j);
+                                if (noteInstance_Rails[j].Count == 0) continue;
+
+                                //long, drag Notes score ++ 
+                                if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.LONG || noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                                {
+                                    PressingScore(j);
+                                }
+                            }
+
+                            if (touch.phase == TouchPhase.Ended)
+                            {
+                                //isPressUp(j);
                                 touchpads[j].GetComponent<MeshRenderer>().enabled = false;
+
+                                if (noteInstance_Rails[j].Count == 0) continue;
+
+                                //long Note score check(0~5)
+                                if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.LONG && noteInstance_Rails[j][0].noteInfo.isLongNoteStart == false)
+                                {
+                                    SuccessExit_LONG(j);
+                                }
+
+                                //drag Note success check by deltaPosition, released index
+                                if (noteInstance_Rails[j - 2][0].noteInfo.type == (int)NoteType.DRAG_RIGHT)
+                                {
+                                    //touchPad눌린 것보다 2칸 왼쪽의 note.type이 drag_right여야
+                                    SuccessExit_DRAG(j);
+                                }
+                                else if (noteInstance_Rails[j - 1][0].noteInfo.type == (int)NoteType.DRAG_RIGHT)
+                                {
+                                    //miss
+                                    MissCheck();
+                                }
+                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_RIGHT) 
+                                {
+                                    //miss
+                                    MissCheck();
+                                }
+
+                                if (noteInstance_Rails[j + 2][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                                {
+                                    //touchPad눌린 것보다 2칸 오른쪽의 note.type이 drag_left여야
+                                    SuccessExit_DRAG(j);
+                                }
+                                else if (noteInstance_Rails[j + 1][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                                {
+                                    //miss
+                                    MissCheck();
+                                }
+                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_LEFT) 
+                                {
+                                    //miss
+                                    MissCheck();
+                                }
+
                             }
                         }
                     }
                 }
             }
+            //Debug.LogError("에러체크");
         }
 
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    isPressDown(0);
-        //    touchpads[0].GetComponent<MeshRenderer>().enabled = true;
-        //}
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    isPressDown(1);
-        //    touchpads[1].GetComponent<MeshRenderer>().enabled = true;
-        //}
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    isPressDown(2);
-        //    touchpads[2].GetComponent<MeshRenderer>().enabled = true;
-        //}
-        //if (Input.GetKeyDown(KeyCode.J))
-        //{
-        //    isPressDown(3);
-        //    touchpads[3].GetComponent<MeshRenderer>().enabled = true;
-        //}
-        //if (Input.GetKeyDown(KeyCode.K))
-        //{
-        //    isPressDown(4);
-        //    touchpads[4].GetComponent<MeshRenderer>().enabled = true;
-        //}
-        //if (Input.GetKeyDown(KeyCode.L))
-        //{
-        //    isPressDown(5);
-        //    touchpads[5].GetComponent<MeshRenderer>().enabled = true;
-        //}
-        ////keyUp
-        //if (Input.GetKeyUp(KeyCode.A))
-        //{
-        //    isPressUp(0);
-        //    isTouchPadPressed[0] = false;
-        //    touchpads[0].GetComponent<MeshRenderer>().enabled = false;
-        //}
-        //if (Input.GetKeyUp(KeyCode.S))
-        //{
-        //    isPressUp(1);
-        //    isTouchPadPressed[1] = false;
-        //    touchpads[1].GetComponent<MeshRenderer>().enabled = false;
-        //}
-        //if (Input.GetKeyUp(KeyCode.D))
-        //{
-        //    isPressUp(2);
-        //    isTouchPadPressed[2] = false;
-        //    touchpads[2].GetComponent<MeshRenderer>().enabled = false;
-        //}
-        //if (Input.GetKeyUp(KeyCode.J))
-        //{
-        //    isPressUp(3);
-        //    isTouchPadPressed[3] = false;
-        //    touchpads[3].GetComponent<MeshRenderer>().enabled = false;
-        //}
-        //if (Input.GetKeyUp(KeyCode.K))
-        //{
-        //    isPressUp(4);
-        //    isTouchPadPressed[4] = false;
-        //    touchpads[4].GetComponent<MeshRenderer>().enabled = false;
-        //}
-        //if (Input.GetKeyUp(KeyCode.L))
-        //{
-        //    isPressUp(5);
-        //    isTouchPadPressed[5] = false;
-        //    touchpads[5].GetComponent<MeshRenderer>().enabled = false;
-        //}
-
-        #endregion
-
-        //02-2.Note_pressCheck + scoreCheck
-        #region 02. Note_scoreCheck
-
-        // 02-2-1. scoreCheck for LONG & DRAG Note //KeyEvent check : keyDown = true
-        for (int i = 0; i < isTouchPadPressed.Length; i++)
-        {
-
-            //판정 범위 내에서 누르기 시작하면 isTouchPadPressed == true
-            //keyUp, 즉 isTouchPadPressed == false가 되기 전까지 1 frame씩 Update
-            if (isTouchPadPressed[i] == true)
-            {
-                //print("현재note의 type은" + note.GetComponent<EJNote>().noteInfo.type);
-                //longNote라면 누르고 있으면 되도록
-                if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.LONG)
-                {
-                    print("longNote가 계속 눌리고 있다");
-                    //점수 계속 증가 
-                    EJScoreManager.instance.SCORE += pressScore * Time.deltaTime;
-
-                    for (int j = 0; j < noteInstance_Rails[i][0].gameObject.GetComponents<MeshRenderer>().Length; j++)
-                    {
-                        noteInstance_Rails[i][0].gameObject.GetComponents<MeshRenderer>()[j].material = missMat;
-                        print("점수 Pad 판정 범위 내에서 누르기 시작했다.");
-                        showScoreText(5);
-                    }
-                }
-                else if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_RIGHT)
-                {
-                    if (isDragPressed[i] == true)
-                    {
-                        print("drag_right고" + i + "번쨰가 눌렸다");
-                        if (isDragPressed[i + 1] == true)
-                        {
-                            print("drag_right고" + (i + 1) + "번쨰가 눌렸다");
-                            if (isDragPressed[i + 2] == true)
-                            {
-                                print("drag_right고" + (i + 2) + "번쨰가 눌렸다");
-                                showScoreText(7);
-
-                            }
-                        }
-                    }
-                    isDragPressed[i] = false;
-                    isDragPressed[i + 1] = false;
-                    isDragPressed[i + 2] = false;
-                }
-                else if (note.GetComponent<EJNote>().noteInfo.type == (int)NoteType.DRAG_LEFT)
-                {
-                    if (isDragPressed[i] == true)
-                    {
-                        print("drag_left이고" + i + "번쨰가 눌렸다");
-                        if (isDragPressed[i - 1] == true)
-                        {
-                            print("drag_left이고" + (i - 1) + "번쨰가 눌렸다");
-                            if (isDragPressed[i - 2] == true)
-                            {
-                                print("drag_left이고" + (i - 2) + "번쨰가 눌렸다");
-                                showScoreText(7);
-                            }
-                        }
-                    }
-                    isDragPressed[i] = false;
-                    isDragPressed[i - 1] = false;
-                    isDragPressed[i - 2] = false;
-                }
-            }
-
-
-
-        }
-
-        //???????
-        // 02-2-2. scoreCheck for LONG & DRAG Note //KeyEvent check : keyDown = false(keyUP일때)
-
-        for (int i = 0; i < noteInstance_Rails.Length; i++)
-        {
-            //Before any Note Instantiated 
-            //??? 이 줄이 모르겠음.
-            if (noteInstance_Rails[i].Count == 0) continue;
-
-            //longNote's endNote
-            //Note Not Pressed && TouchPad Not Pressed 
-            if (noteInstance_Rails[i][0].noteInfo.type == (int)NoteType.LONG && noteInstance_Rails[i][0].noteInfo.isLongNoteStart == false)
-            {
-                //endNote가 지나가도록 눌리지 않았다면 miss 판정을 한다.
-                if (isTouchPadPressed[i] == false)
-                {
-                    //score: Miss
-                    showScoreText(4);
-                }
-            }
-        }
 
         #endregion
     }
 
-    // 02-3. KeyEvent check : keyDown = true
-    void isPressDown(int n)
+    public void ScoreCheck_SHORT(int n)
     {
-        //Song Start && After Note Instantiated
-        if (noteInstance_Rails[n].Count > 0)
+        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
+        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+
+        //01.excellentZone
+        if (distAbs >= 0 && distAbs < excellentZone)
         {
-            NoteInfo firstNoteInfo = noteInstance_Rails[n][0].noteInfo;
-            float dist = Mathf.Abs(noteInstance_Rails[n][0].transform.position.y - touchpads[n].position.y);
-
-            //scoreCheck by NoteCheck
-
-            //01.SHORT Note scoreCheck
-            #region SHORT check
-            if (firstNoteInfo.type == (int)NoteType.SHORT)
-            {
-                //01.excellentZone
-                if (dist >= 0 && dist < excellentZone)
-                {
-                    //excellent
-                    showScoreText(0);
-                    EJScoreManager.instance.SCORE += excellentScore;
-                }
-                else if (dist >= excellentZone && dist < greatZone)
-                {
-                    //great
-                    showScoreText(1);
-                    EJScoreManager.instance.SCORE += greatScore;
-                }
-                else if (dist >= greatZone && dist < goodZone)
-                {
-                    //good
-                    showScoreText(2);
-                    EJScoreManager.instance.SCORE += goodScore;
-                }
-                else if (dist >= goodZone && dist < badZone)
-                {
-                    //bad
-                    showScoreText(3);
-                    EJScoreManager.instance.SCORE += badScore;
-                }
-                else
-                {
-                    //miss
-                    showScoreText(4);
-                    EJScoreManager.instance.SCORE += missScore;
-                }
-            }
-
-            #endregion
-
-            //02.LONG Note scoreCheck
-            //KeyDown >> isTouchPadPress = true
-
-            #region LONG && DRAG check Start
-
-            if (firstNoteInfo.type == (int)NoteType.LONG && firstNoteInfo.isLongNoteStart == true)
-            {
-                //누르기 시작
-                if (dist < badZone)
-                {
-                    isTouchPadPressed[n] = true;
-                }
-            }
-            else if (firstNoteInfo.type == (int)NoteType.DRAG_RIGHT || firstNoteInfo.type == (int)NoteType.DRAG_LEFT)
-            {
-                if (dist < badZone)
-                {
-                    isTouchPadPressed[n] = true;
-                    isDragPressed[n] = true;
-                }
-            }
-            else
-            {
-                //shortNote scoreCheck 여기서 가능
-            }
-
-            #endregion
-
-            //isPassed: No Any KeyEvent 
-            noteInstance_Rails[n][0].autoDestroy();
-
+            //excellent
+            showScoreText(0);
+            EJScoreManager.instance.SCORE += excellentScore;
+        }
+        else if (distAbs >= excellentZone && distAbs < greatZone)
+        {
+            //great
+            showScoreText(1);
+            EJScoreManager.instance.SCORE += greatScore;
+        }
+        else if (distAbs >= greatZone && distAbs < goodZone)
+        {
+            //good
+            showScoreText(2);
+            EJScoreManager.instance.SCORE += goodScore;
+        }
+        else if (distAbs >= goodZone && distAbs < badZone)
+        {
+            //bad
+            showScoreText(3);
+            EJScoreManager.instance.SCORE += badScore;
+        }
+        else if (dist < 0)
+        {
+            //miss
+            MissCheck();
+            EJScoreManager.instance.SCORE += missScore;
+        }
+        else
+        {
+            //note가 아직 touchpad에 닿기 전
         }
     }
 
-    // 02-3. KeyEvent check : keyUp = true
-    void isPressUp(int n)
+    public void SuccessEnter_LONG(int n)
     {
-        //Song Start && After Note Instantiated
-        if (noteInstance_Rails[n].Count > 0)
+        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
+        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+
+        if (distAbs < badZone)
         {
-            //LONG note의 endNote가 아니라면 return 하기!
-            if (!(noteInstance_Rails[n][0].noteInfo.type == (int)NoteType.LONG && noteInstance_Rails[n][0].noteInfo.isLongNoteStart == false)) return;
-
-            //02.LongNote scoreCheck
-            //keyUp을 touchPad에서 떨어진 지점에서 떼면 miss
-
-            float dist = Mathf.Abs(noteInstance_Rails[n][0].transform.position.y - touchpads[n].position.y);
-
-            if (dist < 0.4f)
-            {
-                if (isTouchPadPressed[n])
-                {
-                    showScoreText(6);
-                    //PressDestroy
-                    noteInstance_Rails[n][0].autoDestroy();
-                }
-            }
-            else if (dist > badZone)
-            {
-                showScoreText(4);
-            }
+            //success
         }
+        else if (dist < 0)
+        {
+            //miss
+            MissCheck();
+        }
+    }
+
+    public void SuccessExit_LONG(int n)
+    {
+        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
+        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+
+        //noteInstance_Rails[j][0]
+        //float distNend = Mathf.Abs(touchpads.transform.position.y - endNote.transform.position.y);
+
+        if (distAbs < badZone)
+        {
+            //success
+        }
+        else if (dist < 0)
+        {
+            //miss
+            MissCheck();
+        }
+    }
+
+    public void SuccessEnter_DRAG(int n)
+    {
+        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
+        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+
+        if (distAbs < badZone)
+        {
+            //success
+        }
+        else if (dist < 0)
+        {
+            //miss
+            MissCheck();
+        }
+    }
+
+    public void SuccessExit_DRAG(int n)
+    {
+        //이미 뗀 곳이 올바른 위치라는 것을 확인한 후니까
+        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
+        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+
+        if (dist < badZone)
+        {
+            //success
+        }
+        else
+        {
+            //miss
+            MissCheck();
+        }
+
+    }
+
+
+    public void PressingScore(int n)
+    {
+        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
+        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+
+        if (distAbs < badZone)
+        {
+            EJScoreManager.instance.SCORE += pressScore * Time.deltaTime;
+
+        }
+        else
+        {
+            //note가 판정 범위 내에 있지 않은 경우 score증가 X
+        }
+    }
+
+    public void MissCheck()
+    {
+        showScoreText(4);
     }
 
     //01. NoteType.SHORT test
@@ -484,42 +411,47 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.SHORT;
         info.time = 1;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
+        info = new NoteInfo();
         info.railIdx = 1;
         info.type = (int)NoteType.SHORT;
         info.time = 2;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
+        info = new NoteInfo();
         info.railIdx = 2;
         info.type = (int)NoteType.SHORT;
         info.time = 3;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
+        info = new NoteInfo();
         info.railIdx = 3;
         info.type = (int)NoteType.SHORT;
         info.time = 4;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
+        info = new NoteInfo();
         info.railIdx = 4;
         info.type = (int)NoteType.SHORT;
         info.time = 5;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
+        info = new NoteInfo();
         info.railIdx = 5;
         info.type = (int)NoteType.SHORT;
         info.time = 6;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
         for (int i = 0; i < noteInfo_Rails.Length; i++)
@@ -544,14 +476,14 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.LONG;
         info.time = 1;
         info.isLongNoteStart = true;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
         info.railIdx = 1;
         info.type = (int)NoteType.LONG;
         info.time = 2;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
 
@@ -559,14 +491,14 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.LONG;
         info.time = 3;
         info.isLongNoteStart = true;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
         info.railIdx = 3;
         info.type = (int)NoteType.LONG;
         info.time = 5;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
         for (int i = 0; i < noteInfo_Rails.Length; i++)
@@ -650,7 +582,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_RIGHT;
         info.time = 4;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -658,7 +590,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_LEFT;
         info.time = 4;
         info.isLongNoteStart = false;
-        info.press_idx = 0;
+        info.released_idx = 0;
         allNoteInfo.Add(info);
 
         for (int i = 0; i < noteInfo_Rails.Length; i++)
@@ -672,6 +604,125 @@ public class EJNoteManager : MonoBehaviour
         }
 
     }
+    #endregion
+
+    //04. Mixed test
+    #region MIXED
+    void InputTestMIXEDNote()
+    {
+        NoteInfo info = new NoteInfo();
+
+        info.railIdx = 0;
+        info.type = (int)NoteType.SHORT;
+        info.time = 1;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 3;
+        info.type = (int)NoteType.SHORT;
+        info.time = 3;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 5;
+        info.type = (int)NoteType.SHORT;
+        info.time = 4;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 1;
+        info.type = (int)NoteType.SHORT;
+        info.time = 6;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 1;
+        info.type = (int)NoteType.SHORT;
+        info.time = 6;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 3;
+        info.type = (int)NoteType.SHORT;
+        info.time = 6;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 4;
+        info.type = (int)NoteType.SHORT;
+        info.time = 7;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 5;
+        info.type = (int)NoteType.SHORT;
+        info.time = 9;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 1;
+        info.type = (int)NoteType.LONG;
+        info.time = 2;
+        info.isLongNoteStart = true;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 1;
+        info.type = (int)NoteType.LONG;
+        info.time = 4;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 2;
+        info.type = (int)NoteType.LONG;
+        info.time = 7;
+        info.isLongNoteStart = true;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 2;
+        info.type = (int)NoteType.LONG;
+        info.time = 8;
+        info.isLongNoteStart = false;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 3;
+        info.type = (int)NoteType.DRAG_RIGHT;
+        info.time = 5;
+        info.isLongNoteStart = false;
+        info.released_idx = 5;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 2;
+        info.type = (int)NoteType.DRAG_LEFT;
+        info.time = 5;
+        info.isLongNoteStart = false;
+        info.released_idx = 0;
+        allNoteInfo.Add(info);
+
+        for (int i = 0; i < noteInfo_Rails.Length; i++)
+        {
+            noteInfo_Rails[i] = new List<NoteInfo>();
+        }
+
+        for (int i = 0; i < allNoteInfo.Count; i++)
+        {
+            noteInfo_Rails[allNoteInfo[i].railIdx].Add(allNoteInfo[i]);
+        }
+
+    }
+
     #endregion
 
 

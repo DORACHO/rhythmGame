@@ -43,7 +43,7 @@ public class EJNote : MonoBehaviour
         transform.position += Vector3.down * Time.deltaTime * 5/* * spb*/;
 
         //02.Note_autoDestroy isPassed Check
-        if (transform.position.y < touchpad.position.y)
+        if (transform.position.y +3f < touchpad.position.y)
         {
             autoDestroy(true);
         }
