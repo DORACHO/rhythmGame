@@ -1,7 +1,9 @@
+using Melanchall.DryWetMidi.Core;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+
 using UnityEngine;
 
 //01. Note_Instantiate & Destroy
@@ -32,11 +34,13 @@ public class EJNoteManager : MonoBehaviour
     //02. Note_pressCheck
     bool[] isTouchPadPressed = new bool[railCount];
     bool[] isDragPressed = new bool[railCount];
+    int touchStartedIdx;
     int touchReleasedIdx;
 
     Touch touch;
     TouchPhase phase;
     Vector2 deltaPos;
+
 
     public Material missMat;
 
@@ -71,8 +75,8 @@ public class EJNoteManager : MonoBehaviour
 
         //InputTestSHORTNotes();    //test FINISHED!!!
         //InputTestLONGNotes();     //test FINISHED_1차!!!
-        //InputTestDRAGNote();
-        InputTestMIXEDNote();
+        InputTestDRAGNote();
+        //InputTestMIXEDNote();
     }
 
     void Update()
@@ -150,226 +154,449 @@ public class EJNoteManager : MonoBehaviour
         //02-1.scoreCheck
         #region scoreCheck by touchPhase
 
-        if (Input.touchCount > 0)
-        //if(Input.GetMouseButton(0))
+#if UNITY_EDITOR //check FINISHED!!!
+        //if (Input.touchCount > 0)
+        if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0))
         {
-            for (int i = 0; i < Input.touchCount; i++)            
-            {
-                touch = Input.GetTouch(i);
-                //Vector3 touch = Input.mousePosition;
+            //이걸로 다시 만들기
+            //Drag 0번 눌르고 처음에서 began되고 마지막에서 떼지는지 체크해야함.
+            //떼지않고 다른 버튼이 눌린다면 전 버튼이 사라지도록 해야함.
 
-                Ray ray = Camera.main.ScreenPointToRay(touch.position);
+            if (/*touch.phase == TouchPhase.Began*/Input.GetMouseButtonDown(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hitInfo;
+
+                if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                {
+                    //TouchPad 번호 확인
+                    string touchPadName = hitInfo.transform.name;
+                    touchPadName = touchPadName.Replace("Touch0", "");
+                    int touchIdx = int.Parse(touchPadName) - 1;
+
+                    touchStartedIdx = touchIdx;
+                    touchedFX(touchIdx);
+
+                    if (noteInstance_Rails[touchIdx].Count > 0)
+                    {
+                        //NoteType 확인
+                        if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.SHORT)
+                        {
+                            ScoreCheck_SHORT(touchIdx);
+                        }
+                        else if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG && noteInstance_Rails[touchIdx][0].noteInfo.isLongNoteStart)
+                        {
+                            EnterCheck_LONG(touchIdx);
+                        }
+                        else if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                        {
+                            EnterCheck_DRAG(touchIdx);
+                        }
+                    }
+                }
+            }   //check FINISHED!!!
+
+            if (/*touch.phase == TouchPhase.Moved*/Input.GetMouseButton(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 //Ray ray = Camera.main.ScreenPointToRay(touch);
                 RaycastHit hitInfo;
 
                 if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
                 {
-                    //j = railCount 
-                    for (int j = 0; j < noteInstance_Rails.Length; j++)
+                    string touchPadName = hitInfo.transform.name;
+                    touchPadName = touchPadName.Replace("Touch0", "");
+                    int touchIdx = int.Parse(touchPadName) - 1;
+
+                    touchedFX(touchIdx);
+
+                    if (noteInstance_Rails[touchStartedIdx].Count > 0)
                     {
-                        //if (noteInstance_Rails[j].Count == 0) continue;
-                        //continue: if 조건이 참이라면, 현재 반복을 중단하고 다음 반복을 시작합니다. 
-                        //해당 레일에 note가 생성되어 있을 때마 터치가 먹는 거임.
-
-                        if (hitInfo.transform.gameObject == touchpads[j].gameObject)
+                        if (touchStartedIdx != touchIdx)
                         {
-                            if (touch.phase == TouchPhase.Began)
+                            print("방향 체크 전 touchId는" + touchIdx + "touchStartedIdx는" + touchStartedIdx);
+
+                            //방향 체크
+                            if (touchIdx < touchStartedIdx)     //왼쪽 드래그
                             {
-                                //isPressDown(j);
-                                touchpads[j].GetComponent<MeshRenderer>().enabled = true;   //이 줄까지 들어오는지 확인
-                                //Debug.Log("touchPad의 인덱스는" + j);
-
-                                if (noteInstance_Rails[j].Count == 0) continue;
-
-                                //short Note score check (0~5)
-                                if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.SHORT)
+                                if (noteInstance_Rails[touchStartedIdx].Count > 0 &&
+                                    noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
                                 {
-                                    ScoreCheck_SHORT(j);
-                                }
-                                //long Note success check (0,1)
-                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.LONG)
-                                {
-                                    SuccessEnter_LONG(j);
-                                }
-                                //drag Note success check (0,1)
-                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
-                                {
-                                    SuccessEnter_DRAG(j);
-                                }
+                                    print("현재 idx는" + touchIdx + "이고" + " startedIdx는" + touchStartedIdx);
+                                    print("왼쪽으로 드래그되고 있습니다");
 
-                            }
-
-                            if (touch.phase == TouchPhase.Moved)
-                            {
-                                if (noteInstance_Rails[j].Count == 0) continue;
-
-                                //long, drag Notes score ++ 
-                                if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.LONG || noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
-                                {
-                                    PressingScore(j);
+                                    //deltaPos가 오른쪽인지를 체크하기! 같은 방향으로 움직이고 있는지
+                                    PressingScore(touchStartedIdx);
+                                    showScoreText(9);
                                 }
                             }
-
-                            if (touch.phase == TouchPhase.Ended)
+                            else    //오른쪽 드래그
                             {
-                                //isPressUp(j);
-                                touchpads[j].GetComponent<MeshRenderer>().enabled = false;
-
-                                if (noteInstance_Rails[j].Count == 0) continue;
-
-                                //long Note score check(0~5)
-                                if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.LONG && noteInstance_Rails[j][0].noteInfo.isLongNoteStart == false)
+                                if (noteInstance_Rails[touchStartedIdx].Count > 0 &&
+                                    noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT)
                                 {
-                                    SuccessExit_LONG(j);
+                                    print("오른쪽으로 드래그되고 있습니다");
+                                    PressingScore(touchStartedIdx);
+                                    showScoreText(10);
                                 }
-
-                                //drag Note success check by deltaPosition, released index
-                                if (noteInstance_Rails[j - 2][0].noteInfo.type == (int)NoteType.DRAG_RIGHT)
-                                {
-                                    //touchPad눌린 것보다 2칸 왼쪽의 note.type이 drag_right여야
-                                    SuccessExit_DRAG(j);
-                                }
-                                else if (noteInstance_Rails[j - 1][0].noteInfo.type == (int)NoteType.DRAG_RIGHT)
-                                {
-                                    //miss
-                                    MissCheck();
-                                }
-                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_RIGHT) 
-                                {
-                                    //miss
-                                    MissCheck();
-                                }
-
-                                if (noteInstance_Rails[j + 2][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
-                                {
-                                    //touchPad눌린 것보다 2칸 오른쪽의 note.type이 drag_left여야
-                                    SuccessExit_DRAG(j);
-                                }
-                                else if (noteInstance_Rails[j + 1][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
-                                {
-                                    //miss
-                                    MissCheck();
-                                }
-                                else if (noteInstance_Rails[j][0].noteInfo.type == (int)NoteType.DRAG_LEFT) 
-                                {
-                                    //miss
-                                    MissCheck();
-                                }
-
+                            }
+                        }
+                        else //같은 버튼을 꾹 누르는 것   checkFINISHED !!!
+                        {
+                            if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG)
+                            {
+                                PressingScore(touchIdx);
+                                showScoreText(7);
                             }
                         }
                     }
                 }
+            }  //check FINISHED!!!
+
+            if (/*touch.phase == TouchPhase.Ended*/Input.GetMouseButtonUp(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                //Ray ray = Camera.main.ScreenPointToRay(touch);
+                RaycastHit hitInfo;
+
+                releasedFX(currTouchPadIdx);
+                currTouchPadIdx = -1;
+
+                if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                {
+                    string touchPadName = hitInfo.transform.name;
+                    touchPadName = touchPadName.Replace("Touch0", "");
+                    int touchIdx = int.Parse(touchPadName) - 1;
+
+                    //뗀 곳의 pad 번호 확인
+                    touchReleasedIdx = touchIdx;
+
+                    if (noteInstance_Rails[touchStartedIdx].Count > 0)
+                    {
+                        if (touchStartedIdx != touchReleasedIdx)
+                        {
+                            if (noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                            {
+                                if (touchReleasedIdx == noteInstance_Rails[touchStartedIdx][0].noteInfo.released_idx)
+                                {
+                                    //success
+
+                                    print("드래그 노트 성공했어요!");
+                                    showScoreText(0);
+                                }
+                                else
+                                {
+                                    MissCheck();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (noteInstance_Rails[touchIdx].Count > 0 && noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG && !noteInstance_Rails[touchIdx][0].noteInfo.isLongNoteStart)
+                            {
+                                ExitCheck_LONG(touchIdx);
+                            }
+                        }
+                    }
+                }
+            }   //check FINISHED!!!
+
+        }
+#endif
+
+
+        if (Input.touchCount > 0)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                touch = Input.GetTouch(i);
+
+                if (touch.phase == TouchPhase.Began)
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                    RaycastHit hitInfo;
+
+                    if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                    {
+                        //TouchPad 번호 확인
+                        string touchPadName = hitInfo.transform.name;
+                        touchPadName = touchPadName.Replace("Touch0", "");
+                        int touchIdx = int.Parse(touchPadName) - 1;
+
+                        touchStartedIdx = touchIdx;
+                        touchedFX(touchIdx);
+
+                        if (noteInstance_Rails[touchIdx].Count > 0) 
+                        {
+                            //NoteType 확인
+                            if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.SHORT)
+                            {
+                                ScoreCheck_SHORT(touchIdx);
+                            }
+                            else if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG)
+                            {
+                                EnterCheck_LONG(touchIdx);
+                            }
+                            else if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                            {
+
+                                EnterCheck_DRAG(touchIdx);
+                            }
+                        }                       
+                    }
+                }
+
+                if (touch.phase == TouchPhase.Moved)
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                    RaycastHit hitInfo;
+
+                    if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                    {
+                        string touchPadName = hitInfo.transform.name;
+                        touchPadName = touchPadName.Replace("Touch0", "");
+                        int touchIdx = int.Parse(touchPadName) - 1;
+
+                        touchedFX(touchIdx);
+
+                        if (noteInstance_Rails[touchStartedIdx].Count > 0)
+                        {
+                            if (touchStartedIdx != touchIdx)
+                            {
+                                //방향 체크
+                                if (touchIdx < touchStartedIdx)     //왼쪽 드래그
+                                {
+                                    if (noteInstance_Rails[touchStartedIdx].Count > 0 &&
+                                        noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                                    {
+                                        print("현재 idx는" + touchIdx + "이고" + " startedIdx는" + touchStartedIdx);
+                                        print("왼쪽으로 드래그되고 있습니다");
+
+                                        //deltaPos가 오른쪽인지를 체크하기! 같은 방향으로 움직이고 있는지
+                                        PressingScore(touchStartedIdx);
+                                        showScoreText(9);
+                                    }
+                                }
+                                else    //오른쪽 드래그
+                                {
+                                    if (noteInstance_Rails[touchStartedIdx].Count > 0 &&
+                                        noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT)
+                                    {
+                                        print("오른쪽으로 드래그되고 있습니다");
+                                        PressingScore(touchStartedIdx);
+                                        showScoreText(10);
+                                    }
+                                }
+                            }
+                            else //같은 버튼을 꾹 누르는 것   checkFINISHED !!!
+                            {
+                                if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG)
+                                {
+                                    PressingScore(touchIdx);
+                                    showScoreText(7);
+                                }
+                            }
+                        }
+
+
+
+                    }
+                    
+                }
+
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                    RaycastHit hitInfo;
+
+                    releasedFX(currTouchPadIdx);
+                    currTouchPadIdx = -1;
+
+                    if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
+                    {
+                        string touchPadName = hitInfo.transform.name;
+                        touchPadName = touchPadName.Replace("Touch0", "");
+                        int touchIdx = int.Parse(touchPadName) - 1;
+
+                        //뗀 곳의 pad 번호 확인
+                        touchReleasedIdx = touchIdx;
+
+                        if (noteInstance_Rails[touchStartedIdx].Count > 0)
+                        {
+                            if (touchStartedIdx != touchReleasedIdx)
+                            {
+                                if (noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
+                                {
+                                    if (touchReleasedIdx == noteInstance_Rails[touchStartedIdx][0].noteInfo.released_idx)
+                                    {
+                                        //success
+
+                                        print("드래그 노트 성공했어요!");
+                                        showScoreText(0);
+                                    }
+                                    else
+                                    {
+                                        MissCheck();
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (noteInstance_Rails[touchIdx].Count > 0 && noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG && !noteInstance_Rails[touchIdx][0].noteInfo.isLongNoteStart)
+                                {
+                                    ExitCheck_LONG(touchIdx);
+                                }
+                            }
+                        }
+                    }
+                
+                }
             }
-            //Debug.LogError("에러체크");
         }
 
 
         #endregion
     }
 
+    //현재 touch된 부분만 켜지고 나머지는 꺼지도록 check!!!
+    int currTouchPadIdx = -1;
+    void touchedFX(int n)
+    {
+        if (n == currTouchPadIdx) return;
+
+        if (currTouchPadIdx != -1)
+        {
+            releasedFX(currTouchPadIdx);
+        }
+
+        if (!touchpads[n].GetComponent<MeshRenderer>().enabled)
+        {
+            touchpads[n].GetComponent<MeshRenderer>().enabled = true;
+        }
+
+        currTouchPadIdx = n;
+    }
+
+    void releasedFX(int n)
+    {
+        if (n == -1) return;
+
+        if (touchpads[n].GetComponent<MeshRenderer>().enabled)
+        {
+            touchpads[n].GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
+
     public void ScoreCheck_SHORT(int n)
     {
-        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
-        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+        if (noteInstance_Rails[n][0] == null) return;
 
-        //01.excellentZone
-        if (distAbs >= 0 && distAbs < excellentZone)
+        dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+        distAbs = Mathf.Abs(dist);
+
+
+        if (distAbs > badZone)
         {
-            //excellent
-            showScoreText(0);
-            EJScoreManager.instance.SCORE += excellentScore;
+            //내려오는 중이니까 터치해도 의미가 없다.
+            return;
+            //passDestroy가 되지 않기 위함
         }
-        else if (distAbs >= excellentZone && distAbs < greatZone)
+        else if (distAbs > goodZone)
         {
-            //great
-            showScoreText(1);
-            EJScoreManager.instance.SCORE += greatScore;
-        }
-        else if (distAbs >= greatZone && distAbs < goodZone)
-        {
-            //good
-            showScoreText(2);
-            EJScoreManager.instance.SCORE += goodScore;
-        }
-        else if (distAbs >= goodZone && distAbs < badZone)
-        {
-            //bad
+            //Bad
             showScoreText(3);
             EJScoreManager.instance.SCORE += badScore;
         }
-        else if (dist < 0)
+        else if (distAbs > greatZone)
         {
-            //miss
-            MissCheck();
-            EJScoreManager.instance.SCORE += missScore;
+            //Good
+            showScoreText(2);
+            EJScoreManager.instance.SCORE += goodScore;
+        }
+        else if (distAbs > excellentZone)
+        {
+            //Great
+            showScoreText(1);
+            EJScoreManager.instance.SCORE += greatScore;
         }
         else
         {
-            //note가 아직 touchpad에 닿기 전
+            //Excellent
+            showScoreText(0);
+            EJScoreManager.instance.SCORE += excellentScore;
         }
-    }
 
-    public void SuccessEnter_LONG(int n)
+        PressDestroy(n);
+    } //check_FINISHED!!!
+
+    public void EnterCheck_LONG(int n)
     {
+        if (noteInstance_Rails[n][0] == null) return;
+
         distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
 
         if (distAbs < badZone)
         {
             //success
+            showScoreText(5);
         }
-        else if (dist < 0)
+        else
         {
-            //miss
-            MissCheck();
+            //아직 내려오기 전
+            //터치패드 지난 후엔 autoDestroy           
         }
-    }
+    } //check_FINISHED!!!
 
-    public void SuccessExit_LONG(int n)
+    public void ExitCheck_LONG(int n)
     {
-        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
-
-        //noteInstance_Rails[j][0]
-        //float distNend = Mathf.Abs(touchpads.transform.position.y - endNote.transform.position.y);
+        distAbs = Mathf.Abs(dist);
 
         if (distAbs < badZone)
         {
             //success
+            showScoreText(6);
         }
-        else if (dist < 0)
+        else if (dist > badZone)
         {
             //miss
             MissCheck();
+            //unabled
         }
-    }
+    }   //check_FINISHED!!!
 
-    public void SuccessEnter_DRAG(int n)
+    public void EnterCheck_DRAG(int n)
     {
-        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
+        if (noteInstance_Rails[n][0] == null) return;
+
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+        distAbs = Mathf.Abs(dist);
+
 
         if (distAbs < badZone)
         {
             //success
+            showScoreText(11);
         }
-        else if (dist < 0)
+        else
         {
-            //miss
-            MissCheck();
+            //노트가 내려오기 전           
         }
-    }
+    }   //check FINISHED!!!
 
-    public void SuccessExit_DRAG(int n)
+    public void ExitCheck_DRAG(int n)
     {
-        //이미 뗀 곳이 올바른 위치라는 것을 확인한 후니까
+        if (noteInstance_Rails[n][0] == null) return;
+
+        //이미 뗀 곳이 올바른 위치라는 것을 확인한 후니까!!!
         distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
 
         if (dist < badZone)
         {
             //success
+            showScoreText(8);
         }
         else
         {
@@ -382,6 +609,8 @@ public class EJNoteManager : MonoBehaviour
 
     public void PressingScore(int n)
     {
+        if (noteInstance_Rails[n][0] == null) return;
+
         distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
 
@@ -399,6 +628,20 @@ public class EJNoteManager : MonoBehaviour
     public void MissCheck()
     {
         showScoreText(4);
+    }
+
+    public void PressDestroy(int n)
+    {
+        Destroy(noteInstance_Rails[n][0].gameObject);
+        noteInstance_Rails[n].RemoveAt(0);
+
+        //note에서 FX나오기
+    }
+
+    public void MissUnabled(int n)
+    {
+        //long이나 drag가 눌리다가 끝까지 눌리지 못한 경우
+        //passDestroy까지의 기간 동안 점수 체크가 되지 못하도록 해야함.
     }
 
     //01. NoteType.SHORT test
@@ -519,76 +762,50 @@ public class EJNoteManager : MonoBehaviour
     {
         NoteInfo info = new NoteInfo();
 
-        //info.railIdx = 1;
-        //info.type = (int)NoteType.SHORT;
-        //info.time = 1;
-        //info.isLongNoteStart = false;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
+        info = new NoteInfo();
+        info.railIdx = 3;
+        info.type = (int)NoteType.DRAG_RIGHT;
+        info.time = 1;
+        info.isLongNoteStart = false;
+        info.released_idx = 5;
+        allNoteInfo.Add(info);
 
-        //info.railIdx = 2;
-        //info.type = (int)NoteType.SHORT;
-        //info.time = 2;
-        //info.isLongNoteStart = false;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
-
-        //info.railIdx = 3;
-        //info.type = (int)NoteType.SHORT;
-        //info.time = 3;
-        //info.isLongNoteStart = false;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
-
-        //info.railIdx = 4;
-        //info.type = (int)NoteType.SHORT;
-        //info.time = 4;
-        //info.isLongNoteStart = false;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
-
-        //info.railIdx = 5;
-        //info.type = (int)NoteType.SHORT;
-        //info.time = 5;
-        //info.isLongNoteStart = false;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
-
-        //info.railIdx = 6;
-        //info.type = (int)NoteType.SHORT;
-        //info.time = 6;
-        //info.isLongNoteStart = false;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
-
-        //info = new NoteInfo();
-        //info.railIdx = 2;
-        //info.type = (int)NoteType.LONG;
-        //info.time = 2;
-        //info.isLongNoteStart = true;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
-
-        //info = new NoteInfo();
-        //info.railIdx = 2;
-        //info.type = (int)NoteType.LONG;
-        //info.time = 3;
-        //info.isLongNoteStart = false;
-        //info.press_idx = 0;
-        //allNoteInfo.Add(info);
+        info = new NoteInfo();
+        info.railIdx = 2;
+        info.type = (int)NoteType.DRAG_LEFT;
+        info.time = 1;
+        info.isLongNoteStart = false;
+        info.released_idx = 0;
+        allNoteInfo.Add(info);
 
         info = new NoteInfo();
         info.railIdx = 3;
         info.type = (int)NoteType.DRAG_RIGHT;
         info.time = 4;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.released_idx = 5;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
         info.railIdx = 2;
         info.type = (int)NoteType.DRAG_LEFT;
         info.time = 4;
+        info.isLongNoteStart = false;
+        info.released_idx = 0;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 3;
+        info.type = (int)NoteType.DRAG_RIGHT;
+        info.time = 6;
+        info.isLongNoteStart = false;
+        info.released_idx = 5;
+        allNoteInfo.Add(info);
+
+        info = new NoteInfo();
+        info.railIdx = 2;
+        info.type = (int)NoteType.DRAG_LEFT;
+        info.time = 6;
         info.isLongNoteStart = false;
         info.released_idx = 0;
         allNoteInfo.Add(info);
@@ -724,7 +941,6 @@ public class EJNoteManager : MonoBehaviour
     }
 
     #endregion
-
 
     //scoreManager Script로 이전
     void showScoreText(int n)

@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "R3CT90N3CBK",
         "name": "com.DefaultCompany.mtvs_songcamp",
-        "processId": 29449,
-        "exited": true
+        "processId": 30748,
+        "exited": false
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -17,31 +17,133 @@
         {
             "deviceId": "R3CT90N3CBK",
             "name": "com.DefaultCompany.mtvs_songcamp",
-            "processId": 27122,
+            "processId": 10173,
             "exited": true
         },
         {
             "deviceId": "R3CT90N3CBK",
             "name": "com.DefaultCompany.mtvs_songcamp",
-            "processId": 27701,
+            "processId": 11056,
             "exited": true
         },
         {
             "deviceId": "R3CT90N3CBK",
             "name": "com.DefaultCompany.mtvs_songcamp",
-            "processId": 28471,
+            "processId": 11993,
             "exited": true
         },
         {
             "deviceId": "R3CT90N3CBK",
             "name": "com.DefaultCompany.mtvs_songcamp",
-            "processId": 29449,
+            "processId": 12441,
             "exited": true
         },
         {
             "deviceId": "R3CT90N3CBK",
             "name": "com.DefaultCompany.mtvs_songcamp",
-            "processId": 29892,
+            "processId": 17739,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 20339,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 20557,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 21212,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 22020,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 22592,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 23787,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 24329,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 24745,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 25208,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 26150,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 27100,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 28168,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 28859,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 29517,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 30064,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 30835,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 30748,
             "exited": false
         }
     ],

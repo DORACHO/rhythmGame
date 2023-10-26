@@ -58,25 +58,25 @@ public class InputSystemTest: MonoBehaviour
 
     void TouchProgress()
     {
-        print("touching");
+        //print("touching");
         //scoreText.text = "touching";
     }
 
     private void TouchBegan(InputAction.CallbackContext context)
     {
-        print("touchBegan");
+        //print("touchBegan");
         //scoreText.text = "touchBegan";
     }
 
     private void TouchMoved(InputAction.CallbackContext context)
     {
-        print("touchMoved");
+        //print("touchMoved");
         //scoreText.text = "touchMoved";
     }
 
     private void TouchEnded(InputAction.CallbackContext context)
     {
-        print("touchEnded");
+        //print("touchEnded");
         //scoreText.text = "touchEnded";
     }
 }

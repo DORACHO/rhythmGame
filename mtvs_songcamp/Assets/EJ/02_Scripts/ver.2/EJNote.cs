@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Unity.VisualScripting;
 
+
 public class EJNote : MonoBehaviour
 {
     //01.Note_Flow
