@@ -28,9 +28,8 @@ public struct NoteInfo
     //longNote일때 start이면 true, end이면 false
     public bool isLongNoteStart;
 
-    //dragNote일 때 눌린 rail의 idx?
-    //dragNote일 때 지나간 rail idx?
-    public int released_idx;
+    //dragNote가 떼져야 하는 index
+    public int DRAG_release_idx;
 }
 
 public class EJNoteStorage : MonoBehaviour

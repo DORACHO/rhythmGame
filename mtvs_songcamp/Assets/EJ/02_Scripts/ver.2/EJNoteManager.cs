@@ -71,11 +71,11 @@ public class EJNoteManager : MonoBehaviour
         {
             //notes properties list per Rails
             noteInstance_Rails[i] = new List<EJNote>();
-        }
+        }   
 
         //InputTestSHORTNotes();    //test FINISHED!!!
-        //InputTestLONGNotes();     //test FINISHED_1차!!!
-        InputTestDRAGNote();
+        InputTestLONGNotes();     //test FINISHED_1차!!!
+        //InputTestDRAGNote();
         //InputTestMIXEDNote();
     }
 
@@ -131,6 +131,8 @@ public class EJNoteManager : MonoBehaviour
                         {
                             int startNoteIdx = noteInstance_Rails[i].Count - 1 - 1;
                             noteInstance_Rails[i][startNoteIdx].GetComponent<EJNote>().connectNote(noteInstance.gameObject);
+                            //생성된 startNote 칸을 지워준다.
+                            noteInstance_Rails[i].RemoveAt(0);
                         }
                     }
 
@@ -141,7 +143,11 @@ public class EJNoteManager : MonoBehaviour
                         if (isPassed) isTouchPadPressed[railIdx] = false;
                         //Pass >> remove from List                                                                             
                         noteInstance_Rails[railIdx].Remove(noteInfo);
-                        showScoreText(4);
+
+                        if (!(noteInstance.noteInfo.type == (int)NoteType.LONG && noteInstance.noteInfo.isLongNoteStart == true))
+                        {
+                            showScoreText(4);                       
+                        }
                     };
 
 
@@ -246,7 +252,7 @@ public class EJNoteManager : MonoBehaviour
                             if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG)
                             {
                                 PressingScore(touchIdx);
-                                showScoreText(7);
+                                //showScoreText(7);
                             }
                         }
                     }
@@ -277,7 +283,7 @@ public class EJNoteManager : MonoBehaviour
                         {
                             if (noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
                             {
-                                if (touchReleasedIdx == noteInstance_Rails[touchStartedIdx][0].noteInfo.released_idx)
+                                if (touchReleasedIdx == noteInstance_Rails[touchStartedIdx][0].noteInfo.DRAG_release_idx)
                                 {
                                     //success
 
@@ -307,6 +313,8 @@ public class EJNoteManager : MonoBehaviour
 
         if (Input.touchCount > 0)
         {
+            print("현재 touchCount는" + Input.touchCount);
+
             for (int i = 0; i < Input.touchCount; i++)
             {
                 touch = Input.GetTouch(i);
@@ -325,6 +333,7 @@ public class EJNoteManager : MonoBehaviour
 
                         touchStartedIdx = touchIdx;
                         touchedFX(touchIdx);
+                        print(i + "번째 touch일 때" + touchIdx + "번의 터치패드가 눌렸고" + "touchedFX 함수가 실행되었다.");
 
                         if (noteInstance_Rails[touchIdx].Count > 0) 
                         {
@@ -339,7 +348,6 @@ public class EJNoteManager : MonoBehaviour
                             }
                             else if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
                             {
-
                                 EnterCheck_DRAG(touchIdx);
                             }
                         }                       
@@ -393,7 +401,7 @@ public class EJNoteManager : MonoBehaviour
                                 if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG)
                                 {
                                     PressingScore(touchIdx);
-                                    showScoreText(7);
+                                    //showScoreText(7);
                                 }
                             }
                         }
@@ -401,7 +409,7 @@ public class EJNoteManager : MonoBehaviour
 
 
                     }
-                    
+
                 }
 
                 if (touch.phase == TouchPhase.Ended)
@@ -427,7 +435,7 @@ public class EJNoteManager : MonoBehaviour
                             {
                                 if (noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
                                 {
-                                    if (touchReleasedIdx == noteInstance_Rails[touchStartedIdx][0].noteInfo.released_idx)
+                                    if (touchReleasedIdx == noteInstance_Rails[touchStartedIdx][0].noteInfo.DRAG_release_idx)
                                     {
                                         //success
 
@@ -449,7 +457,7 @@ public class EJNoteManager : MonoBehaviour
                             }
                         }
                     }
-                
+
                 }
             }
         }
@@ -464,6 +472,7 @@ public class EJNoteManager : MonoBehaviour
     {
         if (n == currTouchPadIdx) return;
 
+        
         if (currTouchPadIdx != -1)
         {
             releasedFX(currTouchPadIdx);
@@ -479,6 +488,7 @@ public class EJNoteManager : MonoBehaviour
 
     void releasedFX(int n)
     {
+        print("releasedFX함수 실행");
         if (n == -1) return;
 
         if (touchpads[n].GetComponent<MeshRenderer>().enabled)
@@ -533,13 +543,13 @@ public class EJNoteManager : MonoBehaviour
     {
         if (noteInstance_Rails[n][0] == null) return;
 
-        distAbs = Mathf.Abs(touchpads[n].transform.position.y - noteInstance_Rails[n][0].transform.position.y);
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
+        distAbs = Mathf.Abs(dist);
 
         if (distAbs < badZone)
         {
             //success
-            showScoreText(5);
+            //showScoreText(5);
         }
         else
         {
@@ -550,13 +560,15 @@ public class EJNoteManager : MonoBehaviour
 
     public void ExitCheck_LONG(int n)
     {
+        print("ExitCheck_Long 중입니다");
+
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
         distAbs = Mathf.Abs(dist);
 
         if (distAbs < badZone)
         {
             //success
-            showScoreText(6);
+            //showScoreText(6);
         }
         else if (dist > badZone)
         {
@@ -642,6 +654,10 @@ public class EJNoteManager : MonoBehaviour
     {
         //long이나 drag가 눌리다가 끝까지 눌리지 못한 경우
         //passDestroy까지의 기간 동안 점수 체크가 되지 못하도록 해야함.
+
+        //일단은 pressdestroy해둠
+        Destroy(noteInstance_Rails[n][0].gameObject);
+        noteInstance_Rails[n].RemoveAt(0);
     }
 
     //01. NoteType.SHORT test
@@ -654,7 +670,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.SHORT;
         info.time = 1;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -662,7 +678,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.SHORT;
         info.time = 2;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -670,7 +686,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.SHORT;
         info.time = 3;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -678,7 +694,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.SHORT;
         info.time = 4;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -686,7 +702,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.SHORT;
         info.time = 5;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -694,7 +710,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.SHORT;
         info.time = 6;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         for (int i = 0; i < noteInfo_Rails.Length; i++)
@@ -719,29 +735,29 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.LONG;
         info.time = 1;
         info.isLongNoteStart = true;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info.railIdx = 1;
         info.type = (int)NoteType.LONG;
         info.time = 2;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
 
         info.railIdx = 3;
         info.type = (int)NoteType.LONG;
-        info.time = 3;
+        info.time = 4;
         info.isLongNoteStart = true;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info.railIdx = 3;
         info.type = (int)NoteType.LONG;
         info.time = 5;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         for (int i = 0; i < noteInfo_Rails.Length; i++)
@@ -767,7 +783,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_RIGHT;
         info.time = 1;
         info.isLongNoteStart = false;
-        info.released_idx = 5;
+        info.DRAG_release_idx = 5;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -775,7 +791,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_LEFT;
         info.time = 1;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -783,7 +799,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_RIGHT;
         info.time = 4;
         info.isLongNoteStart = false;
-        info.released_idx = 5;
+        info.DRAG_release_idx = 5;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -791,7 +807,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_LEFT;
         info.time = 4;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -799,7 +815,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_RIGHT;
         info.time = 6;
         info.isLongNoteStart = false;
-        info.released_idx = 5;
+        info.DRAG_release_idx = 5;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -807,7 +823,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_LEFT;
         info.time = 6;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         for (int i = 0; i < noteInfo_Rails.Length; i++)
@@ -917,7 +933,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_RIGHT;
         info.time = 5;
         info.isLongNoteStart = false;
-        info.released_idx = 5;
+        info.DRAG_release_idx = 5;
         allNoteInfo.Add(info);
 
         info = new NoteInfo();
@@ -925,7 +941,7 @@ public class EJNoteManager : MonoBehaviour
         info.type = (int)NoteType.DRAG_LEFT;
         info.time = 5;
         info.isLongNoteStart = false;
-        info.released_idx = 0;
+        info.DRAG_release_idx = 0;
         allNoteInfo.Add(info);
 
         for (int i = 0; i < noteInfo_Rails.Length; i++)

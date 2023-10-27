@@ -349,7 +349,8 @@
         341,
         342,
         343,
-        344
+        344,
+        345
       ],
       "AllowUnexpectedOutput": true,
       "DebugActionIndex": 0
@@ -377,6 +378,17 @@
       "DebugActionIndex": 2
     },
     {
+      "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/resources.resource",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/PlayerDataCache/Android/Data/resources.resource"
+      ],
+      "Outputs": [
+        "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/resources.resource"
+      ],
+      "DebugActionIndex": 3
+    },
+    {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/RuntimeInitializeOnLoads.json",
       "ActionType": "CopyFiles",
       "Inputs": [
@@ -385,7 +397,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/RuntimeInitializeOnLoads.json"
       ],
-      "DebugActionIndex": 3
+      "DebugActionIndex": 4
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ScriptingAssemblies.json",
@@ -396,7 +408,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ScriptingAssemblies.json"
       ],
-      "DebugActionIndex": 4
+      "DebugActionIndex": 5
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/libs/IngameDebugConsole.aar",
@@ -407,7 +419,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/libs/IngameDebugConsole.aar"
       ],
-      "DebugActionIndex": 5
+      "DebugActionIndex": 6
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Assembly-CSharp.dll",
@@ -418,7 +430,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Assembly-CSharp.dll"
       ],
-      "DebugActionIndex": 6
+      "DebugActionIndex": 7
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/IngameDebugConsole.Runtime.dll",
@@ -429,7 +441,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/IngameDebugConsole.Runtime.dll"
       ],
-      "DebugActionIndex": 7
+      "DebugActionIndex": 8
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Melanchall.DryWetMidi.dll",
@@ -440,7 +452,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Melanchall.DryWetMidi.dll"
       ],
-      "DebugActionIndex": 8
+      "DebugActionIndex": 9
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Mono.Security.dll",
@@ -451,7 +463,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Mono.Security.dll"
       ],
-      "DebugActionIndex": 9
+      "DebugActionIndex": 10
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/mscorlib.dll",
@@ -462,7 +474,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/mscorlib.dll"
       ],
-      "DebugActionIndex": 10
+      "DebugActionIndex": 11
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/netstandard.dll",
@@ -473,7 +485,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/netstandard.dll"
       ],
-      "DebugActionIndex": 11
+      "DebugActionIndex": 12
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.ComponentModel.Composition.dll",
@@ -484,7 +496,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.ComponentModel.Composition.dll"
       ],
-      "DebugActionIndex": 12
+      "DebugActionIndex": 13
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Configuration.dll",
@@ -495,7 +507,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Configuration.dll"
       ],
-      "DebugActionIndex": 13
+      "DebugActionIndex": 14
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Core.dll",
@@ -506,7 +518,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Core.dll"
       ],
-      "DebugActionIndex": 14
+      "DebugActionIndex": 15
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Data.DataSetExtensions.dll",
@@ -517,7 +529,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Data.DataSetExtensions.dll"
       ],
-      "DebugActionIndex": 15
+      "DebugActionIndex": 16
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Data.dll",
@@ -528,7 +540,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Data.dll"
       ],
-      "DebugActionIndex": 16
+      "DebugActionIndex": 17
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.dll",
@@ -539,7 +551,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.dll"
       ],
-      "DebugActionIndex": 17
+      "DebugActionIndex": 18
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Drawing.dll",
@@ -550,7 +562,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Drawing.dll"
       ],
-      "DebugActionIndex": 18
+      "DebugActionIndex": 19
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.EnterpriseServices.dll",
@@ -561,7 +573,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.EnterpriseServices.dll"
       ],
-      "DebugActionIndex": 19
+      "DebugActionIndex": 20
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.IO.Compression.dll",
@@ -572,7 +584,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.IO.Compression.dll"
       ],
-      "DebugActionIndex": 20
+      "DebugActionIndex": 21
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.IO.Compression.FileSystem.dll",
@@ -583,7 +595,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.IO.Compression.FileSystem.dll"
       ],
-      "DebugActionIndex": 21
+      "DebugActionIndex": 22
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Net.Http.dll",
@@ -594,7 +606,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Net.Http.dll"
       ],
-      "DebugActionIndex": 22
+      "DebugActionIndex": 23
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Numerics.dll",
@@ -605,7 +617,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Numerics.dll"
       ],
-      "DebugActionIndex": 23
+      "DebugActionIndex": 24
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Runtime.Serialization.dll",
@@ -616,7 +628,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Runtime.Serialization.dll"
       ],
-      "DebugActionIndex": 24
+      "DebugActionIndex": 25
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Security.dll",
@@ -627,7 +639,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Security.dll"
       ],
-      "DebugActionIndex": 25
+      "DebugActionIndex": 26
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.ServiceModel.Internals.dll",
@@ -638,7 +650,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.ServiceModel.Internals.dll"
       ],
-      "DebugActionIndex": 26
+      "DebugActionIndex": 27
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Transactions.dll",
@@ -649,7 +661,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Transactions.dll"
       ],
-      "DebugActionIndex": 27
+      "DebugActionIndex": 28
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Xml.dll",
@@ -660,7 +672,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Xml.dll"
       ],
-      "DebugActionIndex": 28
+      "DebugActionIndex": 29
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Xml.Linq.dll",
@@ -671,7 +683,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/System.Xml.Linq.dll"
       ],
-      "DebugActionIndex": 29
+      "DebugActionIndex": 30
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.InputSystem.dll",
@@ -682,7 +694,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.InputSystem.dll"
       ],
-      "DebugActionIndex": 30
+      "DebugActionIndex": 31
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.Csg.dll",
@@ -693,7 +705,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.Csg.dll"
       ],
-      "DebugActionIndex": 31
+      "DebugActionIndex": 32
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.dll",
@@ -704,7 +716,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.dll"
       ],
-      "DebugActionIndex": 32
+      "DebugActionIndex": 33
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.KdTree.dll",
@@ -715,7 +727,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.KdTree.dll"
       ],
-      "DebugActionIndex": 33
+      "DebugActionIndex": 34
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.Poly2Tri.dll",
@@ -726,7 +738,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.Poly2Tri.dll"
       ],
-      "DebugActionIndex": 34
+      "DebugActionIndex": 35
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.Stl.dll",
@@ -737,7 +749,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.ProBuilder.Stl.dll"
       ],
-      "DebugActionIndex": 35
+      "DebugActionIndex": 36
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.TextMeshPro.dll",
@@ -748,7 +760,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.TextMeshPro.dll"
       ],
-      "DebugActionIndex": 36
+      "DebugActionIndex": 37
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.Timeline.dll",
@@ -759,7 +771,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.Timeline.dll"
       ],
-      "DebugActionIndex": 37
+      "DebugActionIndex": 38
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
@@ -770,7 +782,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
-      "DebugActionIndex": 38
+      "DebugActionIndex": 39
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.Core.dll",
@@ -781,7 +793,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.Core.dll"
       ],
-      "DebugActionIndex": 39
+      "DebugActionIndex": 40
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.Flow.dll",
@@ -792,7 +804,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.Flow.dll"
       ],
-      "DebugActionIndex": 40
+      "DebugActionIndex": 41
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.State.dll",
@@ -803,7 +815,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Unity.VisualScripting.State.dll"
       ],
-      "DebugActionIndex": 41
+      "DebugActionIndex": 42
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AccessibilityModule.dll",
@@ -814,7 +826,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AccessibilityModule.dll"
       ],
-      "DebugActionIndex": 42
+      "DebugActionIndex": 43
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AIModule.dll",
@@ -825,7 +837,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AIModule.dll"
       ],
-      "DebugActionIndex": 43
+      "DebugActionIndex": 44
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AndroidJNIModule.dll",
@@ -836,7 +848,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AndroidJNIModule.dll"
       ],
-      "DebugActionIndex": 44
+      "DebugActionIndex": 45
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AnimationModule.dll",
@@ -847,7 +859,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AnimationModule.dll"
       ],
-      "DebugActionIndex": 45
+      "DebugActionIndex": 46
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ARModule.dll",
@@ -858,7 +870,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ARModule.dll"
       ],
-      "DebugActionIndex": 46
+      "DebugActionIndex": 47
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AssetBundleModule.dll",
@@ -869,7 +881,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AssetBundleModule.dll"
       ],
-      "DebugActionIndex": 47
+      "DebugActionIndex": 48
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AudioModule.dll",
@@ -880,7 +892,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.AudioModule.dll"
       ],
-      "DebugActionIndex": 48
+      "DebugActionIndex": 49
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ClothModule.dll",
@@ -891,7 +903,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ClothModule.dll"
       ],
-      "DebugActionIndex": 49
+      "DebugActionIndex": 50
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.CoreModule.dll",
@@ -902,7 +914,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.CoreModule.dll"
       ],
-      "DebugActionIndex": 50
+      "DebugActionIndex": 51
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.CrashReportingModule.dll",
@@ -913,7 +925,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.CrashReportingModule.dll"
       ],
-      "DebugActionIndex": 51
+      "DebugActionIndex": 52
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.DirectorModule.dll",
@@ -924,7 +936,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.DirectorModule.dll"
       ],
-      "DebugActionIndex": 52
+      "DebugActionIndex": 53
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.dll",
@@ -935,7 +947,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.dll"
       ],
-      "DebugActionIndex": 53
+      "DebugActionIndex": 54
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.DSPGraphModule.dll",
@@ -946,7 +958,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.DSPGraphModule.dll"
       ],
-      "DebugActionIndex": 54
+      "DebugActionIndex": 55
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.GameCenterModule.dll",
@@ -957,7 +969,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.GameCenterModule.dll"
       ],
-      "DebugActionIndex": 55
+      "DebugActionIndex": 56
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.GIModule.dll",
@@ -968,7 +980,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.GIModule.dll"
       ],
-      "DebugActionIndex": 56
+      "DebugActionIndex": 57
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.GridModule.dll",
@@ -979,7 +991,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.GridModule.dll"
       ],
-      "DebugActionIndex": 57
+      "DebugActionIndex": 58
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.HotReloadModule.dll",
@@ -990,7 +1002,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.HotReloadModule.dll"
       ],
-      "DebugActionIndex": 58
+      "DebugActionIndex": 59
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ImageConversionModule.dll",
@@ -1001,7 +1013,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ImageConversionModule.dll"
       ],
-      "DebugActionIndex": 59
+      "DebugActionIndex": 60
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.IMGUIModule.dll",
@@ -1012,7 +1024,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.IMGUIModule.dll"
       ],
-      "DebugActionIndex": 60
+      "DebugActionIndex": 61
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.InputLegacyModule.dll",
@@ -1023,7 +1035,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.InputLegacyModule.dll"
       ],
-      "DebugActionIndex": 61
+      "DebugActionIndex": 62
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.InputModule.dll",
@@ -1034,7 +1046,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.InputModule.dll"
       ],
-      "DebugActionIndex": 62
+      "DebugActionIndex": 63
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.JSONSerializeModule.dll",
@@ -1045,7 +1057,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.JSONSerializeModule.dll"
       ],
-      "DebugActionIndex": 63
+      "DebugActionIndex": 64
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.LocalizationModule.dll",
@@ -1056,7 +1068,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.LocalizationModule.dll"
       ],
-      "DebugActionIndex": 64
+      "DebugActionIndex": 65
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ParticleSystemModule.dll",
@@ -1067,7 +1079,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ParticleSystemModule.dll"
       ],
-      "DebugActionIndex": 65
+      "DebugActionIndex": 66
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.PerformanceReportingModule.dll",
@@ -1078,7 +1090,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.PerformanceReportingModule.dll"
       ],
-      "DebugActionIndex": 66
+      "DebugActionIndex": 67
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.Physics2DModule.dll",
@@ -1089,7 +1101,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.Physics2DModule.dll"
       ],
-      "DebugActionIndex": 67
+      "DebugActionIndex": 68
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.PhysicsModule.dll",
@@ -1100,7 +1112,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.PhysicsModule.dll"
       ],
-      "DebugActionIndex": 68
+      "DebugActionIndex": 69
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ProfilerModule.dll",
@@ -1111,7 +1123,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ProfilerModule.dll"
       ],
-      "DebugActionIndex": 69
+      "DebugActionIndex": 70
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
@@ -1122,7 +1134,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
       ],
-      "DebugActionIndex": 70
+      "DebugActionIndex": 71
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ScreenCaptureModule.dll",
@@ -1133,7 +1145,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.ScreenCaptureModule.dll"
       ],
-      "DebugActionIndex": 71
+      "DebugActionIndex": 72
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SharedInternalsModule.dll",
@@ -1144,7 +1156,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SharedInternalsModule.dll"
       ],
-      "DebugActionIndex": 72
+      "DebugActionIndex": 73
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SpriteMaskModule.dll",
@@ -1155,7 +1167,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SpriteMaskModule.dll"
       ],
-      "DebugActionIndex": 73
+      "DebugActionIndex": 74
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SpriteShapeModule.dll",
@@ -1166,7 +1178,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SpriteShapeModule.dll"
       ],
-      "DebugActionIndex": 74
+      "DebugActionIndex": 75
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.StreamingModule.dll",
@@ -1177,7 +1189,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.StreamingModule.dll"
       ],
-      "DebugActionIndex": 75
+      "DebugActionIndex": 76
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SubstanceModule.dll",
@@ -1188,7 +1200,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SubstanceModule.dll"
       ],
-      "DebugActionIndex": 76
+      "DebugActionIndex": 77
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SubsystemsModule.dll",
@@ -1199,7 +1211,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.SubsystemsModule.dll"
       ],
-      "DebugActionIndex": 77
+      "DebugActionIndex": 78
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TerrainModule.dll",
@@ -1210,7 +1222,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TerrainModule.dll"
       ],
-      "DebugActionIndex": 78
+      "DebugActionIndex": 79
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TerrainPhysicsModule.dll",
@@ -1221,7 +1233,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TerrainPhysicsModule.dll"
       ],
-      "DebugActionIndex": 79
+      "DebugActionIndex": 80
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TextCoreFontEngineModule.dll",
@@ -1232,7 +1244,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TextCoreFontEngineModule.dll"
       ],
-      "DebugActionIndex": 80
+      "DebugActionIndex": 81
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TextCoreTextEngineModule.dll",
@@ -1243,7 +1255,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TextCoreTextEngineModule.dll"
       ],
-      "DebugActionIndex": 81
+      "DebugActionIndex": 82
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TextRenderingModule.dll",
@@ -1254,7 +1266,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TextRenderingModule.dll"
       ],
-      "DebugActionIndex": 82
+      "DebugActionIndex": 83
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TilemapModule.dll",
@@ -1265,7 +1277,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TilemapModule.dll"
       ],
-      "DebugActionIndex": 83
+      "DebugActionIndex": 84
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TLSModule.dll",
@@ -1276,7 +1288,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.TLSModule.dll"
       ],
-      "DebugActionIndex": 84
+      "DebugActionIndex": 85
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UI.dll",
@@ -1287,7 +1299,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UI.dll"
       ],
-      "DebugActionIndex": 85
+      "DebugActionIndex": 86
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UIElementsModule.dll",
@@ -1298,7 +1310,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UIElementsModule.dll"
       ],
-      "DebugActionIndex": 86
+      "DebugActionIndex": 87
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UIElementsNativeModule.dll",
@@ -1309,7 +1321,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UIElementsNativeModule.dll"
       ],
-      "DebugActionIndex": 87
+      "DebugActionIndex": 88
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UIModule.dll",
@@ -1320,7 +1332,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UIModule.dll"
       ],
-      "DebugActionIndex": 88
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UmbraModule.dll",
@@ -1331,7 +1343,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UmbraModule.dll"
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UNETModule.dll",
@@ -1342,7 +1354,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UNETModule.dll"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
@@ -1353,7 +1365,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityAnalyticsModule.dll",
@@ -1364,7 +1376,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityAnalyticsModule.dll"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityConnectModule.dll",
@@ -1375,7 +1387,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityConnectModule.dll"
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 94
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityCurlModule.dll",
@@ -1386,7 +1398,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityCurlModule.dll"
       ],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 95
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityTestProtocolModule.dll",
@@ -1397,7 +1409,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityTestProtocolModule.dll"
       ],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
@@ -1408,7 +1420,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll"
       ],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 97
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
@@ -1419,7 +1431,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll"
       ],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 98
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestModule.dll",
@@ -1430,7 +1442,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestModule.dll"
       ],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
@@ -1441,7 +1453,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll"
       ],
-      "DebugActionIndex": 99
+      "DebugActionIndex": 100
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
@@ -1452,7 +1464,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll"
       ],
-      "DebugActionIndex": 100
+      "DebugActionIndex": 101
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VehiclesModule.dll",
@@ -1463,7 +1475,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VehiclesModule.dll"
       ],
-      "DebugActionIndex": 101
+      "DebugActionIndex": 102
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VFXModule.dll",
@@ -1474,7 +1486,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VFXModule.dll"
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VideoModule.dll",
@@ -1485,7 +1497,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VideoModule.dll"
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 104
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VRModule.dll",
@@ -1496,7 +1508,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.VRModule.dll"
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 105
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.WindModule.dll",
@@ -1507,7 +1519,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.WindModule.dll"
       ],
-      "DebugActionIndex": 105
+      "DebugActionIndex": 106
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.XRModule.dll",
@@ -1518,7 +1530,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/UnityEngine.XRModule.dll"
       ],
-      "DebugActionIndex": 106
+      "DebugActionIndex": 107
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/Android/Features/FeatureCheckList.txt",
@@ -1529,7 +1541,7 @@
         "Library/Bee/artifacts/Android/Features/FeatureCheckList.txt"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 107
+      "DebugActionIndex": 108
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Assembly-CSharp-FeaturesChecked.txt_ki5r.info",
@@ -1540,7 +1552,7 @@
         "Library/Bee/artifacts/csharpactions/Assembly-CSharp-FeaturesChecked.txt_ki5r.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 108
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Assembly-CSharp-FeaturesChecked.txt",
@@ -1588,12 +1600,12 @@
         "Library/Bee/artifacts/Android/Features/Assembly-CSharp-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        108
+        108,
+        109
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/IngameDebugConsole.Runtime-FeaturesChecked.txt_p0tn.info",
@@ -1604,7 +1616,7 @@
         "Library/Bee/artifacts/csharpactions/IngameDebugConsole.Runtime-FeaturesChecked.txt_p0tn.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 110
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/IngameDebugConsole.Runtime-FeaturesChecked.txt",
@@ -1652,12 +1664,12 @@
         "Library/Bee/artifacts/Android/Features/IngameDebugConsole.Runtime-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        110
+        108,
+        111
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Melanchall.DryWetMidi-FeaturesChecked.txt_1a3u.info",
@@ -1668,7 +1680,7 @@
         "Library/Bee/artifacts/csharpactions/Melanchall.DryWetMidi-FeaturesChecked.txt_1a3u.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 112
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Melanchall.DryWetMidi-FeaturesChecked.txt",
@@ -1716,12 +1728,12 @@
         "Library/Bee/artifacts/Android/Features/Melanchall.DryWetMidi-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        112
+        108,
+        113
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Mono.Security-FeaturesChecked.txt_pcel.info",
@@ -1732,7 +1744,7 @@
         "Library/Bee/artifacts/csharpactions/Mono.Security-FeaturesChecked.txt_pcel.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 114
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Mono.Security-FeaturesChecked.txt",
@@ -1780,12 +1792,12 @@
         "Library/Bee/artifacts/Android/Features/Mono.Security-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        114
+        108,
+        115
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/mscorlib-FeaturesChecked.txt_pwj8.info",
@@ -1796,7 +1808,7 @@
         "Library/Bee/artifacts/csharpactions/mscorlib-FeaturesChecked.txt_pwj8.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 116
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/mscorlib-FeaturesChecked.txt",
@@ -1844,12 +1856,12 @@
         "Library/Bee/artifacts/Android/Features/mscorlib-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        116
+        108,
+        117
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 117
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/netstandard-FeaturesChecked.txt_gaje.info",
@@ -1860,7 +1872,7 @@
         "Library/Bee/artifacts/csharpactions/netstandard-FeaturesChecked.txt_gaje.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 118
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/netstandard-FeaturesChecked.txt",
@@ -1908,12 +1920,12 @@
         "Library/Bee/artifacts/Android/Features/netstandard-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        118
+        108,
+        119
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.ComponentModel.Composition-FeaturesChecked.txt_1seo.info",
@@ -1924,7 +1936,7 @@
         "Library/Bee/artifacts/csharpactions/System.ComponentModel.Composition-FeaturesChecked.txt_1seo.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 120
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.ComponentModel.Composition-FeaturesChecked.txt",
@@ -1972,12 +1984,12 @@
         "Library/Bee/artifacts/Android/Features/System.ComponentModel.Composition-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        120
+        108,
+        121
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Configuration-FeaturesChecked.txt_vfp9.info",
@@ -1988,7 +2000,7 @@
         "Library/Bee/artifacts/csharpactions/System.Configuration-FeaturesChecked.txt_vfp9.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 122
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Configuration-FeaturesChecked.txt",
@@ -2036,12 +2048,12 @@
         "Library/Bee/artifacts/Android/Features/System.Configuration-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        122
+        108,
+        123
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Core-FeaturesChecked.txt_k2yd.info",
@@ -2052,7 +2064,7 @@
         "Library/Bee/artifacts/csharpactions/System.Core-FeaturesChecked.txt_k2yd.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 124
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Core-FeaturesChecked.txt",
@@ -2100,12 +2112,12 @@
         "Library/Bee/artifacts/Android/Features/System.Core-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        124
+        108,
+        125
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Data.DataSetExtensions-FeaturesChecked.txt_p7rm.info",
@@ -2116,7 +2128,7 @@
         "Library/Bee/artifacts/csharpactions/System.Data.DataSetExtensions-FeaturesChecked.txt_p7rm.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 126
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Data.DataSetExtensions-FeaturesChecked.txt",
@@ -2164,12 +2176,12 @@
         "Library/Bee/artifacts/Android/Features/System.Data.DataSetExtensions-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        126
+        108,
+        127
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Data-FeaturesChecked.txt_r76e.info",
@@ -2180,7 +2192,7 @@
         "Library/Bee/artifacts/csharpactions/System.Data-FeaturesChecked.txt_r76e.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 128
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Data-FeaturesChecked.txt",
@@ -2228,12 +2240,12 @@
         "Library/Bee/artifacts/Android/Features/System.Data-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        128
+        108,
+        129
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System-FeaturesChecked.txt_v90b.info",
@@ -2244,7 +2256,7 @@
         "Library/Bee/artifacts/csharpactions/System-FeaturesChecked.txt_v90b.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 130
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System-FeaturesChecked.txt",
@@ -2292,12 +2304,12 @@
         "Library/Bee/artifacts/Android/Features/System-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        130
+        108,
+        131
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Drawing-FeaturesChecked.txt_f5g4.info",
@@ -2308,7 +2320,7 @@
         "Library/Bee/artifacts/csharpactions/System.Drawing-FeaturesChecked.txt_f5g4.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 132
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Drawing-FeaturesChecked.txt",
@@ -2356,12 +2368,12 @@
         "Library/Bee/artifacts/Android/Features/System.Drawing-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        132
+        108,
+        133
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.EnterpriseServices-FeaturesChecked.txt_kuui.info",
@@ -2372,7 +2384,7 @@
         "Library/Bee/artifacts/csharpactions/System.EnterpriseServices-FeaturesChecked.txt_kuui.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 134
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.EnterpriseServices-FeaturesChecked.txt",
@@ -2420,12 +2432,12 @@
         "Library/Bee/artifacts/Android/Features/System.EnterpriseServices-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        134
+        108,
+        135
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.IO.Compression-FeaturesChecked.txt_ziug.info",
@@ -2436,7 +2448,7 @@
         "Library/Bee/artifacts/csharpactions/System.IO.Compression-FeaturesChecked.txt_ziug.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 136
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.IO.Compression-FeaturesChecked.txt",
@@ -2484,12 +2496,12 @@
         "Library/Bee/artifacts/Android/Features/System.IO.Compression-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        136
+        108,
+        137
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.IO.Compression.FileSystem-FeaturesChecked.txt_8xhs.info",
@@ -2500,7 +2512,7 @@
         "Library/Bee/artifacts/csharpactions/System.IO.Compression.FileSystem-FeaturesChecked.txt_8xhs.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 138
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.IO.Compression.FileSystem-FeaturesChecked.txt",
@@ -2548,12 +2560,12 @@
         "Library/Bee/artifacts/Android/Features/System.IO.Compression.FileSystem-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        138
+        108,
+        139
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Net.Http-FeaturesChecked.txt_6zy9.info",
@@ -2564,7 +2576,7 @@
         "Library/Bee/artifacts/csharpactions/System.Net.Http-FeaturesChecked.txt_6zy9.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 140
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Net.Http-FeaturesChecked.txt",
@@ -2612,12 +2624,12 @@
         "Library/Bee/artifacts/Android/Features/System.Net.Http-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        140
+        108,
+        141
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Numerics-FeaturesChecked.txt_zs7y.info",
@@ -2628,7 +2640,7 @@
         "Library/Bee/artifacts/csharpactions/System.Numerics-FeaturesChecked.txt_zs7y.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 142
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Numerics-FeaturesChecked.txt",
@@ -2676,12 +2688,12 @@
         "Library/Bee/artifacts/Android/Features/System.Numerics-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        142
+        108,
+        143
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Runtime.Serialization-FeaturesChecked.txt_b9hm.info",
@@ -2692,7 +2704,7 @@
         "Library/Bee/artifacts/csharpactions/System.Runtime.Serialization-FeaturesChecked.txt_b9hm.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 144
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Runtime.Serialization-FeaturesChecked.txt",
@@ -2740,12 +2752,12 @@
         "Library/Bee/artifacts/Android/Features/System.Runtime.Serialization-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        144
+        108,
+        145
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Security-FeaturesChecked.txt_pdzz.info",
@@ -2756,7 +2768,7 @@
         "Library/Bee/artifacts/csharpactions/System.Security-FeaturesChecked.txt_pdzz.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 146
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Security-FeaturesChecked.txt",
@@ -2804,12 +2816,12 @@
         "Library/Bee/artifacts/Android/Features/System.Security-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        146
+        108,
+        147
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.ServiceModel.Internals-FeaturesChecked.txt_het8.info",
@@ -2820,7 +2832,7 @@
         "Library/Bee/artifacts/csharpactions/System.ServiceModel.Internals-FeaturesChecked.txt_het8.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 148
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.ServiceModel.Internals-FeaturesChecked.txt",
@@ -2868,12 +2880,12 @@
         "Library/Bee/artifacts/Android/Features/System.ServiceModel.Internals-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        148
+        108,
+        149
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Transactions-FeaturesChecked.txt_e9ns.info",
@@ -2884,7 +2896,7 @@
         "Library/Bee/artifacts/csharpactions/System.Transactions-FeaturesChecked.txt_e9ns.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 150
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Transactions-FeaturesChecked.txt",
@@ -2932,12 +2944,12 @@
         "Library/Bee/artifacts/Android/Features/System.Transactions-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        150
+        108,
+        151
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 151
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Xml-FeaturesChecked.txt_wnnz.info",
@@ -2948,7 +2960,7 @@
         "Library/Bee/artifacts/csharpactions/System.Xml-FeaturesChecked.txt_wnnz.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 152
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Xml-FeaturesChecked.txt",
@@ -2996,12 +3008,12 @@
         "Library/Bee/artifacts/Android/Features/System.Xml-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        152
+        108,
+        153
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 153
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/System.Xml.Linq-FeaturesChecked.txt_ghye.info",
@@ -3012,7 +3024,7 @@
         "Library/Bee/artifacts/csharpactions/System.Xml.Linq-FeaturesChecked.txt_ghye.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 154
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/System.Xml.Linq-FeaturesChecked.txt",
@@ -3060,12 +3072,12 @@
         "Library/Bee/artifacts/Android/Features/System.Xml.Linq-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        154
+        108,
+        155
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 155
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.InputSystem-FeaturesChecked.txt_ivdb.info",
@@ -3076,7 +3088,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.InputSystem-FeaturesChecked.txt_ivdb.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 156
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.InputSystem-FeaturesChecked.txt",
@@ -3124,12 +3136,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.InputSystem-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        156
+        108,
+        157
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 157
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.ProBuilder.Csg-FeaturesChecked.txt_kcl4.info",
@@ -3140,7 +3152,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.ProBuilder.Csg-FeaturesChecked.txt_kcl4.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 158
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.ProBuilder.Csg-FeaturesChecked.txt",
@@ -3188,12 +3200,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.ProBuilder.Csg-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        158
+        108,
+        159
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 159
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.ProBuilder-FeaturesChecked.txt_vb7b.info",
@@ -3204,7 +3216,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.ProBuilder-FeaturesChecked.txt_vb7b.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 160
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.ProBuilder-FeaturesChecked.txt",
@@ -3252,12 +3264,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.ProBuilder-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        160
+        108,
+        161
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 161
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.ProBuilder.KdTree-FeaturesChecked.txt_sgfs.info",
@@ -3268,7 +3280,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.ProBuilder.KdTree-FeaturesChecked.txt_sgfs.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 162
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.ProBuilder.KdTree-FeaturesChecked.txt",
@@ -3316,12 +3328,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.ProBuilder.KdTree-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        162
+        108,
+        163
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 163
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.ProBuilder.Poly2Tri-FeaturesChecked.txt_yy1d.info",
@@ -3332,7 +3344,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.ProBuilder.Poly2Tri-FeaturesChecked.txt_yy1d.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 164
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.ProBuilder.Poly2Tri-FeaturesChecked.txt",
@@ -3380,12 +3392,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.ProBuilder.Poly2Tri-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        164
+        108,
+        165
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.ProBuilder.Stl-FeaturesChecked.txt_g2v3.info",
@@ -3396,7 +3408,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.ProBuilder.Stl-FeaturesChecked.txt_g2v3.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 166
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.ProBuilder.Stl-FeaturesChecked.txt",
@@ -3444,12 +3456,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.ProBuilder.Stl-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        166
+        108,
+        167
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 167
+      "DebugActionIndex": 168
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.TextMeshPro-FeaturesChecked.txt_c7od.info",
@@ -3460,7 +3472,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.TextMeshPro-FeaturesChecked.txt_c7od.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 168
+      "DebugActionIndex": 169
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.TextMeshPro-FeaturesChecked.txt",
@@ -3508,12 +3520,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.TextMeshPro-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        168
+        108,
+        169
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 169
+      "DebugActionIndex": 170
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.Timeline-FeaturesChecked.txt_in83.info",
@@ -3524,7 +3536,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.Timeline-FeaturesChecked.txt_in83.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 170
+      "DebugActionIndex": 171
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.Timeline-FeaturesChecked.txt",
@@ -3572,12 +3584,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.Timeline-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        170
+        108,
+        171
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 171
+      "DebugActionIndex": 172
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.VisualScripting.Antlr3.Runtime-FeaturesChecked.txt_on7y.info",
@@ -3588,7 +3600,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.VisualScripting.Antlr3.Runtime-FeaturesChecked.txt_on7y.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 172
+      "DebugActionIndex": 173
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.VisualScripting.Antlr3.Runtime-FeaturesChecked.txt",
@@ -3636,12 +3648,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.VisualScripting.Antlr3.Runtime-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        172
+        108,
+        173
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 173
+      "DebugActionIndex": 174
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.VisualScripting.Core-FeaturesChecked.txt_v98y.info",
@@ -3652,7 +3664,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.VisualScripting.Core-FeaturesChecked.txt_v98y.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 174
+      "DebugActionIndex": 175
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.VisualScripting.Core-FeaturesChecked.txt",
@@ -3700,12 +3712,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.VisualScripting.Core-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        174
+        108,
+        175
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 175
+      "DebugActionIndex": 176
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.VisualScripting.Flow-FeaturesChecked.txt_6qpt.info",
@@ -3716,7 +3728,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.VisualScripting.Flow-FeaturesChecked.txt_6qpt.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 176
+      "DebugActionIndex": 177
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.VisualScripting.Flow-FeaturesChecked.txt",
@@ -3764,12 +3776,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.VisualScripting.Flow-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        176
+        108,
+        177
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 177
+      "DebugActionIndex": 178
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/Unity.VisualScripting.State-FeaturesChecked.txt_znao.info",
@@ -3780,7 +3792,7 @@
         "Library/Bee/artifacts/csharpactions/Unity.VisualScripting.State-FeaturesChecked.txt_znao.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 178
+      "DebugActionIndex": 179
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Unity.VisualScripting.State-FeaturesChecked.txt",
@@ -3828,12 +3840,12 @@
         "Library/Bee/artifacts/Android/Features/Unity.VisualScripting.State-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        178
+        108,
+        179
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 179
+      "DebugActionIndex": 180
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.AccessibilityModule-FeaturesChecked.txt_ttts.info",
@@ -3844,7 +3856,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.AccessibilityModule-FeaturesChecked.txt_ttts.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 180
+      "DebugActionIndex": 181
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.AccessibilityModule-FeaturesChecked.txt",
@@ -3892,12 +3904,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.AccessibilityModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        180
+        108,
+        181
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 181
+      "DebugActionIndex": 182
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.AIModule-FeaturesChecked.txt_jr17.info",
@@ -3908,7 +3920,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.AIModule-FeaturesChecked.txt_jr17.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 182
+      "DebugActionIndex": 183
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.AIModule-FeaturesChecked.txt",
@@ -3956,12 +3968,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.AIModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        182
+        108,
+        183
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 183
+      "DebugActionIndex": 184
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.AndroidJNIModule-FeaturesChecked.txt_x3ln.info",
@@ -3972,7 +3984,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.AndroidJNIModule-FeaturesChecked.txt_x3ln.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 184
+      "DebugActionIndex": 185
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.AndroidJNIModule-FeaturesChecked.txt",
@@ -4020,12 +4032,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.AndroidJNIModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        184
+        108,
+        185
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 185
+      "DebugActionIndex": 186
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.AnimationModule-FeaturesChecked.txt_3sdh.info",
@@ -4036,7 +4048,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.AnimationModule-FeaturesChecked.txt_3sdh.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 186
+      "DebugActionIndex": 187
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.AnimationModule-FeaturesChecked.txt",
@@ -4084,12 +4096,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.AnimationModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        186
+        108,
+        187
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 187
+      "DebugActionIndex": 188
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.ARModule-FeaturesChecked.txt_crib.info",
@@ -4100,7 +4112,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.ARModule-FeaturesChecked.txt_crib.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 188
+      "DebugActionIndex": 189
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.ARModule-FeaturesChecked.txt",
@@ -4148,12 +4160,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.ARModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        188
+        108,
+        189
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 189
+      "DebugActionIndex": 190
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.AssetBundleModule-FeaturesChecked.txt_1gjh.info",
@@ -4164,7 +4176,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.AssetBundleModule-FeaturesChecked.txt_1gjh.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 190
+      "DebugActionIndex": 191
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.AssetBundleModule-FeaturesChecked.txt",
@@ -4212,12 +4224,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.AssetBundleModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        190
+        108,
+        191
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 191
+      "DebugActionIndex": 192
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.AudioModule-FeaturesChecked.txt_tbfa.info",
@@ -4228,7 +4240,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.AudioModule-FeaturesChecked.txt_tbfa.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 192
+      "DebugActionIndex": 193
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.AudioModule-FeaturesChecked.txt",
@@ -4276,12 +4288,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.AudioModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        192
+        108,
+        193
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 193
+      "DebugActionIndex": 194
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.ClothModule-FeaturesChecked.txt_t4wd.info",
@@ -4292,7 +4304,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.ClothModule-FeaturesChecked.txt_t4wd.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 194
+      "DebugActionIndex": 195
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.ClothModule-FeaturesChecked.txt",
@@ -4340,12 +4352,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.ClothModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        194
+        108,
+        195
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 195
+      "DebugActionIndex": 196
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.CoreModule-FeaturesChecked.txt_uimb.info",
@@ -4356,7 +4368,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.CoreModule-FeaturesChecked.txt_uimb.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 196
+      "DebugActionIndex": 197
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.CoreModule-FeaturesChecked.txt",
@@ -4404,12 +4416,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.CoreModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        196
+        108,
+        197
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 197
+      "DebugActionIndex": 198
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.CrashReportingModule-FeaturesChecked.txt_yrdm.info",
@@ -4420,7 +4432,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.CrashReportingModule-FeaturesChecked.txt_yrdm.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 198
+      "DebugActionIndex": 199
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.CrashReportingModule-FeaturesChecked.txt",
@@ -4468,12 +4480,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.CrashReportingModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        198
+        108,
+        199
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 199
+      "DebugActionIndex": 200
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.DirectorModule-FeaturesChecked.txt_ruda.info",
@@ -4484,7 +4496,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.DirectorModule-FeaturesChecked.txt_ruda.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 200
+      "DebugActionIndex": 201
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.DirectorModule-FeaturesChecked.txt",
@@ -4532,12 +4544,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.DirectorModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        200
+        108,
+        201
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 201
+      "DebugActionIndex": 202
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine-FeaturesChecked.txt_x1ug.info",
@@ -4548,7 +4560,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine-FeaturesChecked.txt_x1ug.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 202
+      "DebugActionIndex": 203
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine-FeaturesChecked.txt",
@@ -4596,12 +4608,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        202
+        108,
+        203
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 203
+      "DebugActionIndex": 204
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.DSPGraphModule-FeaturesChecked.txt_sa00.info",
@@ -4612,7 +4624,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.DSPGraphModule-FeaturesChecked.txt_sa00.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 204
+      "DebugActionIndex": 205
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.DSPGraphModule-FeaturesChecked.txt",
@@ -4660,12 +4672,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.DSPGraphModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        204
+        108,
+        205
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 205
+      "DebugActionIndex": 206
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.GameCenterModule-FeaturesChecked.txt_mquo.info",
@@ -4676,7 +4688,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.GameCenterModule-FeaturesChecked.txt_mquo.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 206
+      "DebugActionIndex": 207
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.GameCenterModule-FeaturesChecked.txt",
@@ -4724,12 +4736,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.GameCenterModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        206
+        108,
+        207
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 207
+      "DebugActionIndex": 208
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.GIModule-FeaturesChecked.txt_xq4v.info",
@@ -4740,7 +4752,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.GIModule-FeaturesChecked.txt_xq4v.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 208
+      "DebugActionIndex": 209
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.GIModule-FeaturesChecked.txt",
@@ -4788,12 +4800,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.GIModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        208
+        108,
+        209
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 209
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.GridModule-FeaturesChecked.txt_5p9t.info",
@@ -4804,7 +4816,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.GridModule-FeaturesChecked.txt_5p9t.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 210
+      "DebugActionIndex": 211
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.GridModule-FeaturesChecked.txt",
@@ -4852,12 +4864,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.GridModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        210
+        108,
+        211
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 211
+      "DebugActionIndex": 212
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.HotReloadModule-FeaturesChecked.txt_hu6r.info",
@@ -4868,7 +4880,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.HotReloadModule-FeaturesChecked.txt_hu6r.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 212
+      "DebugActionIndex": 213
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.HotReloadModule-FeaturesChecked.txt",
@@ -4916,12 +4928,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.HotReloadModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        212
+        108,
+        213
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 213
+      "DebugActionIndex": 214
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.ImageConversionModule-FeaturesChecked.txt_cml2.info",
@@ -4932,7 +4944,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.ImageConversionModule-FeaturesChecked.txt_cml2.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 214
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.ImageConversionModule-FeaturesChecked.txt",
@@ -4980,12 +4992,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.ImageConversionModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        214
+        108,
+        215
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 215
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.IMGUIModule-FeaturesChecked.txt_ufk2.info",
@@ -4996,7 +5008,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.IMGUIModule-FeaturesChecked.txt_ufk2.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 216
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.IMGUIModule-FeaturesChecked.txt",
@@ -5044,12 +5056,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.IMGUIModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        216
+        108,
+        217
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 217
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.InputLegacyModule-FeaturesChecked.txt_y5my.info",
@@ -5060,7 +5072,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.InputLegacyModule-FeaturesChecked.txt_y5my.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 218
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.InputLegacyModule-FeaturesChecked.txt",
@@ -5108,12 +5120,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.InputLegacyModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        218
+        108,
+        219
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 219
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.InputModule-FeaturesChecked.txt_xblj.info",
@@ -5124,7 +5136,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.InputModule-FeaturesChecked.txt_xblj.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 220
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.InputModule-FeaturesChecked.txt",
@@ -5172,12 +5184,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.InputModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        220
+        108,
+        221
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 221
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.JSONSerializeModule-FeaturesChecked.txt_vjsc.info",
@@ -5188,7 +5200,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.JSONSerializeModule-FeaturesChecked.txt_vjsc.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 222
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.JSONSerializeModule-FeaturesChecked.txt",
@@ -5236,12 +5248,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.JSONSerializeModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        222
+        108,
+        223
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 223
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.LocalizationModule-FeaturesChecked.txt_c5g9.info",
@@ -5252,7 +5264,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.LocalizationModule-FeaturesChecked.txt_c5g9.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 224
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.LocalizationModule-FeaturesChecked.txt",
@@ -5300,12 +5312,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.LocalizationModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        224
+        108,
+        225
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 225
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.ParticleSystemModule-FeaturesChecked.txt_kapj.info",
@@ -5316,7 +5328,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.ParticleSystemModule-FeaturesChecked.txt_kapj.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 226
+      "DebugActionIndex": 227
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.ParticleSystemModule-FeaturesChecked.txt",
@@ -5364,12 +5376,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.ParticleSystemModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        226
+        108,
+        227
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 227
+      "DebugActionIndex": 228
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.PerformanceReportingModule-FeaturesChecked.txt_pjc8.info",
@@ -5380,7 +5392,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.PerformanceReportingModule-FeaturesChecked.txt_pjc8.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 228
+      "DebugActionIndex": 229
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.PerformanceReportingModule-FeaturesChecked.txt",
@@ -5428,12 +5440,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.PerformanceReportingModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        228
+        108,
+        229
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 229
+      "DebugActionIndex": 230
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.Physics2DModule-FeaturesChecked.txt_45hf.info",
@@ -5444,7 +5456,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.Physics2DModule-FeaturesChecked.txt_45hf.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 230
+      "DebugActionIndex": 231
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.Physics2DModule-FeaturesChecked.txt",
@@ -5492,12 +5504,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.Physics2DModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        230
+        108,
+        231
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 231
+      "DebugActionIndex": 232
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.PhysicsModule-FeaturesChecked.txt_2l1t.info",
@@ -5508,7 +5520,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.PhysicsModule-FeaturesChecked.txt_2l1t.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 232
+      "DebugActionIndex": 233
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.PhysicsModule-FeaturesChecked.txt",
@@ -5556,12 +5568,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.PhysicsModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        232
+        108,
+        233
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 233
+      "DebugActionIndex": 234
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.ProfilerModule-FeaturesChecked.txt_8pk7.info",
@@ -5572,7 +5584,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.ProfilerModule-FeaturesChecked.txt_8pk7.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 234
+      "DebugActionIndex": 235
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.ProfilerModule-FeaturesChecked.txt",
@@ -5620,12 +5632,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.ProfilerModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        234
+        108,
+        235
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 235
+      "DebugActionIndex": 236
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule-FeaturesChecked.txt_tunv.info",
@@ -5636,7 +5648,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule-FeaturesChecked.txt_tunv.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 236
+      "DebugActionIndex": 237
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule-FeaturesChecked.txt",
@@ -5684,12 +5696,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        236
+        108,
+        237
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 237
+      "DebugActionIndex": 238
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.ScreenCaptureModule-FeaturesChecked.txt_dsz7.info",
@@ -5700,7 +5712,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.ScreenCaptureModule-FeaturesChecked.txt_dsz7.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 238
+      "DebugActionIndex": 239
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.ScreenCaptureModule-FeaturesChecked.txt",
@@ -5748,12 +5760,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.ScreenCaptureModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        238
+        108,
+        239
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 239
+      "DebugActionIndex": 240
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.SharedInternalsModule-FeaturesChecked.txt_sm9d.info",
@@ -5764,7 +5776,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.SharedInternalsModule-FeaturesChecked.txt_sm9d.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 240
+      "DebugActionIndex": 241
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.SharedInternalsModule-FeaturesChecked.txt",
@@ -5812,12 +5824,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.SharedInternalsModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        240
+        108,
+        241
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 241
+      "DebugActionIndex": 242
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.SpriteMaskModule-FeaturesChecked.txt_g2rc.info",
@@ -5828,7 +5840,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.SpriteMaskModule-FeaturesChecked.txt_g2rc.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 242
+      "DebugActionIndex": 243
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.SpriteMaskModule-FeaturesChecked.txt",
@@ -5876,12 +5888,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.SpriteMaskModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        242
+        108,
+        243
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 243
+      "DebugActionIndex": 244
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.SpriteShapeModule-FeaturesChecked.txt_zrrh.info",
@@ -5892,7 +5904,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.SpriteShapeModule-FeaturesChecked.txt_zrrh.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 244
+      "DebugActionIndex": 245
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.SpriteShapeModule-FeaturesChecked.txt",
@@ -5940,12 +5952,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.SpriteShapeModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        244
+        108,
+        245
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 245
+      "DebugActionIndex": 246
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.StreamingModule-FeaturesChecked.txt_hlqf.info",
@@ -5956,7 +5968,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.StreamingModule-FeaturesChecked.txt_hlqf.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 246
+      "DebugActionIndex": 247
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.StreamingModule-FeaturesChecked.txt",
@@ -6004,12 +6016,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.StreamingModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        246
+        108,
+        247
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 247
+      "DebugActionIndex": 248
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.SubstanceModule-FeaturesChecked.txt_3jeb.info",
@@ -6020,7 +6032,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.SubstanceModule-FeaturesChecked.txt_3jeb.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 248
+      "DebugActionIndex": 249
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.SubstanceModule-FeaturesChecked.txt",
@@ -6068,12 +6080,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.SubstanceModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        248
+        108,
+        249
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 249
+      "DebugActionIndex": 250
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.SubsystemsModule-FeaturesChecked.txt_vzqa.info",
@@ -6084,7 +6096,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.SubsystemsModule-FeaturesChecked.txt_vzqa.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 250
+      "DebugActionIndex": 251
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.SubsystemsModule-FeaturesChecked.txt",
@@ -6132,12 +6144,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.SubsystemsModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        250
+        108,
+        251
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 251
+      "DebugActionIndex": 252
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.TerrainModule-FeaturesChecked.txt_wybo.info",
@@ -6148,7 +6160,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.TerrainModule-FeaturesChecked.txt_wybo.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 252
+      "DebugActionIndex": 253
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.TerrainModule-FeaturesChecked.txt",
@@ -6196,12 +6208,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.TerrainModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        252
+        108,
+        253
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 253
+      "DebugActionIndex": 254
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.TerrainPhysicsModule-FeaturesChecked.txt_15vy.info",
@@ -6212,7 +6224,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.TerrainPhysicsModule-FeaturesChecked.txt_15vy.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 254
+      "DebugActionIndex": 255
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.TerrainPhysicsModule-FeaturesChecked.txt",
@@ -6260,12 +6272,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.TerrainPhysicsModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        254
+        108,
+        255
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 255
+      "DebugActionIndex": 256
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.TextCoreFontEngineModule-FeaturesChecked.txt_4rfo.info",
@@ -6276,7 +6288,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.TextCoreFontEngineModule-FeaturesChecked.txt_4rfo.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 256
+      "DebugActionIndex": 257
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.TextCoreFontEngineModule-FeaturesChecked.txt",
@@ -6324,12 +6336,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.TextCoreFontEngineModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        256
+        108,
+        257
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 257
+      "DebugActionIndex": 258
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.TextCoreTextEngineModule-FeaturesChecked.txt_el85.info",
@@ -6340,7 +6352,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.TextCoreTextEngineModule-FeaturesChecked.txt_el85.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 258
+      "DebugActionIndex": 259
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.TextCoreTextEngineModule-FeaturesChecked.txt",
@@ -6388,12 +6400,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.TextCoreTextEngineModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        258
+        108,
+        259
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 259
+      "DebugActionIndex": 260
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.TextRenderingModule-FeaturesChecked.txt_ighi.info",
@@ -6404,7 +6416,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.TextRenderingModule-FeaturesChecked.txt_ighi.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 260
+      "DebugActionIndex": 261
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.TextRenderingModule-FeaturesChecked.txt",
@@ -6452,12 +6464,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.TextRenderingModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        260
+        108,
+        261
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 261
+      "DebugActionIndex": 262
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.TilemapModule-FeaturesChecked.txt_xct4.info",
@@ -6468,7 +6480,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.TilemapModule-FeaturesChecked.txt_xct4.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 262
+      "DebugActionIndex": 263
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.TilemapModule-FeaturesChecked.txt",
@@ -6516,12 +6528,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.TilemapModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        262
+        108,
+        263
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 263
+      "DebugActionIndex": 264
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.TLSModule-FeaturesChecked.txt_i3n3.info",
@@ -6532,7 +6544,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.TLSModule-FeaturesChecked.txt_i3n3.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 264
+      "DebugActionIndex": 265
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.TLSModule-FeaturesChecked.txt",
@@ -6580,12 +6592,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.TLSModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        264
+        108,
+        265
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 265
+      "DebugActionIndex": 266
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UI-FeaturesChecked.txt_v0bu.info",
@@ -6596,7 +6608,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UI-FeaturesChecked.txt_v0bu.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 266
+      "DebugActionIndex": 267
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UI-FeaturesChecked.txt",
@@ -6644,12 +6656,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UI-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        266
+        108,
+        267
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 267
+      "DebugActionIndex": 268
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UIElementsModule-FeaturesChecked.txt_aabo.info",
@@ -6660,7 +6672,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UIElementsModule-FeaturesChecked.txt_aabo.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 268
+      "DebugActionIndex": 269
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UIElementsModule-FeaturesChecked.txt",
@@ -6708,12 +6720,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UIElementsModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        268
+        108,
+        269
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 269
+      "DebugActionIndex": 270
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UIElementsNativeModule-FeaturesChecked.txt_9nb4.info",
@@ -6724,7 +6736,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UIElementsNativeModule-FeaturesChecked.txt_9nb4.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 270
+      "DebugActionIndex": 271
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UIElementsNativeModule-FeaturesChecked.txt",
@@ -6772,12 +6784,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UIElementsNativeModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        270
+        108,
+        271
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 271
+      "DebugActionIndex": 272
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UIModule-FeaturesChecked.txt_zatd.info",
@@ -6788,7 +6800,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UIModule-FeaturesChecked.txt_zatd.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 272
+      "DebugActionIndex": 273
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UIModule-FeaturesChecked.txt",
@@ -6836,12 +6848,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UIModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        272
+        108,
+        273
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 273
+      "DebugActionIndex": 274
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UmbraModule-FeaturesChecked.txt_sk2p.info",
@@ -6852,7 +6864,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UmbraModule-FeaturesChecked.txt_sk2p.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 274
+      "DebugActionIndex": 275
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UmbraModule-FeaturesChecked.txt",
@@ -6900,12 +6912,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UmbraModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        274
+        108,
+        275
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 275
+      "DebugActionIndex": 276
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UNETModule-FeaturesChecked.txt_v8z7.info",
@@ -6916,7 +6928,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UNETModule-FeaturesChecked.txt_v8z7.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 276
+      "DebugActionIndex": 277
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UNETModule-FeaturesChecked.txt",
@@ -6964,12 +6976,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UNETModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        276
+        108,
+        277
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 277
+      "DebugActionIndex": 278
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityAnalyticsCommonModule-FeaturesChecked.txt_z4m3.info",
@@ -6980,7 +6992,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityAnalyticsCommonModule-FeaturesChecked.txt_z4m3.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 278
+      "DebugActionIndex": 279
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityAnalyticsCommonModule-FeaturesChecked.txt",
@@ -7028,12 +7040,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityAnalyticsCommonModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        278
+        108,
+        279
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 279
+      "DebugActionIndex": 280
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityAnalyticsModule-FeaturesChecked.txt_cjxw.info",
@@ -7044,7 +7056,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityAnalyticsModule-FeaturesChecked.txt_cjxw.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 280
+      "DebugActionIndex": 281
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityAnalyticsModule-FeaturesChecked.txt",
@@ -7092,12 +7104,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityAnalyticsModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        280
+        108,
+        281
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 281
+      "DebugActionIndex": 282
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityConnectModule-FeaturesChecked.txt_ck2r.info",
@@ -7108,7 +7120,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityConnectModule-FeaturesChecked.txt_ck2r.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 282
+      "DebugActionIndex": 283
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityConnectModule-FeaturesChecked.txt",
@@ -7156,12 +7168,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityConnectModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        282
+        108,
+        283
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 283
+      "DebugActionIndex": 284
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityCurlModule-FeaturesChecked.txt_k4qz.info",
@@ -7172,7 +7184,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityCurlModule-FeaturesChecked.txt_k4qz.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 284
+      "DebugActionIndex": 285
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityCurlModule-FeaturesChecked.txt",
@@ -7220,12 +7232,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityCurlModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        284
+        108,
+        285
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 285
+      "DebugActionIndex": 286
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityTestProtocolModule-FeaturesChecked.txt_2b9e.info",
@@ -7236,7 +7248,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityTestProtocolModule-FeaturesChecked.txt_2b9e.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 286
+      "DebugActionIndex": 287
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityTestProtocolModule-FeaturesChecked.txt",
@@ -7284,12 +7296,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityTestProtocolModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        286
+        108,
+        287
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 287
+      "DebugActionIndex": 288
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestAssetBundleModule-FeaturesChecked.txt_dju7.info",
@@ -7300,7 +7312,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestAssetBundleModule-FeaturesChecked.txt_dju7.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 288
+      "DebugActionIndex": 289
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestAssetBundleModule-FeaturesChecked.txt",
@@ -7348,12 +7360,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestAssetBundleModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        288
+        108,
+        289
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 289
+      "DebugActionIndex": 290
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestAudioModule-FeaturesChecked.txt_1uoh.info",
@@ -7364,7 +7376,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestAudioModule-FeaturesChecked.txt_1uoh.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 290
+      "DebugActionIndex": 291
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestAudioModule-FeaturesChecked.txt",
@@ -7412,12 +7424,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestAudioModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        290
+        108,
+        291
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 291
+      "DebugActionIndex": 292
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestModule-FeaturesChecked.txt_jk15.info",
@@ -7428,7 +7440,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestModule-FeaturesChecked.txt_jk15.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 292
+      "DebugActionIndex": 293
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestModule-FeaturesChecked.txt",
@@ -7476,12 +7488,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        292
+        108,
+        293
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 293
+      "DebugActionIndex": 294
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestTextureModule-FeaturesChecked.txt_isnv.info",
@@ -7492,7 +7504,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestTextureModule-FeaturesChecked.txt_isnv.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 294
+      "DebugActionIndex": 295
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestTextureModule-FeaturesChecked.txt",
@@ -7540,12 +7552,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestTextureModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        294
+        108,
+        295
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 295
+      "DebugActionIndex": 296
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestWWWModule-FeaturesChecked.txt_eosx.info",
@@ -7556,7 +7568,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.UnityWebRequestWWWModule-FeaturesChecked.txt_eosx.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 296
+      "DebugActionIndex": 297
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestWWWModule-FeaturesChecked.txt",
@@ -7604,12 +7616,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.UnityWebRequestWWWModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        296
+        108,
+        297
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 297
+      "DebugActionIndex": 298
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.VehiclesModule-FeaturesChecked.txt_a1wc.info",
@@ -7620,7 +7632,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.VehiclesModule-FeaturesChecked.txt_a1wc.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 298
+      "DebugActionIndex": 299
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.VehiclesModule-FeaturesChecked.txt",
@@ -7668,12 +7680,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.VehiclesModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        298
+        108,
+        299
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 299
+      "DebugActionIndex": 300
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.VFXModule-FeaturesChecked.txt_r8mm.info",
@@ -7684,7 +7696,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.VFXModule-FeaturesChecked.txt_r8mm.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 300
+      "DebugActionIndex": 301
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.VFXModule-FeaturesChecked.txt",
@@ -7732,12 +7744,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.VFXModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        300
+        108,
+        301
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 301
+      "DebugActionIndex": 302
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.VideoModule-FeaturesChecked.txt_2ixs.info",
@@ -7748,7 +7760,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.VideoModule-FeaturesChecked.txt_2ixs.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 302
+      "DebugActionIndex": 303
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.VideoModule-FeaturesChecked.txt",
@@ -7796,12 +7808,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.VideoModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        302
+        108,
+        303
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 303
+      "DebugActionIndex": 304
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.VRModule-FeaturesChecked.txt_nz9x.info",
@@ -7812,7 +7824,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.VRModule-FeaturesChecked.txt_nz9x.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 304
+      "DebugActionIndex": 305
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.VRModule-FeaturesChecked.txt",
@@ -7860,12 +7872,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.VRModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        304
+        108,
+        305
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 305
+      "DebugActionIndex": 306
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.WindModule-FeaturesChecked.txt_jjbj.info",
@@ -7876,7 +7888,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.WindModule-FeaturesChecked.txt_jjbj.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 306
+      "DebugActionIndex": 307
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.WindModule-FeaturesChecked.txt",
@@ -7924,12 +7936,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.WindModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        306
+        108,
+        307
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 307
+      "DebugActionIndex": 308
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/UnityEngine.XRModule-FeaturesChecked.txt_xks3.info",
@@ -7940,7 +7952,7 @@
         "Library/Bee/artifacts/csharpactions/UnityEngine.XRModule-FeaturesChecked.txt_xks3.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 308
+      "DebugActionIndex": 309
     },
     {
       "Annotation": "ExtractUsedFeatures Library/Bee/artifacts/Android/Features/UnityEngine.XRModule-FeaturesChecked.txt",
@@ -7988,12 +8000,12 @@
         "Library/Bee/artifacts/Android/Features/UnityEngine.XRModule-FeaturesChecked.txt"
       ],
       "ToBuildDependencies": [
-        107,
-        308
+        108,
+        309
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 309
+      "DebugActionIndex": 310
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity default resources",
@@ -8004,7 +8016,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity default resources"
       ],
-      "DebugActionIndex": 310
+      "DebugActionIndex": 311
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/build.gradle_keq9.info",
@@ -8015,7 +8027,7 @@
         "Library/Bee/artifacts/csharpactions/build.gradle_keq9.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 311
+      "DebugActionIndex": 312
     },
     {
       "Annotation": "ActionGenerateProjectFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/build.gradle (+6 others)",
@@ -8046,11 +8058,11 @@
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/gradle/wrapper/gradle-wrapper.properties"
       ],
       "ToBuildDependencies": [
-        311
+        312
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 312
+      "DebugActionIndex": 313
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/proguard-unity.txt",
@@ -8061,7 +8073,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/proguard-unity.txt"
       ],
-      "DebugActionIndex": 313
+      "DebugActionIndex": 314
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/java/com/unity3d/player/UnityPlayerActivity.java",
@@ -8072,7 +8084,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/java/com/unity3d/player/UnityPlayerActivity.java"
       ],
-      "DebugActionIndex": 314
+      "DebugActionIndex": 315
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/libs/unity-classes.jar",
@@ -8083,7 +8095,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/libs/unity-classes.jar"
       ],
-      "DebugActionIndex": 315
+      "DebugActionIndex": 316
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values/ids.xml",
@@ -8094,7 +8106,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values/ids.xml"
       ],
-      "DebugActionIndex": 316
+      "DebugActionIndex": 317
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values/styles.xml",
@@ -8105,7 +8117,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values/styles.xml"
       ],
-      "DebugActionIndex": 317
+      "DebugActionIndex": 318
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values-v21/styles.xml",
@@ -8116,7 +8128,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values-v21/styles.xml"
       ],
-      "DebugActionIndex": 318
+      "DebugActionIndex": 319
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values-v28/styles.xml",
@@ -8127,7 +8139,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values-v28/styles.xml"
       ],
-      "DebugActionIndex": 319
+      "DebugActionIndex": 320
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values/styles.xml",
@@ -8138,7 +8150,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values/styles.xml"
       ],
-      "DebugActionIndex": 320
+      "DebugActionIndex": 321
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values-v21/styles.xml",
@@ -8149,7 +8161,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values-v21/styles.xml"
       ],
-      "DebugActionIndex": 321
+      "DebugActionIndex": 322
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values-v28/styles.xml",
@@ -8160,7 +8172,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values-v28/styles.xml"
       ],
-      "DebugActionIndex": 322
+      "DebugActionIndex": 323
     },
     {
       "Annotation": "WriteText D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values/strings.xml",
@@ -8171,7 +8183,7 @@
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/values/strings.xml"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 323
+      "DebugActionIndex": 324
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values/freeformwindow.xml",
@@ -8182,7 +8194,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values/freeformwindow.xml"
       ],
-      "DebugActionIndex": 324
+      "DebugActionIndex": 325
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values-v30/freeformwindow.xml",
@@ -8193,7 +8205,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/res/values-v30/freeformwindow.xml"
       ],
-      "DebugActionIndex": 325
+      "DebugActionIndex": 326
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-anydpi-v26/app_icon.xml",
@@ -8204,7 +8216,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-anydpi-v26/app_icon.xml"
       ],
-      "DebugActionIndex": 326
+      "DebugActionIndex": 327
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-anydpi-v26/app_icon_round.xml",
@@ -8215,7 +8227,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-anydpi-v26/app_icon_round.xml"
       ],
-      "DebugActionIndex": 327
+      "DebugActionIndex": 328
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/app_icon.png",
@@ -8226,7 +8238,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/app_icon.png"
       ],
-      "DebugActionIndex": 328
+      "DebugActionIndex": 329
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/ic_launcher_background.png",
@@ -8237,7 +8249,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/ic_launcher_background.png"
       ],
-      "DebugActionIndex": 329
+      "DebugActionIndex": 330
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
@@ -8248,7 +8260,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
       ],
-      "DebugActionIndex": 330
+      "DebugActionIndex": 331
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmain.so",
@@ -8259,7 +8271,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmain.so"
       ],
-      "DebugActionIndex": 331
+      "DebugActionIndex": 332
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libunity.so",
@@ -8270,7 +8282,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libunity.so"
       ],
-      "DebugActionIndex": 332
+      "DebugActionIndex": 333
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmonobdwgc-2.0.so",
@@ -8281,7 +8293,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmonobdwgc-2.0.so"
       ],
-      "DebugActionIndex": 333
+      "DebugActionIndex": 334
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libMonoPosixHelper.so",
@@ -8292,7 +8304,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libMonoPosixHelper.so"
       ],
-      "DebugActionIndex": 334
+      "DebugActionIndex": 335
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmono-native.so",
@@ -8303,7 +8315,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmono-native.so"
       ],
-      "DebugActionIndex": 335
+      "DebugActionIndex": 336
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/LauncherManifestDiag.txt_zvqu.info",
@@ -8314,7 +8326,7 @@
         "Library/Bee/artifacts/csharpactions/LauncherManifestDiag.txt_zvqu.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 336
+      "DebugActionIndex": 337
     },
     {
       "Annotation": "Generate Manifests Library/Bee/artifacts/Android/Manifest/LauncherManifestDiag.txt (+3 others)",
@@ -8439,112 +8451,112 @@
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml"
       ],
       "ToBuildDependencies": [
-        109,
-        111,
-        113,
-        115,
-        117,
-        119,
-        121,
-        123,
-        125,
-        127,
-        129,
-        131,
-        133,
-        135,
-        137,
-        139,
-        141,
-        143,
-        145,
-        147,
-        149,
-        151,
-        153,
-        155,
-        157,
-        159,
-        161,
-        163,
-        165,
-        167,
-        169,
-        171,
-        173,
-        175,
-        177,
-        179,
-        181,
-        183,
-        185,
-        187,
-        189,
-        191,
-        193,
-        195,
-        197,
-        199,
-        201,
-        203,
-        205,
-        207,
-        209,
-        211,
-        213,
-        215,
-        217,
-        219,
-        221,
-        223,
-        225,
-        227,
-        229,
-        231,
-        233,
-        235,
-        237,
-        239,
-        241,
-        243,
-        245,
-        247,
-        249,
-        251,
-        253,
-        255,
-        257,
-        259,
-        261,
-        263,
-        265,
-        267,
-        269,
-        271,
-        273,
-        275,
-        277,
-        279,
-        281,
-        283,
-        285,
-        287,
-        289,
-        291,
-        293,
-        295,
-        297,
-        299,
-        301,
-        303,
-        305,
-        307,
-        309,
-        336
+        110,
+        112,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152,
+        154,
+        156,
+        158,
+        160,
+        162,
+        164,
+        166,
+        168,
+        170,
+        172,
+        174,
+        176,
+        178,
+        180,
+        182,
+        184,
+        186,
+        188,
+        190,
+        192,
+        194,
+        196,
+        198,
+        200,
+        202,
+        204,
+        206,
+        208,
+        210,
+        212,
+        214,
+        216,
+        218,
+        220,
+        222,
+        224,
+        226,
+        228,
+        230,
+        232,
+        234,
+        236,
+        238,
+        240,
+        242,
+        244,
+        246,
+        248,
+        250,
+        252,
+        254,
+        256,
+        258,
+        260,
+        262,
+        264,
+        266,
+        268,
+        270,
+        272,
+        274,
+        276,
+        278,
+        280,
+        282,
+        284,
+        286,
+        288,
+        290,
+        292,
+        294,
+        296,
+        298,
+        300,
+        302,
+        304,
+        306,
+        308,
+        310,
+        337
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 337
+      "DebugActionIndex": 338
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmain.so",
@@ -8555,7 +8567,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmain.so"
       ],
-      "DebugActionIndex": 338
+      "DebugActionIndex": 339
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmonobdwgc-2.0.so",
@@ -8566,7 +8578,7 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmonobdwgc-2.0.so"
       ],
-      "DebugActionIndex": 339
+      "DebugActionIndex": 340
     },
     {
       "Annotation": "CopyFiles D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libunity.so",
@@ -8577,18 +8589,18 @@
       "Outputs": [
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libunity.so"
       ],
-      "DebugActionIndex": 340
+      "DebugActionIndex": 341
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/unity_app_guid_h2tv.info",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"AndroidPlayerBuildProgram.Actions.GuidGenerator\",\"methodName\":\"Run\",\"assemblyLocation\":\"C:\\\\Program Files\\\\Unity\\\\Hub\\\\Editor\\\\2021.3.26f1\\\\Editor\\\\Data\\\\PlaybackEngines\\\\AndroidPlayer\\\\AndroidPlayerBuildProgram.exe\",\"targets\":[\"D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid\"],\"inputs\":[\"Library/PlayerDataCache/Android/Data/boot.config\",\"Library/PlayerDataCache/Android/Data/data.unity3d\",\"Library/PlayerDataCache/Android/Data/RuntimeInitializeOnLoads.json\",\"Library/PlayerDataCache/Android/Data/ScriptingAssemblies.json\",\"Temp/StagingArea/Data/Managed/Assembly-CSharp.dll\",\"Temp/StagingArea/Data/Managed/IngameDebugConsole.Runtime.dll\",\"Temp/StagingArea/Data/Managed/Melanchall.DryWetMidi.dll\",\"Temp/StagingArea/Data/Managed/Mono.Security.dll\",\"Temp/StagingArea/Data/Managed/mscorlib.dll\",\"Temp/StagingArea/Data/Managed/netstandard.dll\",\"Temp/StagingArea/Data/Managed/System.ComponentModel.Composition.dll\",\"Temp/StagingArea/Data/Managed/System.Configuration.dll\",\"Temp/StagingArea/Data/Managed/System.Core.dll\",\"Temp/StagingArea/Data/Managed/System.Data.DataSetExtensions.dll\",\"Temp/StagingArea/Data/Managed/System.Data.dll\",\"Temp/StagingArea/Data/Managed/System.dll\",\"Temp/StagingArea/Data/Managed/System.Drawing.dll\",\"Temp/StagingArea/Data/Managed/System.EnterpriseServices.dll\",\"Temp/StagingArea/Data/Managed/System.IO.Compression.dll\",\"Temp/StagingArea/Data/Managed/System.IO.Compression.FileSystem.dll\",\"Temp/StagingArea/Data/Managed/System.Net.Http.dll\",\"Temp/StagingArea/Data/Managed/System.Numerics.dll\",\"Temp/StagingArea/Data/Managed/System.Runtime.Serialization.dll\",\"Temp/StagingArea/Data/Managed/System.Security.dll\",\"Temp/StagingArea/Data/Managed/System.ServiceModel.Internals.dll\",\"Temp/StagingArea/Data/Managed/System.Transactions.dll\",\"Temp/StagingArea/Data/Managed/System.Xml.dll\",\"Temp/StagingArea/Data/Managed/System.Xml.Linq.dll\",\"Temp/StagingArea/Data/Managed/Unity.InputSystem.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.Csg.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.KdTree.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.Poly2Tri.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.Stl.dll\",\"Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll\",\"Temp/StagingArea/Data/Managed/Unity.Timeline.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.Core.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.Flow.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.State.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AccessibilityModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AndroidJNIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AnimationModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ARModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AssetBundleModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AudioModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ClothModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.CoreModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.CrashReportingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.DirectorModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.DSPGraphModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.GameCenterModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.GIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.GridModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.HotReloadModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ImageConversionModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.IMGUIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.InputLegacyModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.InputModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.JSONSerializeModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.LocalizationModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ParticleSystemModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.PerformanceReportingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.Physics2DModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.PhysicsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ProfilerModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ScreenCaptureModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SharedInternalsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SpriteMaskModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SpriteShapeModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.StreamingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SubstanceModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SubsystemsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TerrainModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TerrainPhysicsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TextCoreFontEngineModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TextCoreTextEngineModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TextRenderingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TilemapModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TLSModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UI.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UIElementsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UIElementsNativeModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UmbraModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UNETModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityAnalyticsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityConnectModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityCurlModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityTestProtocolModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VehiclesModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VFXModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VideoModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VRModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.WindModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.XRModule.dll\",\"C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer/Data/unity default resources\"],\"targetDirectories\":[]}}",
+      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"AndroidPlayerBuildProgram.Actions.GuidGenerator\",\"methodName\":\"Run\",\"assemblyLocation\":\"C:\\\\Program Files\\\\Unity\\\\Hub\\\\Editor\\\\2021.3.26f1\\\\Editor\\\\Data\\\\PlaybackEngines\\\\AndroidPlayer\\\\AndroidPlayerBuildProgram.exe\",\"targets\":[\"D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid\"],\"inputs\":[\"Library/PlayerDataCache/Android/Data/boot.config\",\"Library/PlayerDataCache/Android/Data/data.unity3d\",\"Library/PlayerDataCache/Android/Data/resources.resource\",\"Library/PlayerDataCache/Android/Data/RuntimeInitializeOnLoads.json\",\"Library/PlayerDataCache/Android/Data/ScriptingAssemblies.json\",\"Temp/StagingArea/Data/Managed/Assembly-CSharp.dll\",\"Temp/StagingArea/Data/Managed/IngameDebugConsole.Runtime.dll\",\"Temp/StagingArea/Data/Managed/Melanchall.DryWetMidi.dll\",\"Temp/StagingArea/Data/Managed/Mono.Security.dll\",\"Temp/StagingArea/Data/Managed/mscorlib.dll\",\"Temp/StagingArea/Data/Managed/netstandard.dll\",\"Temp/StagingArea/Data/Managed/System.ComponentModel.Composition.dll\",\"Temp/StagingArea/Data/Managed/System.Configuration.dll\",\"Temp/StagingArea/Data/Managed/System.Core.dll\",\"Temp/StagingArea/Data/Managed/System.Data.DataSetExtensions.dll\",\"Temp/StagingArea/Data/Managed/System.Data.dll\",\"Temp/StagingArea/Data/Managed/System.dll\",\"Temp/StagingArea/Data/Managed/System.Drawing.dll\",\"Temp/StagingArea/Data/Managed/System.EnterpriseServices.dll\",\"Temp/StagingArea/Data/Managed/System.IO.Compression.dll\",\"Temp/StagingArea/Data/Managed/System.IO.Compression.FileSystem.dll\",\"Temp/StagingArea/Data/Managed/System.Net.Http.dll\",\"Temp/StagingArea/Data/Managed/System.Numerics.dll\",\"Temp/StagingArea/Data/Managed/System.Runtime.Serialization.dll\",\"Temp/StagingArea/Data/Managed/System.Security.dll\",\"Temp/StagingArea/Data/Managed/System.ServiceModel.Internals.dll\",\"Temp/StagingArea/Data/Managed/System.Transactions.dll\",\"Temp/StagingArea/Data/Managed/System.Xml.dll\",\"Temp/StagingArea/Data/Managed/System.Xml.Linq.dll\",\"Temp/StagingArea/Data/Managed/Unity.InputSystem.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.Csg.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.KdTree.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.Poly2Tri.dll\",\"Temp/StagingArea/Data/Managed/Unity.ProBuilder.Stl.dll\",\"Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll\",\"Temp/StagingArea/Data/Managed/Unity.Timeline.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.Core.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.Flow.dll\",\"Temp/StagingArea/Data/Managed/Unity.VisualScripting.State.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AccessibilityModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AndroidJNIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AnimationModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ARModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AssetBundleModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.AudioModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ClothModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.CoreModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.CrashReportingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.DirectorModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.DSPGraphModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.GameCenterModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.GIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.GridModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.HotReloadModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ImageConversionModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.IMGUIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.InputLegacyModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.InputModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.JSONSerializeModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.LocalizationModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ParticleSystemModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.PerformanceReportingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.Physics2DModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.PhysicsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ProfilerModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.ScreenCaptureModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SharedInternalsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SpriteMaskModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SpriteShapeModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.StreamingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SubstanceModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.SubsystemsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TerrainModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TerrainPhysicsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TextCoreFontEngineModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TextCoreTextEngineModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TextRenderingModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TilemapModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.TLSModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UI.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UIElementsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UIElementsNativeModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UIModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UmbraModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UNETModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityAnalyticsModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityConnectModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityCurlModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityTestProtocolModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VehiclesModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VFXModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VideoModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.VRModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.WindModule.dll\",\"Temp/StagingArea/Data/Managed/UnityEngine.XRModule.dll\",\"C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer/Data/unity default resources\"],\"targetDirectories\":[]}}",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/csharpactions/unity_app_guid_h2tv.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 341
+      "DebugActionIndex": 342
     },
     {
       "Annotation": "GuidGenerator D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid",
@@ -8596,6 +8608,7 @@
       "Inputs": [
         "Library/PlayerDataCache/Android/Data/boot.config",
         "Library/PlayerDataCache/Android/Data/data.unity3d",
+        "Library/PlayerDataCache/Android/Data/resources.resource",
         "Library/PlayerDataCache/Android/Data/RuntimeInitializeOnLoads.json",
         "Library/PlayerDataCache/Android/Data/ScriptingAssemblies.json",
         "Temp/StagingArea/Data/Managed/Assembly-CSharp.dll",
@@ -8713,11 +8726,11 @@
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid"
       ],
       "ToBuildDependencies": [
-        341
+        342
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 342
+      "DebugActionIndex": 343
     },
     {
       "Annotation": "WriteText D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/resources/META-INF/com.android.games.engine.build_fingerprint",
@@ -8728,7 +8741,7 @@
         "D:/Projects/rhythmGame/mtvs_songcamp/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/resources/META-INF/com.android.games.engine.build_fingerprint"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 343
+      "DebugActionIndex": 344
     },
     {
       "Annotation": "Player",
@@ -8842,109 +8855,109 @@
         104,
         105,
         106,
-        109,
-        111,
-        113,
-        115,
-        117,
-        119,
-        121,
-        123,
-        125,
-        127,
-        129,
-        131,
-        133,
-        135,
-        137,
-        139,
-        141,
-        143,
-        145,
-        147,
-        149,
-        151,
-        153,
-        155,
-        157,
-        159,
-        161,
-        163,
-        165,
-        167,
-        169,
-        171,
-        173,
-        175,
-        177,
-        179,
-        181,
-        183,
-        185,
-        187,
-        189,
-        191,
-        193,
-        195,
-        197,
-        199,
-        201,
-        203,
-        205,
-        207,
-        209,
-        211,
-        213,
-        215,
-        217,
-        219,
-        221,
-        223,
-        225,
-        227,
-        229,
-        231,
-        233,
-        235,
-        237,
-        239,
-        241,
-        243,
-        245,
-        247,
-        249,
-        251,
-        253,
-        255,
-        257,
-        259,
-        261,
-        263,
-        265,
-        267,
-        269,
-        271,
-        273,
-        275,
-        277,
-        279,
-        281,
-        283,
-        285,
-        287,
-        289,
-        291,
-        293,
-        295,
-        297,
-        299,
-        301,
-        303,
-        305,
-        307,
-        309,
+        107,
+        110,
+        112,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152,
+        154,
+        156,
+        158,
+        160,
+        162,
+        164,
+        166,
+        168,
+        170,
+        172,
+        174,
+        176,
+        178,
+        180,
+        182,
+        184,
+        186,
+        188,
+        190,
+        192,
+        194,
+        196,
+        198,
+        200,
+        202,
+        204,
+        206,
+        208,
+        210,
+        212,
+        214,
+        216,
+        218,
+        220,
+        222,
+        224,
+        226,
+        228,
+        230,
+        232,
+        234,
+        236,
+        238,
+        240,
+        242,
+        244,
+        246,
+        248,
+        250,
+        252,
+        254,
+        256,
+        258,
+        260,
+        262,
+        264,
+        266,
+        268,
+        270,
+        272,
+        274,
+        276,
+        278,
+        280,
+        282,
+        284,
+        286,
+        288,
+        290,
+        292,
+        294,
+        296,
+        298,
+        300,
+        302,
+        304,
+        306,
+        308,
         310,
-        312,
+        311,
         313,
         314,
         315,
@@ -8968,12 +8981,13 @@
         333,
         334,
         335,
-        337,
-        342,
-        343
+        336,
+        338,
+        343,
+        344
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 344
+      "DebugActionIndex": 345
     }
   ],
   "FileSignatures": [
@@ -9283,7 +9297,7 @@
   "EmitDataForBeeWhy": 0,
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 344
+          "Player": 345
         }
 ,  "DefaultNodes": [
     0

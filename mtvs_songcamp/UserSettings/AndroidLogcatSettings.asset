@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CT90N3CBK",
         "name": "com.DefaultCompany.mtvs_songcamp",
-        "processId": 30748,
+        "processId": 9959,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -144,6 +144,24 @@
             "deviceId": "R3CT90N3CBK",
             "name": "com.DefaultCompany.mtvs_songcamp",
             "processId": 30748,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 6616,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 10402,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT90N3CBK",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 9959,
             "exited": false
         }
     ],

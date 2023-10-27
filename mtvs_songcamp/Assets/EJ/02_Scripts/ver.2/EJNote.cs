@@ -60,8 +60,10 @@ public class EJNote : MonoBehaviour
         //03. passDestroy
 
         if (autoDestroyAction != null) autoDestroyAction(noteInfo.railIdx, this, isPassed);
-        Destroy(gameObject);
 
+   
+            Destroy(gameObject);
+        
     }
 
     //03.Note_Connect

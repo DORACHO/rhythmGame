@@ -3,6 +3,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.UIElements;
 
 public class SimpleSonarShader_Object : MonoBehaviour
 {
@@ -69,6 +71,19 @@ public class SimpleSonarShader_Object : MonoBehaviour
         RingDelegate();
     }
 
+    public void StartSonarRing2(Vector2 position, float intensity)
+    {
+        // Put values into the queue
+        //position.w = Time.timeSinceLevelLoad;
+        positionsQueue.Dequeue();
+        positionsQueue.Enqueue(position);
+
+        intensityQueue.Dequeue();
+        intensityQueue.Enqueue(intensity);
+
+        RingDelegate();
+    }
+
     /// <summary>
     /// Sends the sonar data to the shader.
     /// </summary>
@@ -82,11 +97,33 @@ public class SimpleSonarShader_Object : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                StartSonarRing(hit.point, 30);
+            }
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         // Start sonar ring from the contact point
         StartSonarRing(collision.contacts[0].point, collision.impulse.magnitude / 10.0f);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        // Start sonar ring from the contact point
+        StartSonarRing(other.ClosestPointOnBounds(transform.position), 10f);
+        // 물리적 충돌이 아니므로 impulse.magnitude 대신 0을 사용하거나 원하는 값을 사용합니다.
+    }
+
 
     private void OnDestroy()
     {
