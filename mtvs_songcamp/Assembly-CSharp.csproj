@@ -62,6 +62,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\Example\SimpleSonarShader_ExampleCollision.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\MIDI2Note.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\Hovl_Laser2.cs" />
     <Compile Include="Assets\EJ\02_Scripts\ver.2\EJNoteManager_OLD.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJTouchpad_LongNote.cs" />
@@ -96,7 +97,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\Melanchall\DryWetMIDI\Demo\DemoScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
-    <Compile Include="Assets\EJ\05_Source\inputSystem\InputSystemTest.cs" />
+    <Compile Include="Assets\EJ\03_Materials\Mats\inputSystem\InputSystemTest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\EJ\02_Scripts\Tutorial\SongManager.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\HS_HittedObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\EJ\02_Scripts\lr.cs" />
+    <Compile Include="Assets\SongPlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\SimpleSonarShader_Parent.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\For demo scenes\HS_DemoShooting2D.cs" />
@@ -138,7 +140,7 @@
     <Compile Include="Assets\EJ\02_Scripts\EJLongNoteMaker_test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJLongNoteTouchTest.cs" />
-    <Compile Include="Assets\EJ\02_Scripts\MIDI2Note.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJcamShake.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

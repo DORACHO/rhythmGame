@@ -187,8 +187,6 @@ public class EJTouchpad_LongNote : MonoBehaviour
         GameObject miss = Instantiate(missText, canvas.transform.position - Vector3.forward, Quaternion.identity);
         miss.transform.SetParent(canvas.transform);
 
-        
-
         Destroy(miss, 3);
     }
 }

@@ -8,20 +8,13 @@ public class EJScoreManager : MonoBehaviour
     public static EJScoreManager instance;
 
     public TextMeshProUGUI textScore;
+    public TextMeshProUGUI numScore;
+    public TextMeshProUGUI[] score4rails;
+
     float score;
 
     public Canvas canvas;
-    public GameObject[] scoreTexts;
-
-    SCORE_STATE scoreState;
-    public enum SCORE_STATE
-    {
-        Excellent,  
-        Great,
-        Good,
-        Bad,
-        Miss
-    }
+    //public GameObject[] scoreTexts;
 
     private void Awake()
     {
@@ -37,28 +30,7 @@ public class EJScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //이게 Update문에 있는게 맞나?
-        //changeState로 하는 법
-        //if (scoreState == SCORE_STATE.Excellent)
-        //{
-        //    showScoreText(0);
-        //}
-        //else if (scoreState == SCORE_STATE.Great)
-        //{
-        //    showScoreText(1);
-        //}
-        //else if (scoreState == SCORE_STATE.Good)
-        //{
-        //    showScoreText(2);
-        //} else if (scoreState == SCORE_STATE.Bad)
-        //{
-        //    showScoreText(3);
-        //}
-        //else if (scoreState == SCORE_STATE.Miss)
-        //{
-        //    showScoreText(4);
-        //}       
-        
+                   
     }
 
     public float SCORE
@@ -70,7 +42,7 @@ public class EJScoreManager : MonoBehaviour
         set
         {
             score = value;
-            textScore.text = "Score : " + score;
+            numScore.text = "Score : " + score;
         }
     }
 
@@ -84,11 +56,30 @@ public class EJScoreManager : MonoBehaviour
         return score;
     }
 
-    void showScoreText(int n)
+    public IEnumerator showScoreText(string sss, int railIdx, int score)
     {
-        GameObject scoreText = Instantiate(scoreTexts[n], canvas.transform.position - Vector3.forward, Quaternion.identity);
-        scoreText.transform.SetParent(canvas.transform);
 
-        Destroy(scoreText, 0.5f);
+        //처음
+        //GameObject scoreText = Instantiate(scoreTexts[n], canvas.transform.position - Vector3.forward, Quaternion.identity);
+        //scoreText.transform.SetParent(canvas.transform);
+
+        //Destroy(scoreText, 0.5f);
+        textScore.text = sss + "!";
+
+        if (!(sss == "Miss"))
+        {
+            score4rails[railIdx].text = "+" + score;
+        }
+
+        yield return 0.2f;
+        score4rails[railIdx].text = "";
+
     }
+
+    public void StartShowScoreText(string sss, int railIdx, int score)
+    {
+        StartCoroutine(showScoreText(sss, railIdx, score));
+    }
+
+
 }

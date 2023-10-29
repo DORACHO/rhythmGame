@@ -30,6 +30,9 @@ public struct NoteInfo
 
     //dragNote가 떼져야 하는 index
     public int DRAG_release_idx;
+
+    //longNote나 dragNote가 눌리다가 말아서 enable체크를 해야할 때
+    public bool isNoteEnabled;
 }
 
 public class EJNoteStorage : MonoBehaviour
