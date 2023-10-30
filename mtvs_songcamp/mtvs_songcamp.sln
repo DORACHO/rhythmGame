@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngameDebugConsole.Runtime", "IngameDebugConsole.Runtime.csproj", "{0C831535-FE14-9883-09E2-85C7483589A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{D3309262-FE92-C5DA-5C09-B352DD6CDBC9}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngameDebugConsole.Editor", "IngameDebugConsole.Editor.csproj", "{8E1BC1BA-F799-7DF9-1C75-D32D081F77BB}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{0C831535-FE14-9883-09E2-85C7483589A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C831535-FE14-9883-09E2-85C7483589A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C831535-FE14-9883-09E2-85C7483589A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3309262-FE92-C5DA-5C09-B352DD6CDBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3309262-FE92-C5DA-5C09-B352DD6CDBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3309262-FE92-C5DA-5C09-B352DD6CDBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3309262-FE92-C5DA-5C09-B352DD6CDBC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E1BC1BA-F799-7DF9-1C75-D32D081F77BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E1BC1BA-F799-7DF9-1C75-D32D081F77BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E1BC1BA-F799-7DF9-1C75-D32D081F77BB}.Release|Any CPU.ActiveCfg = Release|Any CPU

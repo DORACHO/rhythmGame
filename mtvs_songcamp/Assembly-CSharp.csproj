@@ -118,6 +118,7 @@
     <Compile Include="Assets\EJ\02_Scripts\ver.2\EJNoteStorage.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJSongManager.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\HS_HittedObject.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJcamShake.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\EJ\02_Scripts\lr.cs" />
     <Compile Include="Assets\SongPlay.cs" />
@@ -140,7 +141,7 @@
     <Compile Include="Assets\EJ\02_Scripts\EJLongNoteMaker_test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJLongNoteTouchTest.cs" />
-    <Compile Include="Assets\EJ\02_Scripts\EJcamShake.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\tweenTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -911,6 +912,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{D3309262-FE92-C5DA-5C09-B352DD6CDBC9}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="IngameDebugConsole.Editor.csproj">
       <Project>{8E1BC1BA-F799-7DF9-1C75-D32D081F77BB}</Project>
       <Name>IngameDebugConsole.Editor</Name>

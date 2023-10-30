@@ -308,6 +308,7 @@
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/EJ/02_Scripts/dragNoteFlow.cs"
 "Assets/EJ/02_Scripts/EJbothTouched.cs"
+"Assets/EJ/02_Scripts/EJcamShake.cs"
 "Assets/EJ/02_Scripts/EJDragNote_test.cs"
 "Assets/EJ/02_Scripts/EJDragTest.cs"
 "Assets/EJ/02_Scripts/EJLongNoteMaker_test.cs"

@@ -76,6 +76,8 @@ public class EJNoteManager : MonoBehaviour
     public Canvas canvas;
     public GameObject[] scoreTexts;
 
+
+
     void Start()
     {
         // instantiated note in hierarchy <<< Add EJNote Component 
@@ -225,7 +227,9 @@ public class EJNoteManager : MonoBehaviour
                     int touchIdx = int.Parse(touchPadName) - 1;
 
                     touchStartedIdx = touchIdx;
-                    touchedFX(touchIdx);
+
+                    dicCurrTouchPadIdx[0] = -1;
+                    touchedFX(touchIdx, 0);
 
                     if (noteInstance_Rails[touchIdx].Count > 0)
                     {
@@ -258,7 +262,7 @@ public class EJNoteManager : MonoBehaviour
                     touchPadName = touchPadName.Replace("Touch0", "");
                     int touchIdx = int.Parse(touchPadName) - 1;
 
-                    touchedFX(touchIdx);
+                    touchedFX(touchIdx, 0);
 
                     if (noteInstance_Rails[touchStartedIdx].Count > 0)
                     {
@@ -316,8 +320,8 @@ public class EJNoteManager : MonoBehaviour
                 //Ray ray = Camera.main.ScreenPointToRay(touch);
                 RaycastHit hitInfo;
 
-                releasedFX(currTouchPadIdx);
-                currTouchPadIdx = -1;
+                releasedFX(0);
+                dicCurrTouchPadIdx.Remove(0);
 
                 if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
                 {
@@ -359,9 +363,11 @@ public class EJNoteManager : MonoBehaviour
             for (int i = 0; i < Input.touchCount; i++)
             {
                 touch = Input.GetTouch(i);
+                //touch.fingerId = i;
 
                 if (touch.phase == TouchPhase.Began)
                 {
+
                     Ray ray = Camera.main.ScreenPointToRay(touch.position);
                     RaycastHit hitInfo;
 
@@ -373,7 +379,9 @@ public class EJNoteManager : MonoBehaviour
                         int touchIdx = int.Parse(touchPadName) - 1;
 
                         touchStartedIdx = touchIdx;
-                        touchedFX(touchIdx);
+
+                        dicCurrTouchPadIdx[touch.fingerId] = -1;
+                        touchedFX(touchIdx, touch.fingerId);
                         print(i + "번째 touch일 때" + touchIdx + "번의 터치패드가 눌렸고" + "touchedFX 함수가 실행되었다.");
 
                         if (noteInstance_Rails[touchIdx].Count > 0)
@@ -406,7 +414,7 @@ public class EJNoteManager : MonoBehaviour
                         touchPadName = touchPadName.Replace("Touch0", "");
                         int touchIdx = int.Parse(touchPadName) - 1;
 
-                        touchedFX(touchIdx);
+                        touchedFX(touchIdx, touch.fingerId);
 
                         if (noteInstance_Rails[touchStartedIdx].Count > 0)
                         {
@@ -415,6 +423,8 @@ public class EJNoteManager : MonoBehaviour
                                 //방향 체크
                                 if (touchIdx < touchStartedIdx)     //왼쪽 드래그
                                 {
+                                    draggingState = DraggingState.Dragging_LEFT;
+
                                     if (noteInstance_Rails[touchStartedIdx].Count > 0 &&
                                         noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
                                     {
@@ -428,6 +438,8 @@ public class EJNoteManager : MonoBehaviour
                                 }
                                 else    //오른쪽 드래그
                                 {
+                                    draggingState = DraggingState.Dragging_RIGHT;
+
                                     if (noteInstance_Rails[touchStartedIdx].Count > 0 &&
                                         noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT)
                                     {
@@ -439,6 +451,8 @@ public class EJNoteManager : MonoBehaviour
                             }
                             else //같은 버튼을 꾹 누르는 것   checkFINISHED !!!
                             {
+                                draggingState = DraggingState.None;
+
                                 if (noteInstance_Rails[touchIdx][0].noteInfo.type == (int)NoteType.LONG)
                                 {
                                     PressingScore(touchIdx);
@@ -458,8 +472,8 @@ public class EJNoteManager : MonoBehaviour
                     Ray ray = Camera.main.ScreenPointToRay(touch.position);
                     RaycastHit hitInfo;
 
-                    releasedFX(currTouchPadIdx);
-                    currTouchPadIdx = -1;
+                    releasedFX(touch.fingerId);
+                    dicCurrTouchPadIdx.Remove(touch.fingerId);
 
                     if (Physics.Raycast(ray, out hitInfo, 100f, 1 << LayerMask.NameToLayer("touchPad")))
                     {
@@ -476,17 +490,7 @@ public class EJNoteManager : MonoBehaviour
                             {
                                 if (noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_RIGHT || noteInstance_Rails[touchStartedIdx][0].noteInfo.type == (int)NoteType.DRAG_LEFT)
                                 {
-                                    if (touchReleasedIdx == noteInstance_Rails[touchStartedIdx][0].noteInfo.DRAG_release_idx)
-                                    {
-                                        //success
-
-                                        print("드래그 노트 성공했어요!");
-                                        showScoreText(0);
-                                    }
-                                    else
-                                    {
-                                        MissCheck();
-                                    }
+                                    ExitCheck_DRAG(touchStartedIdx);
                                 }
                             }
                             else
@@ -533,15 +537,24 @@ public class EJNoteManager : MonoBehaviour
     }
 
     //현재 touch된 부분만 켜지고 나머지는 꺼지도록 check!!!
-    int currTouchPadIdx = -1;
-    void touchedFX(int n)
+    //int currTouchPadIdx = -1;
+
+    //Dictionary<fingerID, railIdx>
+    Dictionary<int, int> dicCurrTouchPadIdx = new Dictionary<int, int>();
+
+    //fingerId별 startIdx가 필요    
+    //*****Dictionary<fingerID, startIdx>
+    Dictionary<int, int> dicStartIdx = new Dictionary<int, int>();
+
+    void touchedFX(int n, int fingerId)
     {
-        if (n == currTouchPadIdx) return;
+        if (dicCurrTouchPadIdx.ContainsKey(fingerId) == false) return;
+        if (n == dicCurrTouchPadIdx[fingerId]) return;
 
 
-        if (currTouchPadIdx != -1)
+        if (dicCurrTouchPadIdx[fingerId] != -1)
         {
-            releasedFX(currTouchPadIdx);
+            releasedFX(fingerId);
         }
 
         if (!touchpads[n].GetComponent<MeshRenderer>().enabled)
@@ -549,11 +562,13 @@ public class EJNoteManager : MonoBehaviour
             touchpads[n].GetComponent<MeshRenderer>().enabled = true;
         }
 
-        currTouchPadIdx = n;
+        dicCurrTouchPadIdx[fingerId] = n;
     }
 
-    void releasedFX(int n)
+    void releasedFX(int fingerId)
     {
+        if (dicCurrTouchPadIdx.ContainsKey(fingerId) == false) return;
+        int n = dicCurrTouchPadIdx[fingerId];
         print("releasedFX함수 실행");
         if (n == -1) return;
 
@@ -617,6 +632,7 @@ public class EJNoteManager : MonoBehaviour
 
         dist = noteInstance_Rails[n][0].transform.position.y - touchpads[n].transform.position.y;
         distAbs = Mathf.Abs(dist);
+
 
         if (distAbs < badZone)
         {

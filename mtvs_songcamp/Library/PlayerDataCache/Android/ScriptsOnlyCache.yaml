@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - EJNote
     - EJNoteManager
     - EJScoreManager
+    - EJcamShake
     - EJnoteFlow
     - InputSystemTest
     - SimpleSonarShader_Object
@@ -23,6 +24,7 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatConsoleWindow
     - Unity.Android.Logcat.AndroidLogcatManager
     Unity.ProBuilder.dll:
     - UnityEngine.ProBuilder.PolyShape
@@ -61,6 +63,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
@@ -117,6 +120,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.ScrollRect/ScrollRectEvent
     - UnityEngine.UI.Scrollbar/ScrollEvent
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve: []
   sceneClasses:
@@ -212,6 +216,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20330}
     - Class: 114
+      Script: {instanceID: 20344}
+    - Class: 114
       Script: {instanceID: 20354}
     - Class: 114
       Script: {instanceID: 20434}
@@ -226,27 +232,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21294}
     - Class: 114
-      Script: {instanceID: 21706}
+      Script: {instanceID: 21476}
     - Class: 114
-      Script: {instanceID: 21718}
+      Script: {instanceID: 21708}
     - Class: 114
-      Script: {instanceID: 21828}
+      Script: {instanceID: 21720}
     - Class: 114
-      Script: {instanceID: 22078}
+      Script: {instanceID: 21830}
     - Class: 114
-      Script: {instanceID: 22252}
+      Script: {instanceID: 22080}
     - Class: 114
-      Script: {instanceID: 22630}
+      Script: {instanceID: 22254}
     - Class: 114
-      Script: {instanceID: 23094}
+      Script: {instanceID: 22632}
     - Class: 114
-      Script: {instanceID: 43356}
+      Script: {instanceID: 23096}
     - Class: 114
-      Script: {instanceID: 43364}
+      Script: {instanceID: 31966}
     - Class: 114
-      Script: {instanceID: 43366}
+      Script: {instanceID: 31974}
     - Class: 114
-      Script: {instanceID: 43368}
+      Script: {instanceID: 31976}
+    - Class: 114
+      Script: {instanceID: 31978}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -316,7 +324,7 @@ ScriptsOnlyBuild:
     className: EJDragNote_test
   - hash:
       serializedVersion: 2
-      Hash: 1dcd66cffca78396e5bb94342f8dd10e
+      Hash: f7c76c1933349e07ba9c98f685873b56
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EJScoreManager
@@ -1288,7 +1296,7 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: 5ef62c20967e40dd2ea83b654a297640
+      Hash: ef0bea513323c508356fbf99fa0465d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EJNoteManager
@@ -1370,6 +1378,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HS_HittedObject
+  - hash:
+      serializedVersion: 2
+      Hash: c58ff49b90d2c97813137837a05aa8bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EJcamShake
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
