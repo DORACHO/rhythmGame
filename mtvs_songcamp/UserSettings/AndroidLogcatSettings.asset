@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "0815f8084e4b0b04",
         "name": "com.DefaultCompany.mtvs_songcamp",
-        "processId": 5540,
+        "processId": 28748,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -192,6 +192,12 @@
             "deviceId": "0815f8084e4b0b04",
             "name": "com.DefaultCompany.mtvs_songcamp",
             "processId": 5540,
+            "exited": false
+        },
+        {
+            "deviceId": "0815f8084e4b0b04",
+            "name": "com.DefaultCompany.mtvs_songcamp",
+            "processId": 28748,
             "exited": false
         }
     ],

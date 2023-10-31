@@ -4,5 +4,38 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MainScene/00.Logo.unity
+    guid: 1ad4f0e4d21a8ef48a23d3afeca94557
+  - enabled: 1
+    path: Assets/MainScene/01.Loading.unity
+    guid: 819ce77c94a13c14da7fd49c2df4cd52
+  - enabled: 1
+    path: Assets/MainScene/02.LogIn.unity
+    guid: eece6e756a19dac49a83cd917ddfe479
+  - enabled: 1
+    path: Assets/MainScene/03.Character.unity
+    guid: 9902481f9657e0947823a49f11baffe6
+  - enabled: 1
+    path: Assets/MainScene/04-0.Lounge.unity
+    guid: 2f64022b6f978264e9ed187f5042f97b
+  - enabled: 1
+    path: Assets/MainScene/04-1.Lounge_Chat.unity
+    guid: b979f82f2e44ba5488e224d363a0d3cc
+  - enabled: 1
+    path: Assets/MainScene/05-0.ComposeMode_dohyeon.unity
+    guid: 2262af2a96409634c895addacc106d46
+  - enabled: 1
+    path: Assets/MainScene/05-1.ComposeMode_UploadInput.unity
+    guid: a8292e51fb4a88245b7de488bad93c65
+  - enabled: 1
+    path: Assets/MainScene/06-0.PlayMode_SongSelect.unity
+    guid: 6dd980d531f765a4d93e01a524df5e07
+  - enabled: 1
+    path: Assets/MainScene/06-1.PlayMode_Game.unity
+    guid: 206fe2ef90d9f61458d9130a758fb904
+  - enabled: 1
+    path: Assets/MainScene/07.ConcertMode.unity
+    guid: 86f62477ef70bf745a5b2d7a9567bf7d
   m_configObjects: {}

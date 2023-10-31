@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\EJ\02_Scripts\EJDragNote_test.cs" />
     <Compile Include="Assets\EJ\02_Scripts\ver.2\EJScoreManager.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_0.cs" />
     <Compile Include="Assets\EJ\02_Scripts\Tutorial\Notemanager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\Example\SimpleSonarShader_ExampleCollision.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\Hovl_LaserDemo.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSong.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\For demo scenes\HS_CameraHolder.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJMatChange_test.cs" />
@@ -98,24 +100,31 @@
     <Compile Include="Assets\Melanchall\DryWetMIDI\Demo\DemoScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\EJ\03_Materials\Mats\inputSystem\InputSystemTest.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_3.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_2.cs" />
     <Compile Include="Assets\EJ\02_Scripts\Tutorial\SongManager.cs" />
     <Compile Include="Assets\EJ\02_Scripts\ver.3\EJTouchManager3.cs" />
     <Compile Include="Assets\EJ\02_Scripts\tweenTest1.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJTouchPad.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_4.cs" />
     <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\SimpleSonarShader_Object.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_1.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJLongNoteScore.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\HS_ProjectileMover.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_6.cs" />
     <Compile Include="Assets\EJ\02_Scripts\ver.2\EJNoteManager.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\Hovl_DemoLasers.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJnoteFlow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJBtn.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJMissPad.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_Back.cs" />
     <Compile Include="Assets\EJ\02_Scripts\ver.2\EJNoteStorage.cs" />
     <Compile Include="Assets\EJ\02_Scripts\EJSongManager.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\HS_HittedObject.cs" />
@@ -129,6 +138,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\EJ\02_Scripts\Tutorial\PlayController.cs" />
+    <Compile Include="Assets\EJ\02_Scripts\EJSceneManager_5.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\HS_Rotator.cs" />
     <Compile Include="Assets\Hovl Studio\Resources\Scripts\HS_EffectSound.cs" />

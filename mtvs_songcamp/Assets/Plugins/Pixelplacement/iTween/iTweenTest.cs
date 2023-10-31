@@ -10,7 +10,6 @@ public class iTweenTest : MonoBehaviour
     void Start()
     {
 
-
     }
 
     // Update is called once per frame
@@ -44,5 +43,18 @@ public class iTweenTest : MonoBehaviour
                                             "time", 0.5f,
                                             "easetype", iTween.EaseType.easeInOutExpo
                                             ));
+
+        iTween.ScaleTo(gameObject, iTween.Hash(
+                                            "scale", new Vector3(2, 2, 2),  // x, y, z 축의 크기를 2로 변경
+                                            "time", 2.0f,
+                                            "easetype", iTween.EaseType.easeInOutExpo
+                                            ));
+
+        iTween.FadeTo(gameObject, iTween.Hash(
+                                            "alpha", 0.5f,  // 투명도를 0.5로 변경 (0부터 1까지의 값)
+                                            "time", 2.0f,
+                                            "easetype", iTween.EaseType.easeInOutExpo
+                                            ));
+
     }
 }
